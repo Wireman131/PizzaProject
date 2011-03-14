@@ -67,7 +67,8 @@ if(isset($_SESSION['email'])){
 
 include 'emailBody.php';
 
-exit();
+exit(); // temporary block of the emailer for testing purposes
+
 /*
  * This is where the SwiftMailer will work it's magic and compose a HTML based 
  * to send as a confirmation...

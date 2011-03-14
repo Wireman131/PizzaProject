@@ -3,19 +3,25 @@
  * CAPTCHA form module - self contained
  */
 @session_start();
-ob_start();
+//ob_start();
+
 $image="default";
 error_reporting(E_ALL ^ E_NOTICE);
 if(!$_POST['submit']){
+ 
   echo"<form method=\"post\" action=\"captcha.php\">\n";
   echo"<table border=\"0\" cellspacing=\"3\" cellpadding=\"3\">\n";
-  echo"<tr><td>Type The Letters You See Below Into The Box</td></tr>\n";
-  echo"<tr><td align=\"center\"><img src=\"image.php\"></td></tr>\n";
-  //echo"<tr><td>". $solution . "</td></tr>\n";
-  echo"<tr><td align=\"right\"><input type=\"text\" name=\"image\"></td></tr>\n";
-  echo"<tr><td align=\"right\"><input type=\"submit\" name=\"submit\" value=
-  		\"Check CAPTCHA\"></td></tr>\n";
+  echo"<tr><td colspan=2>Type The Letters You See Below Into The Box</td></tr>\n";
+  echo"<tr><td colspan=2 align=\"center\">
+  <img src=\"image.php\"></td></tr>\n";
+  //echo"<tr><td>". $_session['solution'] . "</td></tr>\n";
+  echo"<tr><td><input type=\"text\" name=\"image\"></td><td>&nbsp;</td></tr>\n";
+  echo"<tr><td><input type=\"submit\" name=\"submit\" value=
+  		\"Check CAPTCHA\"></td>&nbsp;<td>
+  		
+  		</td></tr>\n";
   echo"</table></form>\n";
+  
 }else{
   $image = $_POST['image'];
   
@@ -39,12 +45,13 @@ sLNea3JU8i95cQGgQOsujwzc2TbXcAkM7zjUTKoeq9Q=
   
   
   if($image == $solution){
-    echo"Success";
+    header("Location: emailConfirm.php");
+    
      }else{
     echo"Fail!";
   }
 }
 
-ob_end_flush();
+//ob_end_flush();
 
 ?>
