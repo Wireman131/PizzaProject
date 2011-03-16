@@ -1,5 +1,5 @@
 <?php
-/*
+/* 
  * Code to create the CAPTCHA image
  * also creates the 'solution' to the CAPTCHA, encrypts it, and saves it to
  * a session variable. 

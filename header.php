@@ -17,3 +17,4 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Advanced PHP Pizza Shop</title>
 <script src="Project 2.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>

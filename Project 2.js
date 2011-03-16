@@ -3,7 +3,8 @@
 	var outputSize;
 	
 		
-	function sizer() {  // get pizza size - determined by which radio button is selected
+	function sizer() { 
+	   // get pizza size - determined by which radio button is selected
 	for (var i = 0; i<4; i++) {
 			if (document.getElementById("pizzaSize_"+i).checked == true) {
 				var size = document.getElementById("pizzaSize_" +i).value
@@ -166,10 +167,14 @@ function pricer(size) {  // determine price of pie based on size
 			//return true;
 		} 
 		if (passThru == 4) {
+		  
+		  alert("code to unhide the captcha box");
+		}
 			//window.alert("You Made It!"+passThru);
 			
 			
 			// open the window
+		  
 			win2 = window.open("", "PizzaOrder", "width=800,height=800,resizable=0");
 			// write to window
 			win2.focus();
@@ -198,7 +203,7 @@ function pricer(size) {  // determine price of pie based on size
 					}
 				//output total price to popup window
 				
-				win2.document.writeln("<br/><strong>Total Price:$"+zz+"</strong><br/><br/>");
+				//win2.document.writeln("<br/><strong>Total Price:$"+zz+"</strong><br/><br/>");
 			
 			// check to see if delivery was selected
 			if (document.getElementById("deliveryBox").checked == true) {
@@ -221,8 +226,12 @@ function pricer(size) {  // determine price of pie based on size
 			
 			}
 			
-		}
-	var dt;	// 
+		
+		
+	  // end of popup window code - not needed for this project.  t.g. 3/15/2011
+		  
+		  
+	var dt;	 
 	function calculateTime () {
 		var today=new Date();
 		var hr=today.getHours();

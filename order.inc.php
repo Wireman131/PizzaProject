@@ -12,6 +12,7 @@
 	* @since      Mar 11, 2011-2011
 */
 ?>
+<div id='container'>
 <form>
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
@@ -206,7 +207,7 @@
 
   
 
- <!--  <div id="SubmitBox">
+  <div id="SubmitBox">
   <table width="60" border="0">
     <tr>
       <td><label>
@@ -216,14 +217,14 @@
         <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
       </label></td>
     </tr>
-  </table>
-  </div> -->
-
-</form><br/>
-<div id='captcha'>
-<?php  
-//include 'captcha.php';  //sumting wong with this ... screws up the other form
+    <tr><td colspan=2>
+  <?php  
+include 'captcha.php';  //sumting wong with this ... screws up the other form
 
 ?>
-</div>WTF!?!?! I Can't Read This!<br/>
-<form><button onclick=\"newCaptcha();\">Reload</button></form>
+    
+    </td></tr>
+  </table>
+  </div> 
+
+</form></div><br/>

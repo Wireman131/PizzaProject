@@ -1,4 +1,3 @@
-<div id='container'>
 <?php
 /*
  * Short Description
@@ -29,4 +28,3 @@ if (!isset($_REQUEST['pid'])) include("order.inc.php");
 					
 			} 
 ?>
-</div>
