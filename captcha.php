@@ -4,12 +4,13 @@
  */
 @session_start();
 //ob_start();
+print_r($_POST);
 
 $image="default";
 error_reporting(E_ALL ^ E_NOTICE);
-if(!$_POST['submit']){
+if(!isset($_POST['submit'])){
  
-  echo"<form method=\"post\" action=\"captcha.php\">\n";
+  echo"<form method=\"post\" action=\"index.php?pid=validate\">\n";
   echo"<table border=\"0\" cellspacing=\"3\" cellpadding=\"3\">\n";
   echo"<tr><td colspan=2>Type The Letters You See Below Into The Box</td></tr>\n";
   echo"<tr><td colspan=2 align=\"center\">
@@ -17,9 +18,7 @@ if(!$_POST['submit']){
   //echo"<tr><td>". $_session['solution'] . "</td></tr>\n";
   echo"<tr><td><input type=\"text\" name=\"image\"></td><td>&nbsp;</td></tr>\n";
   echo"<tr><td><input type=\"submit\" name=\"submit\" value=
-  		\"Check CAPTCHA\"></td>&nbsp;<td>
-  		
-  		</td></tr>\n";
+  		\"Check CAPTCHA\"></td><td>&nbsp;</td></tr>\n";
   echo"</table></form>\n";
   
 }else{
@@ -45,13 +44,18 @@ sLNea3JU8i95cQGgQOsujwzc2TbXcAkM7zjUTKoeq9Q=
   
   
   if($image == $solution){
-    header("Location: emailConfirm.php");
+   echo "success!";
+  ob_end_clean();
+   ob_start();
+   header("Location: emailConfirm.php");
+   ob_end_flush();
     
      }else{
     echo"Fail!";
+    ob_end_flush();
   }
 }
 
-//ob_end_flush();
+ob_end_flush();
 
 ?>

@@ -8,6 +8,7 @@
 <title>Tony's Pizza Email Confirmation</title>
 <style type="text/css">
 #confirmEmail #container {
+	position:relative;
 	width:1000px;
 	min-height:800px;
 	background-color:#C00;

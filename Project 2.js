@@ -120,17 +120,17 @@ function pricer(size) {  // determine price of pie based on size
 	verifyCustomerInfo();}
 	//window.open ("http://www.javascript-coder.com","mywindow");		
 	//}
-	function verifyCustomerInfo () {
+	function verifyCustomerInfo() {
+	  //alert("here");
+	
 		var passThru = 0;
 		// statements to validate user input
 		//window.alert("test");  // error checking tool
 		//window.alert(document.getElementById("customerName").value);
 		if (document.getElementById("customerName").value == "") {
 			window.alert("You Must Enter Your Name!");
-			
 			//document.getElementById("customerName").focus();
-			//return false;
-			
+			return false;
 			
 		} else {
 			name = document.getElementById("customerName").value;
@@ -140,7 +140,7 @@ function pricer(size) {  // determine price of pie based on size
 		if (document.getElementById("customerAddress").value == "") {
 			window.alert("You must enter your address!");
 			//document.getElementById("customerAddress").focus();
-			//return false;
+			return false;
 		} else {
 			var address = document.getElementById("customerAddress").value;
 			passThru += 1;
@@ -149,87 +149,30 @@ function pricer(size) {  // determine price of pie based on size
 		if (document.getElementById("customerPhone").value == "") {
 			window.alert("You must enter your phone number!");
 			//document.getElementById("customerPhone").focus();
-			//return false;
+			return false;
 		} else {
 			var phone = document.getElementById("customerPhone").value;
 			passThru += 1;
 			//window.alert("Phone Number was:"+ phone +passThru);
-			//return true;
+			
 		}
 		if (document.getElementById("customerEmail").value == "") {
 			window.alert("You must enter your email address!");
 			//document.getElementById("customerEmail").focus();
-			//return false;
+			return false;
 		} else {
 			var email = document.getElementById("customerEmail").value;
 			passThru += 1;
 			//window.alert("Email address was:"+ email+passThru);
-			//return true;
-		} 
+					} 
 		if (passThru == 4) {
-		  
-		  alert("code to unhide the captcha box");
-		}
-			//window.alert("You Made It!"+passThru);
+		  return true;
+		 // alert("code to unhide the captcha box");
+		  //document.pizza.submit();
+		} 
 			
+	}
 			
-			// open the window
-		  
-			win2 = window.open("", "PizzaOrder", "width=800,height=800,resizable=0");
-			// write to window
-			win2.focus();
-			win2.document.body.innerHTML=""
-			win2.document.writeln("<html><head><title>Order Results</title>");
-			win2.document.writeln("");
-		    win2.document.write('<style type="text/css">');
-    		win2.document.write('@import url("2.css");');
-   		    win2.document.write('</style>');
-
-			win2.document.writeln("</head><body>");
-			win2.document.writeln("<div id='outputContainer'>");
-			win2.document.writeln("<h2>Order Summary</h2><br/>Customer Name: "+name+"<br/>");
-			win2.document.writeln("Address: "+address+"<br/>");
-			win2.document.writeln("Pizza Size:"+outputSize+"<br/>");
-			win2.document.writeln("Toppings: ");
-			
-			//subroutine to output selected toppings
-			for (var i = 0; i<8; i++) {
-			if (document.getElementById("topping_"+i).checked == true) {
-				//alert("topping alert");
-				var selectedToppingName = document.getElementById("topping_" +i).name;
-				win2.document.writeln(selectedToppingName + " ");
-				
-						}
-					}
-				//output total price to popup window
-				
-				//win2.document.writeln("<br/><strong>Total Price:$"+zz+"</strong><br/><br/>");
-			
-			// check to see if delivery was selected
-			if (document.getElementById("deliveryBox").checked == true) {
-				win2.document.writeln("Your pizza will be delivered to: "+address+" in 30 minutes<br/>");
-				calculateTime();
-				win2.document.writeln("Estimated Time of Delivery: "+ dt + AorP);
-				win2.focus();
-				
-			} else {
-				win2.document.writeln("Your pizza will be ready for pickup in 30 minutes<br/>");
-				
-							//var thisDate = new Date();
-				calculateTime();
-				//window.alert(dt);
-				win2.document.writeln("Pick Up At: " + dt + AorP + "<br/>");
-				win2.focus();
-				}
-			win2.document.writeln("</div></body></html>");
-			win2.document.close();			
-			
-			}
-			
-		
-		
-	  // end of popup window code - not needed for this project.  t.g. 3/15/2011
-		  
 		  
 	var dt;	 
 	function calculateTime () {

@@ -13,7 +13,7 @@
 */
 ?>
 <div id='container'>
-<form>
+<form name='pizza' action='index.php' method="post" onsubmit="return verifyCustomerInfo();">
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
   <table width="200" border="0">
@@ -196,7 +196,7 @@
     </tr>
     <tr>
       <td><label>Email Address
-        <input type="text" name="email" id="customerEmail" />
+        <input type="text" name="email" id="customerEmail" /><input type="hidden" name="pid" value="validate">
       </label></td>
     </tr>
   </table>
@@ -207,24 +207,21 @@
 
   
 
-  <div id="SubmitBox">
+  
   <table width="60" border="0">
     <tr>
       <td><label>
-        <input type="button" name="submit" id="submit" value="Submit Order!" onclick="processOrder()" />
+        <input type="submit" name="validateUser" id="submit" value="Submit Order!" />
       </label></td>
       <td><label>
         <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
       </label></td>
     </tr>
-    <tr><td colspan=2>
-  <?php  
-include 'captcha.php';  //sumting wong with this ... screws up the other form
-
-?>
+    <tr><td colspan=2><input type="hidden" name="pid" value="validate">
+  
     
     </td></tr>
   </table>
-  </div> 
+ 
 
 </form></div><br/>

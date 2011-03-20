@@ -175,7 +175,7 @@ if (!$result)
   trigger_error('Send Error Message: ' . $e,E_USER_NOTICE);
   }
   
-
+ob_end_flush();
 
 
 
