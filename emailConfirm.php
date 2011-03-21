@@ -22,10 +22,12 @@ $_SESSION['emailCoupon'] = "None";
 date_default_timezone_set('America/Detroit');
 /*
  * perhaps calling Date once will be enough
+ * 
 */
 $timeOfOrder = Date("l, F j, Y, g:i a");
+$timeOfDelievery = Date("l, F j, Y, g:i a", strtotime("+30 minutes"));
 $_SESSION['timeOfOrder'] = $timeOfOrder;
-$_SESSION['deliveryTime'] = $timeOfOrder + 30 * 60;
+$_SESSION['deliveryTime'] = $timeOfDelievery;
 
 function goBack(){
   //echo"Fail! <br/> Form Values Are No Good!!<br/>Try Again!";
