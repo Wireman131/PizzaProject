@@ -5,10 +5,25 @@
  * 
  */
 //print_r($_POST);
- //unset($_SESSION['pid']);
-ob_start();
-echo"<div id='pizza'>pizza page<br/>";
-echo"order form will go here<br/><br/>\n";
+/*
+ * Sample - Temporary Data for testing:
+ */
+session_start();
+$_SESSION['firstName'] = "Tony";
+$_SESSION['lastName'] = "Gaudio";
+$_SESSION['address'] = "123 Main Street";
+$_SESSION['billingAddress'] = "321 South Main Street";
+$_SESSION['email'] = "wireman131@wireman131.com";
+$_SESSION['order'] = "1 Large Pizza with: Pepperoni, Green Olive, Jalepeno,
+					Bacon.  Plus one order of breadsticks.";
+$_SESSION['payMethod'] = "Cash";
+$_SESSION['emailCoupon'] = "None";
+
+
+
+
+echo"<div id='pizza'>Real User Validation<br/>";
+echo"Please confirm that you are human!<br/><br/>\n";
 echo "<div id='captcha'>";
 require 'captcha.php';
 echo "</div><p>WTF!?!?! I Can't Read This!<br/></p>
@@ -16,7 +31,12 @@ echo "</div><p>WTF!?!?! I Can't Read This!<br/></p>
 <input type=\"hidden\" name=\"pid\" value=\"validate\">
 </form></div>";
 //ob_end_flush();
-?>
+if ($_SESSION['captchaGood'] == 'true'){
+  $_SESSION['captchaGood'] = 'false';
+  //header("Location: emailConfirm.php");
+  ?>
+  <script language="JavaScript">
 
-</body>
-</html>
+window.location = 'http://localhost:8080/PizzaProject/emailConfirm.php';
+</script>
+<?php } ?>

@@ -7,18 +7,7 @@ session_start();
 function cleanUserData($value){  // use this to clean values prior to query
 	return mysql_real_escape_string(trim(strip_tags($value)));
 }  
-/*
- * Sample - Temporary Data for testing:
- */
-$_SESSION['firstName'] = "Tony";
-$_SESSION['lastName'] = "Gaudio";
-$_SESSION['address'] = "123 Main Street";
-$_SESSION['billingAddress'] = "321 South Main Street";
-$_SESSION['email'] = "wireman131@wireman131.com";
-$_SESSION['order'] = "1 Large Pizza with: Pepperoni, Green Olive, Jalepeno,
-					Bacon.  Plus one order of breadsticks.";
-$_SESSION['payMethod'] = "Cash";
-$_SESSION['emailCoupon'] = "None";
+
 date_default_timezone_set('America/Detroit');
 /*
  * perhaps calling Date once will be enough

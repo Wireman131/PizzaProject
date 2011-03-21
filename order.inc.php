@@ -13,7 +13,7 @@
 */
 ?>
 <div id='container'>
-<form name='pizza' action='index.php' method="post" onsubmit="return verifyCustomerInfo();">
+<form name='pizza' action='index.php?pid=validate' method="post" onsubmit="return verifyCustomerInfo();">
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
   <table width="200" border="0">

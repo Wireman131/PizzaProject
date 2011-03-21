@@ -69,6 +69,7 @@ set_include_path('.'.PATH_SEPARATOR.implode(PATH_SEPARATOR, array(
 
 <?php 
 	include('content.php');
+	
 ?>
 
 </body>

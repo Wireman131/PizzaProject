@@ -4,7 +4,7 @@
  */
 @session_start();
 //ob_start();
-print_r($_POST);
+//print_r($_POST);
 
 $image="default";
 error_reporting(E_ALL ^ E_NOTICE);
@@ -44,18 +44,14 @@ sLNea3JU8i95cQGgQOsujwzc2TbXcAkM7zjUTKoeq9Q=
   
   
   if($image == $solution){
-   echo "success!";
-  ob_end_clean();
-   ob_start();
-   header("Location: emailConfirm.php");
-   ob_end_flush();
-    
+   $_SESSION['captchaGood'] = "true";
+   //echo "success!";    
      }else{
     echo"Fail!";
-    ob_end_flush();
+   
   }
 }
 
-ob_end_flush();
+
 
 ?>
