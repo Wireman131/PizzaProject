@@ -20,8 +20,12 @@ $_SESSION['order'] = "1 Large Pizza with: Pepperoni, Green Olive, Jalepeno,
 $_SESSION['payMethod'] = "Cash";
 $_SESSION['emailCoupon'] = "None";
 date_default_timezone_set('America/Detroit');
-$_SESSION['timeOfOrder'] = date("l, F j, Y, g:i a");
-$_SESSION['deliveryTime'] = date("l, F j, Y, g:i a", mktime()+(30*60));
+/*
+ * perhaps calling Date once will be enough
+*/
+$timeOfOrder = Date("l, F j, Y, g:i a");
+$_SESSION['timeOfOrder'] = $timeOfOrder;
+$_SESSION['deliveryTime'] = $timeOfOrder + 30 * 60;
 
 function goBack(){
   //echo"Fail! <br/> Form Values Are No Good!!<br/>Try Again!";

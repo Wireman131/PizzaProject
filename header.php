@@ -1,15 +1,37 @@
 <?php
-/*
-	* Description Short 
-	*
-	* Description Long
-	*
-	* @author			david
-	* @category   
-	* @package    
-	* @version    
-	* @link       git@github.com:
-	* @since      Mar 11, 2011-2011
+/*                   ____
+ *             _,--~~    ~~--._
+ *           ,/'  m%%%%%%=@%%m  `\.
+ *          /' m%%o(_)%%o%%%%o%%m `\
+ *        /' %%@=%o%%%o%%%o%(_)o%%% `\
+ *       /  %o%%%%%=@%%%(_)%%o%%@=%%  \
+ *      |  (_)%(_)%%o%%%o%%%%=@(_)%%%  |
+ *      | %%o%%%%o%%%(_)%%o%%o%%%%o%%% |
+ *      | %%o%(_)%%%  o%(_)%%%o%%o%o%% |
+ *      |  (_)%%=@    %o%o%%(_)%o(_)%  |
+ *  	   \  ~%%o      %o%=@%%o%%@%%o%~ /
+ *		    \ .         %%o%(_)%%(_)o~ ,/
+ *			             _)%o%%(_)%~   _/
+ *	                 %%%o%%%%%~~_/'
+ *                   ..____,,--'
+ *            /\
+ *           /  \
+ *            ||
+ *             \\_ 
+ *              -- http://www.ascii-art.de/ascii/pqr/pizza.txt
+ *
+ *
+ * 
+ * Description Short
+ *
+ * Description Long
+ *
+ * @author			david
+ * @category   
+ * @package    
+ * @version    
+ * @link       git@github.com:
+ * @since      Mar 11, 2011-2011
 */
 ?>
 
