@@ -1,5 +1,17 @@
 @charset "utf-8";
-/* CSS Document */
+/*
+  * CSS for Pizza Project
+  *
+  * Description Long
+  *
+  * @author     Tony Gaudio, David Sullivan
+  * @category   ANM293
+  * @package    PizzaProject
+  * @version    1
+  * @link       git@github.com:Wireman131/PizzaProject
+  * @link       git@github.com:teamsullivango/PizzaProject
+  * @since      Mar 11, 2011-2011
+*/
 body	{
 	background-color:#C00;
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;

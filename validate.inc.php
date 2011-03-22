@@ -1,9 +1,17 @@
 <?php
 /*
- * This simulates the "Pizza Order Form" page. 
- * Replace with the actual code..
- * 
- */
+	* Validate that user is human - captcha container 
+	*
+	* Description Long
+	*
+	* @author			Tony Gaudio, David Sullivan
+	* @category   ANM293
+	* @package    PizzaProject
+	* @version    1
+	* @link				git@github.com:Wireman131/PizzaProject
+	* @link       git@github.com:teamsullivango/PizzaProject
+	* @since      Mar 11, 2011-2011
+*/
 @session_start();
 //print_r($_POST);
 //echo "<br/><br/>";
@@ -40,7 +48,7 @@ if (!isset($_SESSION['orderTotal'])){
 if (isset($_POST['deliveryBox'])){
   $_SESSION['delivery'] = "Pizza will be delivered around ";
 } else {
-  $_SESSION['delivery'] = "Pizza will be ready for pickup ";
+  $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
 }
 
 //$_SESSION['address'] = "123 Main Street";

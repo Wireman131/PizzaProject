@@ -1,9 +1,18 @@
 <?php
 @session_start();
 /*
- * Pull in all session variables that were set on the order form sucess page.
- */
-
+	* Swiftmailer email notification of order
+	*
+	* Description Long
+	*
+	* @author			Tony Gaudio, David Sullivan
+	* @category   ANM293
+	* @package    PizzaProject
+	* @version    1
+	* @link				git@github.com:Wireman131/PizzaProject
+	* @link       git@github.com:teamsullivango/PizzaProject
+	* @since      Mar 11, 2011-2011
+*/
 function cleanUserData($value){  // use this to clean values prior to query
 	return mysql_real_escape_string(trim(strip_tags($value)));
 }  
@@ -32,10 +41,10 @@ timeOfOrder
 deliveryTime
 */
 
-print_r($_SESSION);
+//print_r($_SESSION);
 include 'emailBody.php';
 
-exit(); // temporary block of the emailer for testing purposes
+//exit(); // temporary block of the emailer for testing purposes
 
 /*
  * This is where the SwiftMailer will work it's magic and compose a HTML based 
@@ -78,7 +87,7 @@ $headers->addTextHeader('ANM293', 'CNM-270');
 /*
  * Set the subject of the message.
  */
-$message->setSubject('Tony Gaudio, SWIFT Mailer 4.0.6');
+$message->setSubject('Tony Gaudio, Pizza Order Confirmation');
 
 /*
  * Set a From: address including a name - need to use array if more than one
@@ -91,7 +100,8 @@ $message->setReplyTo(array('tonyforschool@gmail.com' => 'Tony Gaudio'));
  * address, OR if you include a name.
  */
 $message->setTo(array(
-  'wireman131@chartermi.net' => 'Anthony Gaudio'));
+$_SESSION['email'] => $_SESSION['customerName']));
+  //'wireman131@chartermi.net' => 'Anthony Gaudio'));
 /*
  * Bounce path for messages that can not be delivered, or a Reply To address.
  */
@@ -99,11 +109,15 @@ $message->setReturnPath('tonyforschool@gmail.com');
 /*
  * Set the body of the message, followed by the format, in this case 'text/html'
  */
+
 $emailConfirm = "<img src='http://localhost:8080/PizzaProject/images/header.png' />";
-$emailConfirm .= "<hr><h3>Order Confirmation: " . $_SESSION['order'] . " </h3>";
+$emailConfirm .= "<hr><h3>Order Confirmation: " . $_SESSION['orderSummary'] . " </h3>";
 $emailConfirm .= "<h4>Time of order:" . $_SESSION['timeOfOrder'] . "</h4>";
-$emailConfirm .= "<h4>Estimated Time Of Delivery : " . $_SESSION['deliveryTime']
-. "<br/>";
+$emailConfirm .= "<h4>" . $_SESSION['delivery'] . $_SESSION['deliveryTime'] . "</h4><br/>";
+$emailConfirm .= "<h4>For : " . $_SESSION['customerName'] . "</h4><br/>";
+$emailConfirm .= "<h4>Please be ready to pay $" . $_SESSION['orderTotal'] . " with "
+	. $_SESSION['payMethod'] . "</h4><br/>";
+$emailConfirm .= "<h2>Thank You For Your Order!!</h2>";
 $message->setBody($emailConfirm, 'text/html');
 /*
  * Create result variable - assign it the result of the send method of the 

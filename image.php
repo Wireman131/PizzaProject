@@ -1,9 +1,19 @@
 <?php
 /* 
- * Code to create the CAPTCHA image
- * also creates the 'solution' to the CAPTCHA, encrypts it, and saves it to
- * a session variable. 
- */
+ 	* Code to create the CAPTCHA image
+ 	* also creates the 'solution' to the CAPTCHA, encrypts it, and saves it to
+ 	* a session variable. 
+	*
+	* Description Long
+	*
+	* @author			Tony Gaudio, David Sullivan
+	* @category   ANM293
+	* @package    PizzaProject
+	* @version    1
+	* @link				git@github.com:Wireman131/PizzaProject
+	* @link       git@github.com:teamsullivango/PizzaProject
+	* @since      Mar 11, 2011-2011
+*/
 session_start();
 function stringGen($length){
   $characters = "abcdefhkmnrstuvwxyz2345678";

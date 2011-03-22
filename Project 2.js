@@ -1,4 +1,42 @@
-﻿	var outputSize;
+﻿/*
+  * Javascript code for Pizza Project 
+  *
+  * Description Long
+  *
+  * @author     Tony Gaudio, David Sullivan
+  * @category   ANM293
+  * @package    PizzaProject
+  * @version    1
+  * @link       git@github.com:Wireman131/PizzaProject
+  * @link       git@github.com:teamsullivango/PizzaProject
+  * @since      Mar 11, 2011-2011
+*/
+
+//  ajax routine to reload captcha
+function newCaptcha(){
+  //  Create an XMLHttpRequest object
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+// Create the function to be executed when the server response is ready
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+      document.getElementById("captcha").innerHTML=xmlhttp.responseText;
+  }
+xmlhttp.open("GET","captcha.php" ,true);
+xmlhttp.send();
+  }
+}
+
+
+var outputSize;
 	var myOrderSummary;
 		
 	function sizer() { 
@@ -255,32 +293,4 @@ function tallyReset() {
 				tst();
 		}
 
-//  ajax routine to reload captcha
-
-function newCaptcha(){
-  //alert("WTF Holmes!");
-
-//  Create an XMLHttpRequest object
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-// Create the function to be executed when the server response is ready
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    
-    document.getElementById("captcha").innerHTML=xmlhttp.responseText;
-  }
-  
-
-xmlhttp.open("GET","captcha.php" ,true);
-xmlhttp.send();
-}
-}
 

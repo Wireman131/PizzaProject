@@ -1,6 +1,6 @@
 <?php
 /*
-	* Description Short 
+	* Index page - contains entire site 
 	*
 	* Description Long
 	*

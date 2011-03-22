@@ -1,6 +1,6 @@
 <?php
 /*
-	* Description Short 
+	* Pizza Order form page
 	*
 	* Description Long
 	*

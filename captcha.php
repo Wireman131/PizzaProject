@@ -1,7 +1,17 @@
 <?php
 /*
- * CAPTCHA form module - self contained
- */
+ 	* CAPTCHA form module - self contained
+	*
+	* Description Long
+	*
+	* @author			Tony Gaudio, David Sullivan
+	* @category   ANM293
+	* @package    PizzaProject
+	* @version    1
+	* @link				git@github.com:Wireman131/PizzaProject
+	* @link       git@github.com:teamsullivango/PizzaProject
+	* @since      Mar 11, 2011-2011
+*/
 @session_start();
 //ob_start();
 //print_r($_POST);
