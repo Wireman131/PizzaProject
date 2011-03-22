@@ -32,7 +32,7 @@ timeOfOrder
 deliveryTime
 */
 
-//print_r($_SESSION);
+print_r($_SESSION);
 include 'emailBody.php';
 
 exit(); // temporary block of the emailer for testing purposes

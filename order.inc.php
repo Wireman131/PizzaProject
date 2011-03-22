@@ -246,6 +246,8 @@
       </label></td>
     </tr>
     <tr><td colspan=2><input type="hidden" name="pid" value="validate">
+    									<input type="hidden" name="orderTotal" value="">
+    									<input type="hidden" name="orderSummary" value="">
   
     
     </td></tr>

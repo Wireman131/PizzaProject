@@ -1,12 +1,14 @@
 ﻿	var outputSize;
-	
+	var myOrderSummary;
 		
 	function sizer() { 
+	  myOrderSummary = "";
 	   // get pizza size - determined by which radio button is selected
 	for (var i = 0; i<4; i++) {
 			if (document.getElementById("pizzaSize_"+i).checked == true) {
 				var size = document.getElementById("pizzaSize_" +i).value;
 				//window.alert("You picked " + size + "  as your pizza size");
+				myOrderSummary = size + " Pizza, with ";
 				pricer(size);	}  // pass the value size to the pricer function
 								}
 	}
@@ -63,6 +65,11 @@ function pricer(size) {  // determine price of pie based on size
 				// Get the topping Name
 				var selectedToppingName = document.getElementById("topping_" +i).name;
 				//alert("Topping Name: "+ selectedToppingName);
+				if (toppingCount == 0){
+				  myOrderSummary += selectedToppingName;
+				} else {
+				  myOrderSummary += ", " + selectedToppingName;
+				}
 				// Get the topping Price
 				var selectedToppingPrice = document.getElementById("topping_"+i).value;
 				//alert("Selected Topping Price: "+ selectedToppingPrice);
@@ -172,6 +179,8 @@ function pricer(size) {  // determine price of pie based on size
 			//window.alert("Email address was:"+ email+passThru);
 					} 
 		if (passThru == 5) {
+		  pizza.orderTotal.value = zz;
+		  pizza.orderSummary.value = myOrderSummary;
 		  return true;
 		 // alert("code to unhide the captcha box");
 		  //document.pizza.submit();
