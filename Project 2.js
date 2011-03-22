@@ -1,13 +1,11 @@
-﻿  	
-	//var piePrice = 1
-	var outputSize;
+﻿	var outputSize;
 	
 		
 	function sizer() { 
 	   // get pizza size - determined by which radio button is selected
 	for (var i = 0; i<4; i++) {
 			if (document.getElementById("pizzaSize_"+i).checked == true) {
-				var size = document.getElementById("pizzaSize_" +i).value
+				var size = document.getElementById("pizzaSize_" +i).value;
 				//window.alert("You picked " + size + "  as your pizza size");
 				pricer(size);	}  // pass the value size to the pricer function
 								}
@@ -86,7 +84,7 @@ function pricer(size) {  // determine price of pie based on size
 		//alert("Topper Function");
 		// check to see if delivery is checked if so, add 2 bucks to the toppingTotal and output delivery tag and price
 		if (document.getElementById("deliveryBox").checked == true) {
-		toppingTotal = (2 + parseFloat(toppingTotal))
+		toppingTotal = (2 + parseFloat(toppingTotal));
 		document.getElementById("deliveryYes").innerHTML = "Delivery";
 		document.getElementById("deliveryYesPrice").innerHTML = "2.00";
 		}
@@ -146,6 +144,14 @@ function pricer(size) {  // determine price of pie based on size
 			passThru += 1;
 			//window.alert("Address was:" + address + passThru);
 				}
+		if (document.getElementById("billAddress").value == "") {
+      window.alert("You must enter your billing address!");
+      //document.getElementById("customerAddress").focus();
+      return false;
+    } else {
+       passThru += 1;
+      //window.alert("Address was:" + address + passThru);
+        }
 		if (document.getElementById("customerPhone").value == "") {
 			window.alert("You must enter your phone number!");
 			//document.getElementById("customerPhone").focus();
@@ -165,7 +171,7 @@ function pricer(size) {  // determine price of pie based on size
 			passThru += 1;
 			//window.alert("Email address was:"+ email+passThru);
 					} 
-		if (passThru == 4) {
+		if (passThru == 5) {
 		  return true;
 		 // alert("code to unhide the captcha box");
 		  //document.pizza.submit();

@@ -131,6 +131,10 @@ table {
   background-color:#000;
 }
 #confirmEmail #content {
+	border:3px solid black;
+  border-radius:15px;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
   position:relative;
   width:750px;
   padding:25px;
@@ -139,6 +143,10 @@ table {
   background-color:#0C6;
 }
 #confirmEmail #orderSummary {
+	border:3px solid black;
+	border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
   font-family:georgia;
   font-weight:bold;
   width:600px;

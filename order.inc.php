@@ -13,6 +13,7 @@
 */
 ?>
 <div id='container'>
+<div id='headerImage'><img src='images/header.png' /></div>
 <form name='pizza' action='index.php?pid=validate' method="post" onsubmit="return verifyCustomerInfo();">
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
@@ -177,7 +178,24 @@
   </div>
   <br /> <br /> <br /> <br />
   <div id="OrderName">
- 
+ <h3>Payment Method</h3>
+  <table width="200" border="0">
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="cash" value="Cash" checked" />
+        Cash</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="creditcard" value="Credit Card" " />
+        Credit Card</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="check" value="Check" " />
+        Check</label></td>
+    </tr>
+  </table>
   <table width="390" border="0">
     <tr>
       <td> <label>Name
@@ -190,6 +208,11 @@
       </label></td>
     </tr>
     <tr>
+      <td><label>Billing Address
+        <input type="text" name="billingAddress" id="billAddress" />
+      </label></td>
+    </tr>
+    <tr>
       <td><label>Phone Number 
         <input type="text" name="phone" id="customerPhone" />
       </label></td>
@@ -197,6 +220,11 @@
     <tr>
       <td><label>Email Address
         <input type="text" name="email" id="customerEmail" /><input type="hidden" name="pid" value="validate">
+      </label></td>
+    </tr>
+    <tr>
+      <td> <label>Coupon Code
+        <input type="text" name="couponCode" id="couponCode"  />
       </label></td>
     </tr>
   </table>

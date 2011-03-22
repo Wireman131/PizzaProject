@@ -20,7 +20,7 @@ if (!isset($_SESSION['address'])){
 } 
 if (!isset($_SESSION['billingAddress'])){
   $_SESSION['billingAddress'] = $_POST['billingAddress'];
-} 
+}
 if (!isset($_SESSION['email'])){
   $_SESSION['email'] = $_POST['email'];
 } 
@@ -28,23 +28,19 @@ if (!isset($_SESSION['payMethod'])){
   $_SESSION['payMethod'] = $_POST['payMethod'];
 }
 if (!isset($_SESSION['emailCoupon'])){
-  $_SESSION['emailCoupon'] = $_POST['emailCoupon'];
+  $_SESSION['emailCoupon'] = $_POST['couponCode'];
 }
 if (!isset($_SESSION['orderSummary'])){
   $_SESSION['orderSummary'] = $_POST['orderSummary'];
-}
-
-if (isset($_POST['orderTotal'])){
+} 
+if (!isset($_SESSION['orderTotal'])){
   $_SESSION['orderTotal'] = $_POST['orderTotal'];
-} else {
-  $_SESSION['orderTotal'] = 80.79;
 }
-
 
 if (isset($_POST['deliveryBox'])){
   $_SESSION['delivery'] = "Pizza will be delivered around ";
 } else {
-  $_SESSION['delivery'] = "Pizza will be ready for pickup at ";
+  $_SESSION['delivery'] = "Pizza will be ready for pickup ";
 }
 
 //$_SESSION['address'] = "123 Main Street";

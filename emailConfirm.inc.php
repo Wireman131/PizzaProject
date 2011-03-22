@@ -32,7 +32,7 @@ timeOfOrder
 deliveryTime
 */
 
-
+//print_r($_SESSION);
 include 'emailBody.php';
 
 exit(); // temporary block of the emailer for testing purposes
@@ -99,7 +99,7 @@ $message->setReturnPath('tonyforschool@gmail.com');
 /*
  * Set the body of the message, followed by the format, in this case 'text/html'
  */
-$emailConfirm = "<h1 style=\"color:red;text-align:center;\">Tony's Pizza!</h1>";
+$emailConfirm = "<img src='http://localhost:8080/PizzaProject/images/header.png' />";
 $emailConfirm .= "<hr><h3>Order Confirmation: " . $_SESSION['order'] . " </h3>";
 $emailConfirm .= "<h4>Time of order:" . $_SESSION['timeOfOrder'] . "</h4>";
 $emailConfirm .= "<h4>Estimated Time Of Delivery : " . $_SESSION['deliveryTime']
@@ -143,7 +143,7 @@ if (!$result)
   trigger_error('Send Error Message: ' . $e,E_USER_NOTICE);
   }
   
-ob_end_flush();
+
 
 
 
