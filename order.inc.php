@@ -181,12 +181,12 @@
   <table width="390" border="0">
     <tr>
       <td> <label>Name
-        <input type="text" name="name" id="customerName"  />
+        <input type="text" name="customerName" id="customerName"  />
       </label></td>
     </tr>
     <tr>
       <td><label>Address
-        <input type="text" name="email" id="customerAddress" />
+        <input type="text" name="address" id="customerAddress" />
       </label></td>
     </tr>
     <tr>

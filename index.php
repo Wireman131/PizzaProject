@@ -16,6 +16,7 @@
 /*
  * setting the timezone is important: emails are temporal
  */
+ob_start();
 date_default_timezone_set('America/Detroit');
 
 /*

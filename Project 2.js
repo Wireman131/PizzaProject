@@ -133,7 +133,7 @@ function pricer(size) {  // determine price of pie based on size
 			return false;
 			
 		} else {
-			name = document.getElementById("customerName").value;
+			var customerName = document.getElementById("customerName").value;
 			passThru += 1;
 			//window.alert("Name was :" + name + passThru);
 				}

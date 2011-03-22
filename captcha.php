@@ -20,8 +20,9 @@ if(!isset($_POST['submit'])){
   echo"<tr><td><input type=\"submit\" name=\"submit\" value=
   		\"Check CAPTCHA\"></td><td>&nbsp;</td></tr>\n";
   echo"</table></form>\n";
-  
+  ob_end_flush();
 }else{
+  ob_end_clean();
   $image = $_POST['image'];
   
  $privateKey = "-----BEGIN RSA PRIVATE KEY-----
@@ -44,10 +45,9 @@ sLNea3JU8i95cQGgQOsujwzc2TbXcAkM7zjUTKoeq9Q=
   
   
   if($image == $solution){
-   $_SESSION['captchaGood'] = "true";
-   //echo "success!";    
+   header("Location: index.php?pid=emailConfirm");    
      }else{
-    echo"Fail!";
+   header("Location: index.php?pid=validate");
    
   }
 }

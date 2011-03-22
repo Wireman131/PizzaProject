@@ -110,3 +110,46 @@ table {
 	background-color:#090;
 	color:black;
 	}
+	
+	#confirmEmail #container {
+  position:relative;
+  width:1000px;
+  min-height:800px;
+  background-color:#C00;
+  color:black;
+  margin:0 auto;
+}
+#confirmEmail #header {
+  width:100%;
+  min-height:150px;
+  background-color:#090;
+  text-align:center;
+}
+#confirmEmail #hElement {
+  width:100%;
+  min-height:25px;
+  background-color:#000;
+}
+#confirmEmail #content {
+  position:relative;
+  width:750px;
+  padding:25px;
+  min-height:400px;
+  margin:100px;
+  background-color:#0C6;
+}
+#confirmEmail #orderSummary {
+  font-family:georgia;
+  font-weight:bold;
+  width:600px;
+  padding:50px;
+  margin:25px;
+  background-color:#FF9;
+}
+#confirmEmail #footer {
+  width:1000px;
+  height:25px;
+  margin:0 auto;
+  color:white;
+  background-color:black;
+  text-align:center;
