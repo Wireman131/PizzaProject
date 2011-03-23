@@ -16,20 +16,25 @@
  * Begin jQuery driven event handling on page read, I think
  * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
  */
+/*window.alert("I can't figure out why this isn't working");
+document.getElementById("pizzaSize_0").addEventListener(
+	"click",
+	function(){
+			alert("did this actually work?");
+		},
+	true	
+);
+*/
+
 $("toppingOutput_0").text("jquery fired off this text");
 
 
 $(function(){
 	//alert("jquery is on!");
-	 window.alert("I can't figure out why this isn't working");
-/*
-$("input").change(
+	$("input").change(
 		function(){
 			alert("finally! it worked!");
 		});
-*/
-
-
 });	//end of jquery ready
 
 
