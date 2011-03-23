@@ -12,6 +12,27 @@
   * @since      Mar 11, 2011-2011
 */
 
+/*
+ * Begin jQuery driven event handling on page read, I think
+ * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
+ */
+$("toppingOutput_0").text("jquery fired off this text");
+
+
+$(function(){
+	//alert("jquery is on!");
+	 window.alert("I can't figure out why this isn't working");
+/*
+$("input").change(
+		function(){
+			alert("finally! it worked!");
+		});
+*/
+
+
+});	//end of jquery ready
+
+
 //  ajax routine to reload captcha
 function newCaptcha(){
   //  Create an XMLHttpRequest object
@@ -34,19 +55,6 @@ xmlhttp.open("GET","captcha.php" ,true);
 xmlhttp.send();
   }
 }
-
-/*
- * Begin jQuery driven event handling on page read, I think
- * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
- */
-$(function(){
-	alert("jquery is on!");
-	$("#pizzaSize_0").change(
-		function(){
-			alert("finally! it worked!");
-		});
-});	
-
 
 var outputSize;
 	var myOrderSummary;
