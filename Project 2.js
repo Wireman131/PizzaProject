@@ -35,6 +35,18 @@ xmlhttp.send();
   }
 }
 
+/*
+ * Begin jQuery driven event handling on page read, I think
+ * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
+ */
+$(function(){
+	alert("jquery is on!");
+	$("#pizzaSize_0").change(
+		function(){
+			alert("finally! it worked!");
+		});
+});	
+
 
 var outputSize;
 	var myOrderSummary;

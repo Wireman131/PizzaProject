@@ -20,7 +20,7 @@
   <table width="200" border="0">
     <tr>
       <td><label>
-        <input type="radio" name="pizzaSize" id="pizzaSize_0" value="Small" onchange="sizer()" onclick="sizer()" />
+			<input type="radio" name="pizzaSize" id="pizzaSize_0" value="Small" />
         Small</label></td>
       <td>$8.00</td>
     </tr>
