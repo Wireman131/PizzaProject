@@ -22,6 +22,7 @@ $(function(){
 	$("input").change(
 		function(){
 			sizer();
+			topper();
 		});
 });	//end of jquery ready
 
@@ -95,7 +96,6 @@ function pricer(size) {  // determine price of pie based on size
 		document.getElementById("tallyPiePrice").innerHTML = "&nbsp;";
 		return;
 	}
-	topper();
 }
 	var toppingTotal=0;
 	function topper() {
