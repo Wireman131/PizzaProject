@@ -62,6 +62,16 @@ h3  {
 	height:450px;
 }
 
+#tallyTable{
+	width : "400px";
+	border : "6px";
+  background-color : "#FFFF66";
+}
+
+#tallyTable td{
+	padding : "2px"; 
+}
+
 #OrderName input {
 	width:250px;
 	position:absolute;
