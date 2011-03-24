@@ -16,24 +16,12 @@
  * Begin jQuery driven event handling on page read, I think
  * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
  */
-/*window.alert("I can't figure out why this isn't working");
-document.getElementById("pizzaSize_0").addEventListener(
-	"click",
-	function(){
-			alert("did this actually work?");
-		},
-	true	
-);
-*/
-
-$("toppingOutput_0").text("jquery fired off this text");
-
 
 $(function(){
 	//alert("jquery is on!");
 	$("input").change(
 		function(){
-			alert("finally! it worked!");
+			sizer();
 		});
 });	//end of jquery ready
 
@@ -147,17 +135,14 @@ function pricer(size) {  // determine price of pie based on size
 				document.getElementById("toppingPrice_"+toppingCount).innerHTML = selectedToppingPrice;
 				
 				}
-				}
-				
-				
-				
+		}
 		//alert("Topper Function");
 		// check to see if delivery is checked if so, add 2 bucks to the toppingTotal and output delivery tag and price
 		if (document.getElementById("deliveryBox").checked == true) {
 		toppingTotal = (2 + parseFloat(toppingTotal));
 		document.getElementById("deliveryYes").innerHTML = "Delivery";
 		document.getElementById("deliveryYesPrice").innerHTML = "2.00";
-		}
+	}
 		
 		
 		
