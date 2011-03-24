@@ -23,6 +23,7 @@ $(function(){
 		function(){
 			sizer();
 			topper();
+			calcTotal();  //tally sheet total subtotal, then add sales tax format output
 		});
 });	//end of jquery ready
 
@@ -146,10 +147,9 @@ function pricer(size) {  // determine price of pie based on size
 		
 		
 		
-		tst();  //tally sheet total subtotal, then add sales tax format output
-	}
+		}
 	var zz; // global variable zz used for total 
-	function tst() {
+	function calcTotal() {
 		var w = parseFloat(toppingTotal);
 		//alert("variable w: "+w);
 		var x = parseFloat(piePrice) + w;
@@ -169,10 +169,6 @@ function pricer(size) {  // determine price of pie based on size
 	
 	
 	var name,address,phone,email; // declare 4 global variables so they can be used in popup
-	function processOrder() {
-	verifyCustomerInfo();}
-	//window.open ("http://www.javascript-coder.com","mywindow");		
-	//}
 	function verifyCustomerInfo() {
 	  //alert("here");
 	
@@ -180,7 +176,7 @@ function pricer(size) {  // determine price of pie based on size
 		// statements to validate user input
 		//window.alert("test");  // error checking tool
 		//window.alert(document.getElementById("customerName").value);
-		if (document.getElementById("customerName").value == "") {
+		$("#customerName").value == "") {
 			window.alert("You Must Enter Your Name!");
 			//document.getElementById("customerName").focus();
 			return false;
@@ -190,7 +186,7 @@ function pricer(size) {  // determine price of pie based on size
 			passThru += 1;
 			//window.alert("Name was :" + name + passThru);
 				}
-		if (document.getElementById("customerAddress").value == "") {
+		$("#customerAddress").value == "") {
 			window.alert("You must enter your address!");
 			//document.getElementById("customerAddress").focus();
 			return false;
@@ -199,7 +195,7 @@ function pricer(size) {  // determine price of pie based on size
 			passThru += 1;
 			//window.alert("Address was:" + address + passThru);
 				}
-		if (document.getElementById("billAddress").value == "") {
+		$("#billAddress").value == "") {
       window.alert("You must enter your billing address!");
       //document.getElementById("customerAddress").focus();
       return false;
@@ -207,7 +203,7 @@ function pricer(size) {  // determine price of pie based on size
        passThru += 1;
       //window.alert("Address was:" + address + passThru);
         }
-		if (document.getElementById("customerPhone").value == "") {
+		$("#customerPhone").value == "") {
 			window.alert("You must enter your phone number!");
 			//document.getElementById("customerPhone").focus();
 			return false;
@@ -217,7 +213,7 @@ function pricer(size) {  // determine price of pie based on size
 			//window.alert("Phone Number was:"+ phone +passThru);
 			
 		}
-		if (document.getElementById("customerEmail").value == "") {
+		$("#customerEmail").value == "") {
 			window.alert("You must enter your email address!");
 			//document.getElementById("customerEmail").focus();
 			return false;
