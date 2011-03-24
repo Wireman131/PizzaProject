@@ -26,19 +26,19 @@
     </tr>
     <tr>
       <td><label>
-        <input type="radio" name="pizzaSize" id="pizzaSize_1" value="Medium" onchange="sizer()" onclick="sizer()"/>
+        <input type="radio" name="pizzaSize" id="pizzaSize_1" value="Medium"  />
         Medium</label></td>
       <td>$10.00</td>
     </tr>
     <tr>
       <td><label>
-        <input type="radio" name="pizzaSize" id="pizzaSize_2" value="Large" onchange="sizer()" onclick="sizer()"/>
+        <input type="radio" name="pizzaSize" id="pizzaSize_2" value="Large" />
         Large</label></td>
       <td>$12.00</td>
     </tr>
     <tr>
       <td><label>
-        <input type="radio" name="pizzaSize" id="pizzaSize_3" value="Extra Large" onchange="sizer()" onclick="sizer()"/>
+        <input type="radio" name="pizzaSize" id="pizzaSize_3" value="Extra Large" />
         XL</label></td>
       <td>$14.00</td>
     </tr>
@@ -64,56 +64,56 @@
       </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Pepperoni" id="topping_0" value="1.25" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="Pepperoni" id="topping_0" value="1.25" />
       Pepperoni </label></td>
       <td>$1.25</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Mushrooms" id="topping_1" value=".50" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="Mushrooms" id="topping_1" value=".50" />
       Mushrooms</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Onions" id="topping_2" value=".75" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="Onions" id="topping_2" value=".75" />
       Onions</label></td>
       <td>$.75</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Green Peppers" id="topping_3" value=".90" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="Green Peppers" id="topping_3" value=".90" />
       Green Peppers</label></td>
       <td>$.90</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Sausage" id="topping_4" value="1.40" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="Sausage" id="topping_4" value="1.40" />
       Sausage</label></td>
       <td>$1.40</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Bacon" id="topping_5" value="1.75" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="Bacon" id="topping_5" value="1.75" />
       Bacon</label></td>
       <td>$1.75</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Jalapeno" id="topping_6" value=".55" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="Jalapeno" id="topping_6" value=".55" />
       Jalapeno</label></td>
       <td>$.55</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Green Olive" id="topping_7" value="1.00" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="Green Olive" id="topping_7" value="1.00" />
       Green Olive</label></td>
       <td>$1.00</td>
     </tr>
     <tr>
       <td>Delivery $2.00 <span class='smaller'>- Within 5 Mile Radius Of Store</span></td>
       <td><label>
-        <input type="checkbox" name="deliveryBox" id="deliveryBox" onchange="sizer()" onclick="sizer()"/>
+        <input type="checkbox" name="deliveryBox" id="deliveryBox" />
         Yes</label></td>
     </tr>
     <tr>
