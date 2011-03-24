@@ -58,7 +58,7 @@ xmlhttp.onreadystatechange=function()
   }
 xmlhttp.open("GET","captcha.php" ,true);
 xmlhttp.send();
-  }
+  };
 }
 
 var outputSize;
