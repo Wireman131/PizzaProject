@@ -38,5 +38,8 @@
 <link rel="stylesheet" type="text/css" href="base.css"/>    
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Advanced PHP Pizza Shop</title>
-<script src="/library/jQuery/1.5.1/jquery.js" type="text/javascript"></script>
+<script src="library/jquery/1.5.1/jquery.js" type="text/javascript"></script>
 <script src="Project 2.js" type="text/javascript"></script>
+<!--<script type="text/javascript">alert("test");</script>-->
+
+
