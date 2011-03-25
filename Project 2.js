@@ -16,14 +16,43 @@
  * Begin jQuery driven event handling on page read, I think
  * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
  */
+var couponValue;
+function couponCheck(){
+  //alert('Coupon Checker');
+  couponCode = document.getElementById("couponCode").value;
+  switch(couponCode)
+  {
+  case "twitter2":
+  couponValue = -2;
+  document.getElementById("tallyCouponValue").innerHTML = "<strong>-$2.00</strong>";
+    break;
+  case "freepizza":
+  couponValue = 2;
+  document.getElementById("tallyCouponValue").innerHTML = "<strong>+$2.00</strong>";
+    break;
+  case "springbreak":
+    couponValue = -1;
+    document.getElementById("tallyCouponValue").innerHTML = "<strong>-$1.00</strong>";
+    break;
+  default:
+    couponValue = 0;
+    document.getElementById("tallyCouponValue").innerHTML = "<strong>$0.00</strong>";
+  }
+  return;
+}
+      
+  
 
 $(function(){
 	//alert("jquery is on!");
 	$("input").change(
 		function(){
-			sizer();
+			//alert('here');
+		  sizer();
 			topper();
-		});
+			couponCheck();
+			tst();
+				});
 });	//end of jquery ready
 
 
@@ -146,7 +175,7 @@ function pricer(size) {  // determine price of pie based on size
 		
 		
 		
-		tst();  //tally sheet total subtotal, then add sales tax format output
+		//tst();  //tally sheet total subtotal, then add sales tax format output
 	}
 	var zz; // global variable zz used for total 
 	function tst() {

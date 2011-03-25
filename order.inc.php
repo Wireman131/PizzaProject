@@ -166,7 +166,11 @@
     <td id="deliveryYesPrice">&nbsp;</td>
   </tr>
   <tr>
-    <td><i><strong>Sales Tax <span class="smaller">(Michigan 6% Rate)</span></strong></i></td>
+  	<td><em><strong>Coupon Value</strong></em></td>
+  	<td id="tallyCouponValue">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><em><strong>Sales Tax <span class="smaller">(Michigan 6% Rate)</span></strong></em></td>
     <td id="tallySalesTax">&nbsp;</td>
   </tr>
   <tr>
