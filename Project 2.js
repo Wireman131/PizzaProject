@@ -43,17 +43,22 @@ function couponCheck(){
       
   
 
+
+//alert("javascript file is here");
 $(function(){
-	//alert("jquery is on!");
+//alert("jquery is on!");
 	$("input").change(
 		function(){
 			//alert('here');
 		  sizer();
 			topper();
 			couponCheck();
-			tst();
+		
 				});
-});	//end of jquery ready
+			calcTotal();  //tally sheet total subtotal, then add sales tax format output
+		});
+
+
 
 
 //  ajax routine to reload captcha
@@ -172,13 +177,10 @@ function pricer(size) {  // determine price of pie based on size
 		document.getElementById("deliveryYes").innerHTML = "Delivery";
 		document.getElementById("deliveryYesPrice").innerHTML = "2.00";
 	}
-		
-		
-		
-		//tst();  //tally sheet total subtotal, then add sales tax format output
-	}
+			}
+	
 	var zz; // global variable zz used for total 
-	function tst() {
+	function calcTotal() {
 		var w = parseFloat(toppingTotal);
 		//alert("variable w: "+w);
 		var x = parseFloat(piePrice) + w;
@@ -198,70 +200,67 @@ function pricer(size) {  // determine price of pie based on size
 	
 	
 	var name,address,phone,email; // declare 4 global variables so they can be used in popup
-	function processOrder() {
-	verifyCustomerInfo();}
-	//window.open ("http://www.javascript-coder.com","mywindow");		
-	//}
 	function verifyCustomerInfo() {
-	  //alert("here");
+	  alert("verify customer info");
 	
-		var passThru = 0;
+		//var //passThru = 0;
 		// statements to validate user input
 		//window.alert("test");  // error checking tool
 		//window.alert(document.getElementById("customerName").value);
-		if (document.getElementById("customerName").value == "") {
+		if ($("#customerName").value == "") {
 			window.alert("You Must Enter Your Name!");
 			//document.getElementById("customerName").focus();
 			return false;
+			break;
 			
 		} else {
 			var customerName = document.getElementById("customerName").value;
-			passThru += 1;
-			//window.alert("Name was :" + name + passThru);
+			//passThru += 1;
+			//window.alert("Name was :" + name + //passThru);
 				}
-		if (document.getElementById("customerAddress").value == "") {
+		if ($("#customerAddress").value == "") {
 			window.alert("You must enter your address!");
 			//document.getElementById("customerAddress").focus();
 			return false;
 		} else {
 			var address = document.getElementById("customerAddress").value;
-			passThru += 1;
-			//window.alert("Address was:" + address + passThru);
+			//passThru += 1;
+			//window.alert("Address was:" + address + //passThru);
 				}
-		if (document.getElementById("billAddress").value == "") {
+		if ($("#billAddress").value == "") {
       window.alert("You must enter your billing address!");
       //document.getElementById("customerAddress").focus();
       return false;
     } else {
-       passThru += 1;
-      //window.alert("Address was:" + address + passThru);
+       //passThru += 1;
+      //window.alert("Address was:" + address + //passThru);
         }
-		if (document.getElementById("customerPhone").value == "") {
+		if ($("#customerPhone").value == "") {
 			window.alert("You must enter your phone number!");
 			//document.getElementById("customerPhone").focus();
 			return false;
 		} else {
 			var phone = document.getElementById("customerPhone").value;
-			passThru += 1;
-			//window.alert("Phone Number was:"+ phone +passThru);
+			//passThru += 1;
+			//window.alert("Phone Number was:"+ phone +//passThru);
 			
 		}
-		if (document.getElementById("customerEmail").value == "") {
+		if ($("#customerEmail").value == "") {
 			window.alert("You must enter your email address!");
 			//document.getElementById("customerEmail").focus();
 			return false;
 		} else {
 			var email = document.getElementById("customerEmail").value;
-			passThru += 1;
-			//window.alert("Email address was:"+ email+passThru);
+			//passThru += 1;
+			//window.alert("Email address was:"+ email+//passThru);
 					} 
-		if (passThru == 5) {
+		//if (//passThru == 5) {
 		  pizza.orderTotal.value = zz;
 		  pizza.orderSummary.value = myOrderSummary;
 		  return true;
 		 // alert("code to unhide the captcha box");
 		  //document.pizza.submit();
-		} 
+		//} 
 			
 	}
 			

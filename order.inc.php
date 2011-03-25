@@ -186,7 +186,7 @@
   <table width="200" border="0">
     <tr>
       <td><label>
-        <input type="radio" name="payMethod" id="cash" value="Cash" checked" />
+        <input type="radio" name="payMethod" id="cash" value="Cash" checked />
         Cash</label></td>
     </tr>
     <tr>
