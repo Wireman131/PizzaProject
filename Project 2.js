@@ -16,33 +16,6 @@
  * Begin jQuery driven event handling on page read, I think
  * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
  */
-var couponValue;
-function couponCheck(){
-  //alert('Coupon Checker');
-  couponCode = document.getElementById("couponCode").value;
-  switch(couponCode)
-  {
-  case "twitter2":
-  couponValue = -2;
-  document.getElementById("tallyCouponValue").innerHTML = "<strong>-$2.00</strong>";
-    break;
-  case "freepizza":
-  couponValue = 2;
-  document.getElementById("tallyCouponValue").innerHTML = "<strong>+$2.00</strong>";
-    break;
-  case "springbreak":
-    couponValue = -1;
-    document.getElementById("tallyCouponValue").innerHTML = "<strong>-$1.00</strong>";
-    break;
-  default:
-    couponValue = 0;
-    document.getElementById("tallyCouponValue").innerHTML = "<strong>$0.00</strong>";
-  }
-  return;
-}
-      
-  
-
 
 //alert("javascript file is here");
 $(function(){
@@ -53,10 +26,11 @@ $(function(){
 		  sizer();
 			topper();
 			couponCheck();
-		
-				});
 			calcTotal();  //tally sheet total subtotal, then add sales tax format output
+				});
+			
 		});
+
 
 
 
@@ -179,11 +153,36 @@ function pricer(size) {  // determine price of pie based on size
 	}
 			}
 	
+	var couponValue;
+	function couponCheck(){
+	  //alert('Coupon Checker');
+	  couponCode = document.getElementById("couponCode").value;
+	  switch(couponCode)
+	  {
+	  case "twitter2":
+	  couponValue = -2;
+	  document.getElementById("tallyCouponValue").innerHTML = "<strong>-$2.00</strong>";
+	    break;
+	  case "freepizza":
+	  couponValue = 2;
+	  document.getElementById("tallyCouponValue").innerHTML = "<strong>+$2.00</strong>";
+	    break;
+	  case "springbreak":
+	    couponValue = -1;
+	    document.getElementById("tallyCouponValue").innerHTML = "<strong>-$1.00</strong>";
+	    break;
+	  default:
+	    couponValue = 0;
+	    document.getElementById("tallyCouponValue").innerHTML = "<strong>$0.00</strong>";
+	  }
+	  return;
+	}
+	
 	var zz; // global variable zz used for total 
 	function calcTotal() {
 		var w = parseFloat(toppingTotal);
 		//alert("variable w: "+w);
-		var x = parseFloat(piePrice) + w;
+		var x = (parseFloat(piePrice) + w) + couponValue;
 		var y = x * .06;
 		
 		//alert("variable y: "+y);
@@ -201,7 +200,7 @@ function pricer(size) {  // determine price of pie based on size
 	
 	var name,address,phone,email; // declare 4 global variables so they can be used in popup
 	function verifyCustomerInfo() {
-	  alert("verify customer info");
+	  //alert("verify customer info");
 	
 		//var //passThru = 0;
 		// statements to validate user input
@@ -211,7 +210,7 @@ function pricer(size) {  // determine price of pie based on size
 			window.alert("You Must Enter Your Name!");
 			//document.getElementById("customerName").focus();
 			return false;
-			break;
+
 			
 		} else {
 			var customerName = document.getElementById("customerName").value;
@@ -257,6 +256,7 @@ function pricer(size) {  // determine price of pie based on size
 		//if (//passThru == 5) {
 		  pizza.orderTotal.value = zz;
 		  pizza.orderSummary.value = myOrderSummary;
+		  pizza.couponValue.value = couponValue;
 		  return true;
 		 // alert("code to unhide the captcha box");
 		  //document.pizza.submit();
@@ -264,58 +264,6 @@ function pricer(size) {  // determine price of pie based on size
 			
 	}
 			
-		  
-	var dt;	 
-	function calculateTime () {
-		var today=new Date();
-		var hr=today.getHours();
-		var mn=today.getMinutes();
-		//window.alert("value of mn:"+mn);
-		var s=today.getSeconds();
-		
-		mn = parseInt(mn)+ 30; // add 30 minutes to the current minutes
-			if (mn > 59) {  // if adding 30 minutes pushes the minutes past 59,  advance hour by one, and then subtract 60 minutes from the minute total
-			hr = parseInt(hr) + 1;
-			mn = parseInt(mn) - 60;
-				}
-		//window.alert("value of mn:"+mn);
-		
-		today.setMinutes(mn);
-		// add a zero in front of numbers<10
-		mn=checkTime(mn);
-		s=checkTime(s);
-		//convert from 24 hour format to am/pm
-		hr=hourConvert(hr);
-		dt = hr+":"+mn+":"+s;
-		//window.alert(dt);
-		return dt;
-		
-		}
-	
-	function checkTime(i) // this will add a zero if it the minutes or seconds are single digit numbers
-		{
-		if (i<10)
-		  {
-		  i="0" + i;
-		  }
-		return i;
-		}
-		
-	var AorP;	
-	function hourConvert(hr){  // determine AM or PM assign it to vabiable AorP 
-			
-			if (hr>=12) {
-   				 AorP=" PM"; 
-			} else {
-    			AorP=" AM"; }
-
-			if (hr>=13) {
-    			hr-=12; }
-			if (hr==0) {
-			    hr=12; }
-		return hr;
-		}
-		
 		
 function tallyReset() {
 		var size = "Reset";
@@ -328,7 +276,7 @@ function tallyReset() {
 				document.getElementById("deliveryYesPrice").innerHTML = "&nbsp;";
 				toppingTotal=0;
 				}
-				tst();
+				calcTotal();
 		}
 
 

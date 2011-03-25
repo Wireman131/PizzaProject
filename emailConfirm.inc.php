@@ -43,8 +43,8 @@ deliveryTime
 
 //print_r($_SESSION);
 include 'emailBody.php';
-
-//exit(); // temporary block of the emailer for testing purposes
+session_unset();
+exit(); // temporary block of the emailer for testing purposes
 
 /*
  * This is where the SwiftMailer will work it's magic and compose a HTML based 

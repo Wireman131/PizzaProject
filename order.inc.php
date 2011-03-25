@@ -11,6 +11,7 @@
 	* @link       git@github.com:Wireman131/PizzaProject
 	* @since      Mar 11, 2011-2011
 */
+session_unset();
 ?>
 <div id='container'>
 <div id='headerImage'><img src='images/header.png' /></div>
@@ -229,7 +230,7 @@
     <tr>
       <td> <label>Coupon Code
         <input type="text" name="couponCode" id="couponCode"  />
-      </label></td>
+         </label></td>
     </tr>
   </table>
   

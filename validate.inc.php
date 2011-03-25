@@ -38,6 +38,22 @@ if (!isset($_SESSION['payMethod'])){
 if (!isset($_SESSION['emailCoupon'])){
   $_SESSION['emailCoupon'] = $_POST['couponCode'];
 }
+$val = $_SESSION['emailCoupon'];
+
+//echo "<br/><h1>" . $val . "</h1>";
+if (!isset($_SESSION['couponValue'])){
+if($val == "twitter2"){
+   $_SESSION['couponValue'] = "Your Coupon equals 2 bucks off!<br/>";
+}else if ($val == "springbreak"){
+   $_SESSION['couponValue'] = "Your Coupon equals 1 buck off!</br>";
+}else if ($val == "freepizza"){
+   $_SESSION['couponValue'] = "Coupon equals add 2 bucks sucker!<br/>Only
+   a complete fool would think that we would give you FREE PIZZA!<br/>";
+} else {
+   $_SESSION['couponValue'] = "Coupon equals nothing";
+     }}
+     
+echo $_SESSION['couponValue'] . " is the coupon value.<br/>";
 if (!isset($_SESSION['orderSummary'])){
   $_SESSION['orderSummary'] = $_POST['orderSummary'];
 } 
@@ -50,17 +66,6 @@ if (isset($_POST['deliveryBox'])){
 } else {
   $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
 }
-
-//$_SESSION['address'] = "123 Main Street";
-//$_SESSION['billingAddress'] = "321 South Main Street";
-//$_SESSION['email'] = "wireman131@wireman131.com";
-//$_SESSION['order'] = "1 Large Pizza with: Pepperoni, Green Olive, Jalepeno,
-	//				Bacon.  Plus one order of breadsticks.";
-//$_SESSION['payMethod'] = "Cash";
-//$_SESSION['emailCoupon'] = "None";
-
-
-//print_r($_SESSION);
 
 echo"<div id='pizza'>Real User Validation<br/>";
 echo $_SESSION['customerName'] . " Please confirm that you are human!<br/><br/>\n";
