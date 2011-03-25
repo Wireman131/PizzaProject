@@ -15,6 +15,11 @@ session_unset();
 ?>
 <div id='container'>
 <div id='headerImage'><img src='images/header.png' /></div>
+<?php 
+/*
+ * Form submits to the validate.inc.php page if the client side validaton passes.
+ */
+?>
 <form name='pizza' action='index.php?pid=validate' method="post" onsubmit="return verifyCustomerInfo();">
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
@@ -260,3 +265,7 @@ session_unset();
  
 
 </form></div><br/>
+<?php 
+ob_flush();
+
+?>

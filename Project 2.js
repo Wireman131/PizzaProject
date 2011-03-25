@@ -19,8 +19,13 @@
 
 //alert("javascript file is here");
 $(function(){
-//alert("jquery is on!");
-	$("input").change(
+/*
+ * The following jQuery will look for the first element with the class name
+ * 'auto-focus' and cause focus to land there. i.e. The captcha form.
+ */
+  $('.auto-focus:first').focus();
+
+  $("input").change(
 		function(){
 			//alert('here');
 		  sizer();

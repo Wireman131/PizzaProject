@@ -26,9 +26,10 @@ if(!isset($_POST['submit'])){
   echo"<tr><td colspan=2 align=\"center\">
   <img src=\"image.php\"></td></tr>\n";
   //echo"<tr><td>". $_session['solution'] . "</td></tr>\n";
-  echo"<tr><td><input type=\"text\" name=\"image\"></td><td>&nbsp;</td></tr>\n";
+  echo"<tr><td><input type=\"text\" name=\"image\" class=\"auto-focus\"></td>
+  			<td>&nbsp;</td></tr>\n";
   echo"<tr><td><input type=\"submit\" name=\"submit\" value=
-  		\"Check CAPTCHA\"></td><td>&nbsp;</td></tr>\n";
+  		\"Check CAPTCHA\" ></td><td>&nbsp;</td></tr>\n";
   echo"</table></form>\n";
   ob_end_flush();
 }else{
