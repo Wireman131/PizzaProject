@@ -37,6 +37,7 @@ echo"Coupon Value : " . $_SESSION['couponValue'] . "<br/>";
 echo "Total amount for your order : $" . $_SESSION['orderTotal'] . "<br/>";
 echo "Thank You!! Please Visit Again!<br/>";
 echo "<a href='index.php'>Order Another</a>";
+ob_flush();
     ?>
     
     
