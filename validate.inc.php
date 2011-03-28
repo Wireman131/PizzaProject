@@ -13,6 +13,10 @@
 	* @since      Mar 11, 2011-2011
 */
 @session_start();
+//generate path to Respect Validation library
+$rvl = 'Respect' . SLASH . 'Validation' . SLASH . 'Validator.php';
+require('$rvl');
+
 //print_r($_POST);
 //echo "<br/><br/>";
 
@@ -20,6 +24,8 @@
 /*
  * Sample - Temporary Data for testing:
  */
+$formFields = Array('customerName','address','billingAddress','email','payMethod','emailCoupon','orderSummary','orderTotal','javascript','delivery');
+
 if (!isset($_SESSION['customerName'])){
   $_SESSION['customerName'] = $_POST['customerName'];
 } 
@@ -50,6 +56,9 @@ if (isset($_POST['deliveryBox'])){
 } else {
   $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
 }
+if (isset($_POST['javascript'])){
+  $_SESSION['javascript'] = $_POST['javascript'];
+
 
 //$_SESSION['address'] = "123 Main Street";
 //$_SESSION['billingAddress'] = "321 South Main Street";
@@ -60,8 +69,45 @@ if (isset($_POST['deliveryBox'])){
 //$_SESSION['emailCoupon'] = "None";
 
 
-//print_r($_SESSION);
+	//print_r($_SESSION);
+	//
+//if the javascript has been set, then the order has been placed
+if($_SESSION['javascript']==true){
+inputValidated();
+}
+else{
+	//construct namespace path
+	$rvnp = 'Respect' . SLASH . 'Validation' . SLASH . 'Validator.php';
+	use $rvnp as v;
 
+	//the javascript validation didn't fire, so we have to validate the user input.
+	// check name is a name
+	v::alpha()->validate(); 
+$_SESSION['customerName'])){
+  $_SESSION['customerName'] = $_POST['customerName'];
+} 
+$_SESSION['address'])){
+  $_SESSION['address'] = $_POST['address'];
+} 
+$_SESSION['billingAddress'])){
+  $_SESSION['billingAddress'] = $_POST['billingAddress'];
+}
+$_SESSION['email'])){
+  $_SESSION['email'] = $_POST['email'];
+} 
+
+	// check address and billing address are present
+	// check phone number is a number
+	// check email address is an email address
+	// if all check out call function that prints out the above
+	// else redirect back to the form
+	//
+}
+
+
+
+
+function inputValidated(){
 echo"<div id='pizza'>Real User Validation<br/>";
 echo $_SESSION['customerName'] . " Please confirm that you are human!<br/><br/>\n";
 echo "<div id='captcha'>";
@@ -70,5 +116,6 @@ echo "</div><p>WTF!?!?! I Can't Read This!<br/></p>
 <form><button type='submit' onclick=\"newCaptcha();return true\">Reload</button>
 <input type=\"hidden\" name=\"pid\" value=\"validate\">
 </form></div>";
+}
 
- ?>
+?>

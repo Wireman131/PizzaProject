@@ -120,7 +120,7 @@
     <tr>
       <td>Delivery $2.00 <span class='smaller'>- Within 5 Mile Radius Of Store</span></td>
       <td><label>
-        <input type="checkbox" name="deliveryBox" id="deliveryBox" />
+        <input type="checkbox" name="delivery" id="delivery" />
         Yes</label></td>
     </tr>
     <tr>
