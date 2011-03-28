@@ -13,9 +13,16 @@
   * @since      Mar 11, 2011-2011
 */
 
-label { width: 10em; float: left; }
-label.error { float: none; color: blue; padding-left: .5em; vertical-align: top; }
-
+label { 
+	width: 10em; 
+	float: left; 
+	}
+label.error { 
+	float: none; 
+	color: red; 
+	padding-left: .5em; 
+	vertical-align: top; 
+	}
 
 body	{
 	background-color:#C00;
@@ -39,12 +46,7 @@ h3  {
 	margin-left:auto;
 	margin-right:auto;
 }
-#pizza {
-	width:500px;
-	background-color:green;
-	margin:0 auto;
-	text-align:center;
-}
+
 #header  {
 	font-size:larger;
 	font-weight:bold;
@@ -62,25 +64,40 @@ h3  {
 
 #OrderTally  {
 	position:relative;
+	background-color:red;
 	float:left;
 	width:475px;
 	height:500px;
 }
 
-#OrderName input {
-	width:250px;
+#CustomerInfo input {
+	width:200px;
 	position:absolute;
-	right:35px;	
+	right:5px;	
 	}
-
-#OrderName {
+#leftContainer {
+	width:300px;
+	min-height:800px;
+	background-color:green;
+	float:left;
+}
+#topBox {
+	width:100%;
+	min-height:300px;
+	background-color:orange;
+	
+	}
+#CustomerInfo {
 	position:relative;
-	width:450px;
-	height:125px;
-	clear:both;
+	width:500px;
 	float: left;
 	}
-
+#Payment {
+	position:relative;
+	width:400px;
+	float:left;
+	text-align:center;
+}
 #pizzaImage {
 	width:200px;
 	height:200px;
@@ -90,8 +107,8 @@ h3  {
 }
 
 #PizzaSizes		{
-	width:225px;
-	height:400px;
+	width:200px;
+	
 	position: relative;
 	float:left;
 }
@@ -109,8 +126,8 @@ table {
 		}
 
 #Toppings	{
-	width:300px;
-	height:400px;
+	width:250px;
+	min-height:400px;
 	position:relative;
 	float:left;
 }

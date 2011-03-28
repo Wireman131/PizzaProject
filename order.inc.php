@@ -25,9 +25,68 @@ session_unset();
  */
 ?>
 <form name='pizza' class="cmxform" id="pizza" action='index.php?pid=validate' method="post" >
+<div id="topBox">
+<div id="CustomerInfo">
+<h3>Customer Info</h3>
+  <table width="300" border="0">
+    <tr>
+      <td> <label>Name
+        <input type="text" name="customerName" id="customerName"  class="required"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>Address
+        <input type="text" name="address" id="customerAddress" class="required"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>Billing Address
+        <input type="text" name="billingAddress" id="billAddress" class="required" />
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>Phone Number 
+        <input type="text" name="phone" id="customerPhone" class="required phoneUS"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td><label>Email Address
+				<input type="text" name="email" id="customerEmail" class="required email"/>
+		 </label></td>
+    </tr>
+    <tr>
+      <td> <label>Coupon Code
+        <input type="text" name="couponCode" id="couponCode"  />
+         </label></td>
+    </tr>
+  </table>
+  
+  </div>
+  <div id="Payment">
+ <h3>Payment Method</h3>
+  <table width="300" border="0">
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="cash" value="Cash" checked />
+        Cash</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="creditcard" value="Credit Card" " />
+        Credit Card</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="check" value="Check" " />
+        Check</label></td>
+    </tr>
+  </table>
+ </div>
+  </div> 
+<!-- make another Div to hold all this crap -->
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
-  <table width="200" border="0">
+  <table width="300" border="0">
     <tr>
       <td><label>
 			<input type="radio" name="pizzaSize" id="pizzaSize_0" value="Small" />
@@ -55,18 +114,13 @@ session_unset();
   </table>
   <div id="pizzaImage"><img src="images/pizza.png" alt="Pizza Image" width="200" height="150" /></div>
   </div>
+ 
   <div id="Toppings">
-    <h3>Choose Your Toppings
-      </h3>
+    <h3>Choose Your Toppings</h3>
     <table width="250" border="0">
       <tr>
-      <?php
-      /*
-       * @todo use css to fix td widths 
-       */ 
-      ?>
-      <td width="169">Toppings</td>
-      <td width="87">Cost</td>
+        <td>Toppings</td>
+        <td>Cost</td>
       </tr>
     <tr>
       <td>&nbsp;</td>
@@ -132,6 +186,8 @@ session_unset();
     </tr>
   </table>
   </div> 
+  
+  
   <div id="OrderTally">
     <h3>Your Order</h3>
     <table width="400" border="6" cellpadding="2" bgcolor="#FFFF66">
@@ -191,59 +247,8 @@ session_unset();
 
   </div>
   <br /> <br /> <br /> <br />
-  <div id="OrderName">
- <h3>Payment Method</h3>
-  <table width="200" border="0">
-    <tr>
-      <td><label>
-        <input type="radio" name="payMethod" id="cash" value="Cash" checked />
-        Cash</label></td>
-    </tr>
-    <tr>
-      <td><label>
-        <input type="radio" name="payMethod" id="creditcard" value="Credit Card" " />
-        Credit Card</label></td>
-    </tr>
-    <tr>
-      <td><label>
-        <input type="radio" name="payMethod" id="check" value="Check" " />
-        Check</label></td>
-    </tr>
-  </table>
-  <table width="390" border="0">
-    <tr>
-      <td> <label>Name
-        <input type="text" name="customerName" id="customerName"  class="required"/>
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Address
-        <input type="text" name="address" id="customerAddress" class="required"/>
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Billing Address
-        <input type="text" name="billingAddress" id="billAddress" class="required" />
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Phone Number 
-        <input type="text" name="phone" id="customerPhone" class="required phoneUS"/>
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Email Address
-				<input type="text" name="email" id="customerEmail" class="required email"/>
-		 </label></td>
-    </tr>
-    <tr>
-      <td> <label>Coupon Code
-        <input type="text" name="couponCode" id="couponCode"  />
-         </label></td>
-    </tr>
-  </table>
   
-  </div>
+ 
   
    <br />
 
