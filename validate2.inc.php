@@ -14,9 +14,11 @@
 */
 @session_start();
 //print_r($_POST);
+//echo "<br/><br/>";
+
+//echo "Welcome " . $_POST['name'];
 /*
- * Pull in posted variable from the form, test them, then set session variables
- * accrodingly. 
+ * Sample - Temporary Data for testing:
  */
 if (!isset($_SESSION['customerName'])){
   $_SESSION['customerName'] = $_POST['customerName'];
@@ -36,19 +38,6 @@ if (!isset($_SESSION['payMethod'])){
 if (!isset($_SESSION['emailCoupon'])){
   $_SESSION['emailCoupon'] = $_POST['couponCode'];
 }
-$val = $_SESSION['emailCoupon'];
-if (!isset($_SESSION['couponValue'])){
-if($val == "twitter2"){
-   $_SESSION['couponValue'] = "Your Coupon equals 2 bucks off!<br/>";
-}else if ($val == "springbreak"){
-   $_SESSION['couponValue'] = "Your Coupon equals 1 buck off!</br>";
-}else if ($val == "freepizza"){
-   $_SESSION['couponValue'] = "Coupon equals add 2 bucks sucker!<br/>Only
-   a complete fool would think that we would give you FREE PIZZA!<br/>";
-} else {
-   $_SESSION['couponValue'] = "Coupon equals nothing";
-     }}
-     
 if (!isset($_SESSION['orderSummary'])){
   $_SESSION['orderSummary'] = $_POST['orderSummary'];
 } 
@@ -61,9 +50,21 @@ if (isset($_POST['deliveryBox'])){
 } else {
   $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
 }
-/*
- * Begin section that will display a custom built captcha
- */
+if (isset($_POST['javascript'])){
+  $_SESSION['javascript'] = $_POST['javascript'];
+
+
+//$_SESSION['address'] = "123 Main Street";
+//$_SESSION['billingAddress'] = "321 South Main Street";
+//$_SESSION['email'] = "wireman131@wireman131.com";
+//$_SESSION['order'] = "1 Large Pizza with: Pepperoni, Green Olive, Jalepeno,
+	//				Bacon.  Plus one order of breadsticks.";
+//$_SESSION['payMethod'] = "Cash";
+//$_SESSION['emailCoupon'] = "None";
+
+
+//print_r($_SESSION);
+if($_SESSION['orderSummary']==true){
 echo"<div id='pizza'>Real User Validation<br/>";
 echo $_SESSION['customerName'] . " Please confirm that you are human!<br/><br/>\n";
 echo "<div id='captcha'>";
@@ -72,5 +73,15 @@ echo "</div><p>WTF!?!?! I Can't Read This!<br/></p>
 <form><button type='submit' onclick=\"newCaptcha();return true\">Reload</button>
 <input type=\"hidden\" name=\"pid\" value=\"validate\">
 </form></div>";
-
+}
+else{
+	//the javascript validation didn't fire, so we have to validate the user input.
+	// check name is a name
+	// check address and billing address are present
+	// check phone number is a number
+	// check email address is an email address
+	// if all check out call function that prints out the above
+	// else redirect back to the form
+	//
+}
  ?>

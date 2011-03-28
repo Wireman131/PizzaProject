@@ -6,26 +6,62 @@
   * @author     Tony Gaudio, David Sullivan
   * @category   ANM293
   * @package    PizzaProject
-  * @version    1
+  * @version    1.1
   * @link       git@github.com:Wireman131/PizzaProject
   * @link       git@github.com:teamsullivango/PizzaProject
   * @since      Mar 11, 2011-2011
 */
 
+var couponValue;
+function couponCheck(){
+  //alert('Coupon Checker');
+  couponCode = document.getElementById("couponCode").value;
+  switch(couponCode)
+  {
+  case "twitter2":
+  couponValue = -2;
+  document.getElementById("tallyCouponValue").innerHTML = "<strong>-$2.00</strong>";
+    break;
+  case "freepizza":
+  couponValue = 2;
+  document.getElementById("tallyCouponValue").innerHTML = "<strong>+$2.00</strong>";
+    break;
+  case "springbreak":
+    couponValue = -1;
+    document.getElementById("tallyCouponValue").innerHTML = "<strong>-$1.00</strong>";
+    break;
+  default:
+    couponValue = 0;
+    document.getElementById("tallyCouponValue").innerHTML = "<strong>$0.00</strong>";
+  }
+  return;
+}
+      
+  
 /*
  * Begin jQuery driven event handling on page read, I think
- * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
+ * @todo  figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
  */
+
+
 
 //alert("javascript file is here");
 $(function(){
-/*
- * The following jQuery will look for the first element with the class name
- * 'auto-focus' and cause focus to land there. i.e. The captcha form.
- */
-  $('.auto-focus:first').focus();
+  /*
+   * The following jQuery will look for the first element with the class name
+   * 'auto-focus' and cause focus to land there. i.e. The captcha form.
+   */
+$('.auto-focus:first').focus();
 
-  $("input").change(
+//since this only runs if javascript is enabled, we'll set the form value 'javascript' equal to true
+$('#javascript').val('true');
+  
+  // call to jquery validation occurs here!!!
+$("#pizza").validate();
+
+
+//alert("jquery is on!");
+$("input").change(
 		function(){
 			//alert('here');
 		  sizer();
@@ -76,7 +112,8 @@ var outputSize;
 				myOrderSummary = size + " Pizza, with ";
 				pricer(size);	}  // pass the value size to the pricer function
 								}
-	}
+}
+var piePrice;
 function pricer(size) {  // determine price of pie based on size
 	if (size == "Small") {
 		//alert("You picked Small!!!")	
@@ -198,25 +235,24 @@ function pricer(size) {  // determine price of pie based on size
 		document.getElementById("tallyTotal").innerHTML = "<strong>$"+zz+"</strong>";
 		//alert("Sales Tax " + y + " Pie Price " + x + " Total Cost:$" + zz); 
 				}
-	
-	
-	
-	
+		
 	
 	var name,address,phone,email; // declare 4 global variables so they can be used in popup
-	function verifyCustomerInfo() {
-	  //alert("verify customer info");
-	
-		//var //passThru = 0;
-		// statements to validate user input
-		//window.alert("test");  // error checking tool
-		//window.alert(document.getElementById("customerName").value);
-		if ($("#customerName").value == "") {
-			window.alert("You Must Enter Your Name!");
-			//document.getElementById("customerName").focus();
-			return false;
 
-			
+
+		function verifyCustomerInfo() {
+//	  alert("verify customer info");
+		//we're only interested in validating the name, address, city, zip and phone number
+		var c_name, c_address, cb_address, c_phone;	
+		c_name = $("#customerName").val();
+		c_address = $("#customerAddress").val();
+		cb_address = $("#billAddress").val();
+		c_phone = $("#customerPhone").val();
+//		alert("jquery grabs = " + c_name + c_address + cb_address + c_phone);
+		if ( c_name == "") {
+			window.alert("You Must Enter Your Name!");
+			//return false;
+
 		} else {
 			var customerName = document.getElementById("customerName").value;
 			//passThru += 1;
@@ -225,7 +261,7 @@ function pricer(size) {  // determine price of pie based on size
 		if ($("#customerAddress").value == "") {
 			window.alert("You must enter your address!");
 			//document.getElementById("customerAddress").focus();
-			return false;
+			//return false;
 		} else {
 			var address = document.getElementById("customerAddress").value;
 			//passThru += 1;
@@ -234,7 +270,7 @@ function pricer(size) {  // determine price of pie based on size
 		if ($("#billAddress").value == "") {
       window.alert("You must enter your billing address!");
       //document.getElementById("customerAddress").focus();
-      return false;
+      //return false;
     } else {
        //passThru += 1;
       //window.alert("Address was:" + address + //passThru);
@@ -242,7 +278,7 @@ function pricer(size) {  // determine price of pie based on size
 		if ($("#customerPhone").value == "") {
 			window.alert("You must enter your phone number!");
 			//document.getElementById("customerPhone").focus();
-			return false;
+			//return false;
 		} else {
 			var phone = document.getElementById("customerPhone").value;
 			//passThru += 1;
@@ -252,7 +288,7 @@ function pricer(size) {  // determine price of pie based on size
 		if ($("#customerEmail").value == "") {
 			window.alert("You must enter your email address!");
 			//document.getElementById("customerEmail").focus();
-			return false;
+			//return false;
 		} else {
 			var email = document.getElementById("customerEmail").value;
 			//passThru += 1;

@@ -12,6 +12,11 @@
   * @link       git@github.com:teamsullivango/PizzaProject
   * @since      Mar 11, 2011-2011
 */
+
+label { width: 10em; float: left; }
+label.error { float: none; color: blue; padding-left: .5em; vertical-align: top; }
+
+
 body	{
 	background-color:#C00;
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;

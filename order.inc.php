@@ -11,7 +11,11 @@
 	* @link       git@github.com:Wireman131/PizzaProject
 	* @since      Mar 11, 2011-2011
 */
+/*
+ * This code will nuke all session variables
+ */
 session_unset();
+
 ?>
 <div id='container'>
 <div id='headerImage'><img src='images/header.png' /></div>
@@ -20,7 +24,7 @@ session_unset();
  * Form submits to the validate.inc.php page if the client side validaton passes.
  */
 ?>
-<form name='pizza' action='index.php?pid=validate' method="post" onsubmit="return verifyCustomerInfo();">
+<form name='pizza' class="cmxform" id="pizza" action='index.php?pid=validate' method="post" >
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
   <table width="200" border="0">
@@ -209,28 +213,28 @@ session_unset();
   <table width="390" border="0">
     <tr>
       <td> <label>Name
-        <input type="text" name="customerName" id="customerName"  />
+        <input type="text" name="customerName" id="customerName"  class="required"/>
       </label></td>
     </tr>
     <tr>
       <td><label>Address
-        <input type="text" name="address" id="customerAddress" />
+        <input type="text" name="address" id="customerAddress" class="required"/>
       </label></td>
     </tr>
     <tr>
       <td><label>Billing Address
-        <input type="text" name="billingAddress" id="billAddress" />
+        <input type="text" name="billingAddress" id="billAddress" class="required" />
       </label></td>
     </tr>
     <tr>
       <td><label>Phone Number 
-        <input type="text" name="phone" id="customerPhone" />
+        <input type="text" name="phone" id="customerPhone" class="required phoneUS"/>
       </label></td>
     </tr>
     <tr>
       <td><label>Email Address
-        <input type="text" name="email" id="customerEmail" /><input type="hidden" name="pid" value="validate">
-      </label></td>
+				<input type="text" name="email" id="customerEmail" class="required email"/>
+		 </label></td>
     </tr>
     <tr>
       <td> <label>Coupon Code
@@ -249,7 +253,7 @@ session_unset();
   <table width="60" border="0">
     <tr>
       <td><label>
-        <input type="submit" name="validateUser" id="submit" value="Submit Order!" />
+        <input type="submit" name="validateUser" id="submit" value="Submit Order!" class="submit"/>
       </label></td>
       <td><label>
         <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
@@ -258,7 +262,9 @@ session_unset();
     <tr><td colspan=2><input type="hidden" name="pid" value="validate">
     									<input type="hidden" name="orderTotal" value="">
     									<input type="hidden" name="orderSummary" value="">
-  
+											<input type="hidden" name="pid" value="validate">
+											<input type="hidden" name="javascript" value="false">
+ 
     
     </td></tr>
   </table>
