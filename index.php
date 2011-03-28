@@ -39,8 +39,10 @@ error_reporting(E_ALL | E_STRICT);
  * system, SLASH will be defined so that the same path instructions can
  * be used   
  */
-if( PATH_SEPARATOR  == ';' ) define('SLASH','\\');
-else define('SLASH','/'); 
+if( PATH_SEPARATOR  == ';' ) {
+	define('SLASH','\\');
+}
+else { define('SLASH','/');  }
 
 /*
  * Get path to the directory where this file is running

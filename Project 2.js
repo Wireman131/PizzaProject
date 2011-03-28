@@ -16,6 +16,10 @@
  * Begin jQuery driven event handling on page read, I think
  * @todo	figure out if $(function(){ some code } ); gets run on page load or ready, just for reference
  */
+
+//since this only runs if javascript is enabled, we'll set the form value 'javascript' equal to true
+$('#javascript').val('true');
+
 var couponValue;
 function couponCheck(){
   //alert('Coupon Checker');
@@ -46,6 +50,9 @@ function couponCheck(){
 
 //alert("javascript file is here");
 $(function(){
+// call to jquery validation occurs here!!!
+$("#pizza").validate();
+
 //alert("jquery is on!");
 	$("input").change(
 		function(){
@@ -97,7 +104,8 @@ var outputSize;
 				myOrderSummary = size + " Pizza, with ";
 				pricer(size);	}  // pass the value size to the pricer function
 								}
-	}
+}
+var piePrice;
 function pricer(size) {  // determine price of pie based on size
 	if (size == "Small") {
 		//alert("You picked Small!!!")	
@@ -200,7 +208,8 @@ function pricer(size) {  // determine price of pie based on size
 	
 	
 	var name,address,phone,email; // declare 4 global variables so they can be used in popup
-	function verifyCustomerInfo() {
+
+		function verifyCustomerInfo() {
 //	  alert("verify customer info");
 		//we're only interested in validating the name, address, city, zip and phone number
 		var c_name, c_address, cb_address, c_phone;	

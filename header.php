@@ -35,12 +35,12 @@
 */
 ?>
 
-<link rel="stylesheet" type="text/css" href="base.css"/>    
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Advanced PHP Pizza Shop</title>
-<script src="library/jquery/1.5.1/jquery.js" type="text/javascript"></script>
-<script src="library/jquery-validation/jquery.validation.js" type="text/javascript"></script>
-<script src="Project 2.js" type="text/javascript"></script>
-<!--<script type="text/javascript">alert("test");</script>--> 
-
-
+<?php
+echo '<link rel="stylesheet" type="text/css" href="base.css"/>';
+echo '<script src="library' . SLASH . 'jquery' . SLASH . '1.5.1'  . SLASH .  'jquery.js" type="text/javascript"></script>';
+echo '<script src="library' . SLASH . 'jquery-validation' . SLASH . 'jquery.validate.js" type="text/javascript"></script>';
+echo '<script src="library' . SLASH . 'jquery-validation' . SLASH . 'additional-methods.js" type="text/javascript"></script>';
+echo '<script src="Project 2.js" type="text/javascript"></script>';
+?>
