@@ -64,9 +64,8 @@ h3  {
 
 #OrderTally  {
 	position:relative;
-	background-color:red;
-	float:left;
-	width:475px;
+	float:right;
+	width:425px;
 	height:500px;
 }
 
@@ -75,28 +74,36 @@ h3  {
 	position:absolute;
 	right:5px;	
 	}
-#leftContainer {
-	width:300px;
-	min-height:800px;
-	background-color:green;
-	float:left;
-}
+
 #topBox {
-	width:100%;
-	min-height:300px;
-	background-color:orange;
-	
+	width:80%;
+	margin:0 auto;
+	border-left:3px solid black;
+	border-right:3px solid black;
+	border-bottom:3px solid black;
+	margin-bottom:20px;
+	min-height:240px;
 	}
 #CustomerInfo {
 	position:relative;
-	width:500px;
+	width:60%;
 	float: left;
 	}
 #Payment {
 	position:relative;
-	width:400px;
+	width:40%;
 	float:left;
 	text-align:center;
+}
+#pizzaSection {
+	width:100%;
+	float:left;
+	margin:0 auto;
+	}
+#PizzaSizes   {
+  width:300px;
+  position: relative;
+  float:left;
 }
 #pizzaImage {
 	width:200px;
@@ -105,19 +112,20 @@ h3  {
 	margin-right:auto;
 	margin-top:20px;
 }
-
-#PizzaSizes		{
-	width:200px;
-	
-	position: relative;
-	float:left;
+#Toppings {
+	width:275px;
+  position:relative;
+  float:left;
 }
 
-#SubmitBox  {
+
+#SubmitButton  {
 position:relative;
-margin-top:200px;
 clear:left;
-margin-left:175px;
+float:left;
+padding-top:30px;
+padding-left:30px;
+
 }
 
 table {
@@ -125,25 +133,9 @@ table {
 	margin-right:auto;
 		}
 
-#Toppings	{
-	width:250px;
-	min-height:400px;
-	position:relative;
-	float:left;
-}
 .smaller {
 	font-size:60%;
 		}
-#outputContainer {
-	width:500px;
-	height:400px;
-	padding:20px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:50px;
-	background-color:#090;
-	color:black;
-	}
 	
 	#confirmEmail #container {
   position:relative;

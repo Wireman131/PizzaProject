@@ -54,11 +54,7 @@ session_unset();
 				<input type="text" name="email" id="customerEmail" class="required email"/>
 		 </label></td>
     </tr>
-    <tr>
-      <td> <label>Coupon Code
-        <input type="text" name="couponCode" id="couponCode"  />
-         </label></td>
-    </tr>
+    
   </table>
   
   </div>
@@ -80,13 +76,19 @@ session_unset();
         <input type="radio" name="payMethod" id="check" value="Check" " />
         Check</label></td>
     </tr>
+    <tr>
+      <td> <label for="couponCode">Coupon Code</label>
+        <input type="text" name="couponCode" id="couponCode"  />
+         </td>
+    </tr>
   </table>
  </div>
   </div> 
 <!-- make another Div to hold all this crap -->
+<div id="pizzaSection">
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
-  <table width="300" border="0">
+  <table  border="0">
     <tr>
       <td><label>
 			<input type="radio" name="pizzaSize" id="pizzaSize_0" value="Small" />
@@ -112,12 +114,35 @@ session_unset();
       <td>$14.00</td>
     </tr>
   </table>
-  <div id="pizzaImage"><img src="images/pizza.png" alt="Pizza Image" width="200" height="150" /></div>
+  <div id="pizzaImage"><img src="images/pizza.png" alt="Pizza Image"  height="150" /></div>
+  <div id="submitButton">
+  <table width="60" border="0">
+    <tr>
+      <td><label>
+        <input type="submit" name="validateUser" id="submit" value="Submit Order!" class="submit"/>
+      </label></td>
+      <td><label>
+        <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
+      </label></td>
+    </tr>
+    <tr><td colspan=2><input type="hidden" name="pid" value="validate">
+    									<input type="hidden" name="orderTotal" value="">
+    									<input type="hidden" name="orderSummary" value="">
+											<input type="hidden" name="pid" value="validate">
+											<input type="hidden" name="javascript" value="false">
+ 
+    
+    </td></tr>
+  </table>
+ </div>
+  
+  
+  
   </div>
  
   <div id="Toppings">
     <h3>Choose Your Toppings</h3>
-    <table width="250" border="0">
+    <table  border="0">
       <tr>
         <td>Toppings</td>
         <td>Cost</td>
@@ -175,7 +200,7 @@ session_unset();
       <td>$1.00</td>
     </tr>
     <tr>
-      <td>Delivery $2.00 <span class='smaller'>- Within 5 Mile Radius Of Store</span></td>
+      <td>Delivery $2.00 <span class='smaller'>- Within 5 Miles Of Store</span></td>
       <td><label>
         <input type="checkbox" name="deliveryBox" id="deliveryBox" />
         Yes</label></td>
@@ -190,7 +215,7 @@ session_unset();
   
   <div id="OrderTally">
     <h3>Your Order</h3>
-    <table width="400" border="6" cellpadding="2" bgcolor="#FFFF66">
+    <table border="6" cellpadding="2" bgcolor="#FFFF66">
   <tr>
     <td id="tallySize" width="260">&nbsp;</td>
     <td id="tallyPiePrice" width="122">&nbsp;</td>
@@ -236,7 +261,7 @@ session_unset();
   	<td id="tallyCouponValue">&nbsp;</td>
   </tr>
   <tr>
-    <td><em><strong>Sales Tax <span class="smaller">(Michigan 6% Rate)</span></strong></em></td>
+    <td><em><strong>Sales Tax <span class="smaller">(Mi 6% Rate)</span></strong></em></td>
     <td id="tallySalesTax">&nbsp;</td>
   </tr>
   <tr>
@@ -246,33 +271,10 @@ session_unset();
 </table>
 
   </div>
-  <br /> <br /> <br /> <br />
-  
+  </div>
  
   
-   <br />
 
-  
-
-  
-  <table width="60" border="0">
-    <tr>
-      <td><label>
-        <input type="submit" name="validateUser" id="submit" value="Submit Order!" class="submit"/>
-      </label></td>
-      <td><label>
-        <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
-      </label></td>
-    </tr>
-    <tr><td colspan=2><input type="hidden" name="pid" value="validate">
-    									<input type="hidden" name="orderTotal" value="">
-    									<input type="hidden" name="orderSummary" value="">
-											<input type="hidden" name="pid" value="validate">
-											<input type="hidden" name="javascript" value="false">
- 
-    
-    </td></tr>
-  </table>
  
 
 </form></div><br/>
