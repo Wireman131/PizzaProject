@@ -24,11 +24,14 @@ require('$rvl');
 /*
  * Sample - Temporary Data for testing:
  */
-$formFields = Array('customerName','address','billingAddress','email','payMethod','emailCoupon','orderSummary','orderTotal','javascript','delivery');
-
+$formFields = Array('customerName','address','billingAddress','email','payMethod','emailCoupon','orderSummary','orderTotal','javascript');
+for ($i=0;$i<count($formfields);$i++){
+	$_SESSION[$formFields[$i]] = $_POST[$formFields[$i]];
+}
+/*
+}
 if (!isset($_SESSION['customerName'])){
-  $_SESSION['customerName'] = $_POST['customerName'];
-} 
+  
 if (!isset($_SESSION['address'])){
   $_SESSION['address'] = $_POST['address'];
 } 
@@ -50,7 +53,7 @@ if (!isset($_SESSION['orderSummary'])){
 if (!isset($_SESSION['orderTotal'])){
   $_SESSION['orderTotal'] = $_POST['orderTotal'];
 }
-
+ */
 if (isset($_POST['deliveryBox'])){
   $_SESSION['delivery'] = "Pizza will be delivered around ";
 } else {

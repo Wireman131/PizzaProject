@@ -180,7 +180,7 @@ function pricer(size) {  // determine price of pie based on size
 		}
 		//alert("Topper Function");
 		// check to see if delivery is checked if so, add 2 bucks to the toppingTotal and output delivery tag and price
-		if (document.getElementById("deliveryBox").checked == true) {
+		if (document.getElementById("delivery").checked == true) {
 		toppingTotal = (2 + parseFloat(toppingTotal));
 		document.getElementById("deliveryYes").innerHTML = "Delivery";
 		document.getElementById("deliveryYesPrice").innerHTML = "2.00";
