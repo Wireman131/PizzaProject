@@ -32,7 +32,7 @@ session_unset();
     <tr>
       <td class="col1"><label for="customerName">Name</label></td>
       <td><input type="text" name="customerName" id="customerName"  class="required"/>
-      </td><td></td>
+			</td><td><?php if(isset($_SESSION['customerNameError'])){echo "Please enter your name"} ?></td>
     </tr>
     
     <tr>

@@ -33,7 +33,7 @@ error_reporting(E_ALL | E_STRICT);
  * I couldn't seem to get php to write to php_errors_log, hence, 
  * the error log is in the project directory
  */
-//@ini_set('error_log','errors.log');
+@ini_set('error_log','errors.log');
 
 /*
  * in order to be able to include other files, regardless of the hosting

@@ -14,22 +14,36 @@
 */
 @session_start();
 //generate path to Respect Validation library
-$rvl = 'Respect' . SLASH . 'Validation' . SLASH . 'Validator.php';
-require('$rvl');
+//$rvl = 'Respect' . SLASH . 'Validation' . SLASH . 'Validator.php';
+//require('$rvl');
 
 //print_r($_POST);
 /*
  * Pull in posted variable from the form, test them, then set session variables
  * accrodingly. 
  */
-$formFields = Array('customerName','address','billingAddress','email','payMethod','emailCoupon','orderSummary','orderTotal','javascript');
-for ($i=0;$i<count($formfields);$i++){
+/*$formFields = Array('customerName'=>'',
+	'address'=>'',
+	'billingAddress'=>'',
+	'customerPhone'=>'',
+	'email'=>'',
+	'payMethod'=>'',
+	'emailCoupon'=>'',
+	'orderSummary'=>'',
+	'orderTotal'=>'',
+	'javascript'=>''
+);
+for ($i=0;$i<count($formFields);$i++){
 	$_SESSION[$formFields[$i]] = $_POST[$formFields[$i]];
+	echo $_SESSION[$formFields[$i]]; 
+	$temp = ob_get_contents();
+	echo $temp . " " . $i . " what is going on";
 }
-/*
-}
+ */
+
 if (!isset($_SESSION['customerName'])){
-  
+	$_SESSION['customerName'] = $_POST['customerName'];
+}
 if (!isset($_SESSION['address'])){
   $_SESSION['address'] = $_POST['address'];
 } 
@@ -38,7 +52,10 @@ if (!isset($_SESSION['billingAddress'])){
 }
 if (!isset($_SESSION['email'])){
   $_SESSION['email'] = $_POST['email'];
-} 
+}
+if (!isset($_SESSION['customerPhone'])){
+  $_SESSION['customerPhone'] = $_POST['payMethod'];
+}
 if (!isset($_SESSION['payMethod'])){
   $_SESSION['payMethod'] = $_POST['payMethod'];
 }
@@ -64,16 +81,15 @@ if (!isset($_SESSION['orderSummary'])){
 if (!isset($_SESSION['orderTotal'])){
   $_SESSION['orderTotal'] = $_POST['orderTotal'];
 }
- */
+ 
 if (isset($_POST['deliveryBox'])){
   $_SESSION['delivery'] = "Pizza will be delivered around ";
 } else {
   $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
 }
 
-if (isset($_POST['javascript'])){
-  $_SESSION['javascript'] = $_POST['javascript'];
-
+if (isset($_POST['javascript'])){ $_SESSION['javascript'] = $_POST['javascript']; }
+//echo ($_SESSION['javascript']);
 
 //$_SESSION['address'] = "123 Main Street";
 //$_SESSION['billingAddress'] = "321 South Main Street";
@@ -83,40 +99,27 @@ if (isset($_POST['javascript'])){
 //$_SESSION['payMethod'] = "Cash";
 //$_SESSION['emailCoupon'] = "None";
 
-
-	//print_r($_SESSION);
-	//
+//////////////////////////////////////////////////////////////////////////////////////////////////
 //if the javascript has been set, then the order has been placed
-if($_SESSION['javascript']==true){
+if(eval($_SESSION['javascript'])){
 inputValidated();
 }
 else{
-	//construct namespace path
-	$rvnp = 'Respect' . SLASH . 'Validation' . SLASH . 'Validator.php';
-	use $rvnp as v;
-
-	//the javascript validation didn't fire, so we have to validate the user input.
-	// check name is a name
-	v::alpha()->validate(); 
-$_SESSION['customerName'])){
-  $_SESSION['customerName'] = $_POST['customerName'];
-} 
-$_SESSION['address'])){
-  $_SESSION['address'] = $_POST['address'];
-} 
-$_SESSION['billingAddress'])){
-  $_SESSION['billingAddress'] = $_POST['billingAddress'];
-}
-$_SESSION['email'])){
-  $_SESSION['email'] = $_POST['email'];
-} 
-
+	$isValid = true; //we'll assume that it's okay until we know better
+	// the javascript validation didn't fire, so we have to validate the user input]
+	if($_SESSION['customerName'] == ''){
+		$isValid = false;
+		$_SESSION['customerNameError'] = "Enter Name Please";
+	}
 	// check address and billing address are present
 	// check phone number is a number
 	// check email address is an email address
-	// if all check out call function that prints out the above
+	// if all check out call inputValidated()
 	// else redirect back to the form
 	//
+	if(!$isValid){
+		include('order.inc.php');
+	}
 }
 
 
