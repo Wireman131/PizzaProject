@@ -170,7 +170,19 @@ table {
 .smaller {
 	font-size:60%;
 		}
-	
+	#validate {
+	width:50%;
+	margin:0 auto;
+	text-align:center;
+	background-color:green;
+	border:3px solid black;
+	border-radius:20px;
+	-moz-border-radius:20px;
+	}
+#validate td {
+	text-align:center;
+}
+
 	#confirmEmail #container {
   position:relative;
   width:1000px;

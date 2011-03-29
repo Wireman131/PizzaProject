@@ -127,8 +127,10 @@ function inputValidated(){
 /*
  * Begin section that will display a custom built captcha
  */
-
 echo"<div id='pizza'>Real User Validation<br/>";
+
+echo"<div id='validate'>Real User Validation<br/>";
+
 echo $_SESSION['customerName'] . " Please confirm that you are human!<br/><br/>\n";
 echo "<div id='captcha'>";
 require 'captcha.php';

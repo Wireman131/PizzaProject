@@ -48,8 +48,9 @@ function couponCheck(){
 
 //alert("javascript file is here");
 $(function(){
+  $('.auto-focus:first').focus();
 // call to jquery validation occurs here!!!
-$("#pizza").validate({
+$("#pizza").validate().form({
   messages: {
     customerName: "*",
     email: {
@@ -75,7 +76,8 @@ $("#pizza").validate({
       couponCheck();
       calcTotal();  //tally sheet total subtotal, then add sales tax format output
         });
-      
+  
+ 
     });
 
 
@@ -259,6 +261,7 @@ function pricer(size) {  // determine price of pie based on size
         document.getElementById("toppingPrice_"+toppingCount).innerHTML = selectedToppingPrice;
         
         }
+      pizza.orderSummary.value = myOrderSummary;
     }
     //alert("Topper Function");
     // check to see if delivery is checked if so, add 2 bucks to the toppingTotal and output delivery tag and price
@@ -282,6 +285,8 @@ function pricer(size) {  // determine price of pie based on size
      zz = z.toFixed(2);
     document.getElementById("tallySalesTax").innerHTML = "<i><strong>"+yy+"</strong></i>";
     document.getElementById("tallyTotal").innerHTML = "<strong>$"+zz+"</strong>";
+    pizza.orderTotal.value = zz;
+    
     //alert("Sales Tax " + y + " Pie Price " + x + " Total Cost:$" + zz); 
         }
   
@@ -341,8 +346,7 @@ function pricer(size) {  // determine price of pie based on size
       //window.alert("Email address was:"+ email+//passThru);
           } 
     //if (//passThru == 5) {
-      pizza.orderTotal.value = zz;
-      pizza.orderSummary.value = myOrderSummary;
+      
       return true;
      // alert("code to unhide the captcha box");
       //document.pizza.submit();
@@ -351,57 +355,7 @@ function pricer(size) {  // determine price of pie based on size
   }
       
       
-  var dt;  
-  function calculateTime () {
-    var today=new Date();
-    var hr=today.getHours();
-    var mn=today.getMinutes();
-    //window.alert("value of mn:"+mn);
-    var s=today.getSeconds();
-    
-    mn = parseInt(mn)+ 30; // add 30 minutes to the current minutes
-      if (mn > 59) {  // if adding 30 minutes pushes the minutes past 59,  advance hour by one, and then subtract 60 minutes from the minute total
-      hr = parseInt(hr) + 1;
-      mn = parseInt(mn) - 60;
-        }
-    //window.alert("value of mn:"+mn);
-    
-    today.setMinutes(mn);
-    // add a zero in front of numbers<10
-    mn=checkTime(mn);
-    s=checkTime(s);
-    //convert from 24 hour format to am/pm
-    hr=hourConvert(hr);
-    dt = hr+":"+mn+":"+s;
-    //window.alert(dt);
-    return dt;
-    
-    }
-  
-  function checkTime(i) // this will add a zero if it the minutes or seconds are single digit numbers
-    {
-    if (i<10)
-      {
-      i="0" + i;
-      }
-    return i;
-    }
-    
-  var AorP; 
-  function hourConvert(hr){  // determine AM or PM assign it to vabiable AorP 
-      
-      if (hr>=12) {
-           AorP=" PM"; 
-      } else {
-          AorP=" AM"; }
 
-      if (hr>=13) {
-          hr-=12; }
-      if (hr==0) {
-          hr=12; }
-    return hr;
-    }
-    
     
 function tallyReset() {
     var size = "Reset";
