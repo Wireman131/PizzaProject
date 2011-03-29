@@ -35,7 +35,7 @@ if(!isset($_POST['submit'])){
   echo"<tr><td><input type=\"text\" name=\"image\" class=\"auto-focus\"></td>
   			</tr>\n";
   echo"<tr><td><input type=\"submit\" name=\"submit\" value=
-  		\"Check CAPTCHA\" ></tr>\n";
+  		\"Check CAPTCHA\" title=\"Enter Your Best Guess!\" ></tr>\n";
   echo"</table></form>\n";
   /*
    * flush the output buffer - push to browser

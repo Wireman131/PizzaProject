@@ -94,7 +94,7 @@ h3.left {
 	left:10px;
 	top:-25px;
 	padding:10px;
-	background-color:lightgreen;
+	background-color:#00601B;
 	border:3px solid black;
 	border-radius:10px;
 	-moz-border-radius:10px;
@@ -102,15 +102,24 @@ h3.left {
 	
 	}
 #CustomerInfo table td{
-	background-color:lightgreen;
-		padding:5px;
+	background-color:#00601B;
+		padding:4px;
 	}
+input {
+	padding:5px;
+	border:3px solid white;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	}
+input:focus {
+	background-color:#1FE256;
+	border:3px solid black;
+}
 #CustomerInfo label {
 	position:relative;
 	top:7px;
 	font-weight:bold;
-	
-	color:brown;
+	color:black;
 	}
 .col1 {
 	width:50px;
