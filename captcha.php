@@ -26,16 +26,16 @@ if(!isset($_POST['submit'])){
  
   echo"<form method=\"post\" action=\"index.php?pid=validate\">\n";
   echo"<table border=\"0\" cellspacing=\"3\" cellpadding=\"3\">\n";
-  echo"<tr><td colspan=2>Type The Letters You See Below Into The Box</td></tr>\n";
-  echo"<tr><td colspan=2 align=\"center\"><img src=\"image.php\"></td></tr>\n";
+  echo"<tr><td>Type The Letters You See Below Into The Box</td></tr>\n";
+  echo"<tr><td align=\"center\"><img src=\"image.php\"></td></tr>\n";
   /*
    * Image is dynamically created by specifiying image.php as the source of the
    * image.
    */
   echo"<tr><td><input type=\"text\" name=\"image\" class=\"auto-focus\"></td>
-  			<td>&nbsp;</td></tr>\n";
+  			</tr>\n";
   echo"<tr><td><input type=\"submit\" name=\"submit\" value=
-  		\"Check CAPTCHA\" ></td><td>&nbsp;</td></tr>\n";
+  		\"Check CAPTCHA\" ></tr>\n";
   echo"</table></form>\n";
   /*
    * flush the output buffer - push to browser
