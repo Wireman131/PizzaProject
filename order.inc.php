@@ -31,28 +31,33 @@ session_unset();
   <table >
     <tr>
       <td class="col1"><label for="customerName">Name</label></td>
-      <td><input type="text" name="customerName" id="customerName"  class="required"/>
+      <td><input type="text" name="customerName" id="customerName"  
+      title= "Input Your Full Name" class="required"/>
       </td><td></td>
     </tr>
     
     <tr>
       <td class="col1"><label for="customerAddress">Address</label></td>
-      <td><input type="text" name="address" id="customerAddress" class="required"/>
+      <td><input type="text" name="address" id="customerAddress" 
+      title="Input Your Address" class="required"/>
       </td><td></td>
     </tr>
     <tr>
       <td class="col1"><label for="billAddress">Billing Address</label></td>
-      <td><input type="text" name="billingAddress" id="billAddress" class="required" />
+      <td><input type="text" name="billingAddress" id="billAddress" 
+      title="Input Billing Address" class="required" />
       </td><td></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
-      <td><input type="text" name="phone" id="customerPhone" class="required phoneUS"/>
+      <td><input type="text" name="phone" id="customerPhone" 
+      title="Input Your Phone Number With Area Code" class="required phoneUS"/>
       </td><td></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerEmail">Email Address</label></td>
-			<td><input type="text" name="email" id="customerEmail" class="required email"/>
+			<td><input type="text" name="email" id="customerEmail" 
+			title="Input Email Address" class="required email"/>
 		  </td><td></td>
     </tr>
     
@@ -64,22 +69,26 @@ session_unset();
   <table width="300" border="0">
     <tr>
       <td><label>
-        <input type="radio" name="payMethod" id="cash" value="Cash" checked />
+        <input type="radio" name="payMethod" id="cash" value="Cash" 
+        title="Pay w" checked />
         Cash</label></td>
     </tr>
     <tr>
       <td><label>
-        <input type="radio" name="payMethod" id="creditcard" value="Credit Card" " />
+        <input type="radio" name="payMethod" id="creditcard" value="Credit Card"
+        title="Pay With Credit Card" />
         Credit Card</label></td>
     </tr>
     <tr>
       <td><label>
-        <input type="radio" name="payMethod" id="check" value="Check" " />
+        <input type="radio" name="payMethod" id="check" value="Check"
+        title="Pay With Check" />
         Check</label></td>
     </tr>
     <tr>
       <td> <label for="couponCode">Coupon Code</label>
-        <input type="text" name="couponCode" id="couponCode"  />
+        <input type="text" name="couponCode" id="couponCode"
+        title="Please Enter Your Coupon Code"  />
          </td>
     </tr>
   </table>
@@ -92,25 +101,29 @@ session_unset();
   <table  border="0">
     <tr>
       <td><label>
-			<input type="radio" name="pizzaSize" id="pizzaSize_0" value="Small" />
+			<input type="radio" name="pizzaSize" id="pizzaSize_0" 
+			title="Small Pizza" value="Small" />
         Small</label></td>
       <td>$8.00</td>
     </tr>
     <tr>
       <td><label>
-        <input type="radio" name="pizzaSize" id="pizzaSize_1" value="Medium"  />
+        <input type="radio" name="pizzaSize" id="pizzaSize_1" 
+        title="Medium Pizza" value="Medium"  />
         Medium</label></td>
       <td>$10.00</td>
     </tr>
     <tr>
       <td><label>
-        <input type="radio" name="pizzaSize" id="pizzaSize_2" value="Large" />
+        <input type="radio" name="pizzaSize" id="pizzaSize_2" 
+        title="Large Pizza" value="Large" />
         Large</label></td>
       <td>$12.00</td>
     </tr>
     <tr>
       <td><label>
-        <input type="radio" name="pizzaSize" id="pizzaSize_3" value="Extra Large" />
+        <input type="radio" name="pizzaSize" id="pizzaSize_3" 
+        title="Extra Large Pizza" value="Extra Large" />
         XL</label></td>
       <td>$14.00</td>
     </tr>
@@ -154,56 +167,65 @@ session_unset();
       </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Pepperoni" id="topping_0" value="1.25" />
+        <input type="checkbox" name="Pepperoni" id="topping_0" 
+        title="Pepperoni" value="1.25" />
       Pepperoni </label></td>
       <td>$1.25</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Mushrooms" id="topping_1" value=".50" />
+        <input type="checkbox" name="Mushrooms" id="topping_1" 
+        title="Mushrooms" value=".50" />
       Mushrooms</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Onions" id="topping_2" value=".75" />
+        <input type="checkbox" name="Onions" id="topping_2" 
+        title="Onions" value=".75" />
       Onions</label></td>
       <td>$.75</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Green Peppers" id="topping_3" value=".90" />
+        <input type="checkbox" name="Green Peppers" id="topping_3" 
+        title="Green Peppers" value=".90" />
       Green Peppers</label></td>
       <td>$.90</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Sausage" id="topping_4" value="1.40" />
+        <input type="checkbox" name="Sausage" id="topping_4" 
+        title="Sausage" value="1.40" />
       Sausage</label></td>
       <td>$1.40</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Bacon" id="topping_5" value="1.75" />
+        <input type="checkbox" name="Bacon" id="topping_5" 
+        title="Everything Is Better With Bacon!" value="1.75" />
       Bacon</label></td>
       <td>$1.75</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Jalapeno" id="topping_6" value=".55" />
+        <input type="checkbox" name="Jalapeno" id="topping_6" 
+        title="Jalepeno" value=".55" />
       Jalapeno</label></td>
       <td>$.55</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Green Olive" id="topping_7" value="1.00" />
+        <input type="checkbox" name="Green Olive" id="topping_7" 
+        title="Green Olive" value="1.00" />
       Green Olive</label></td>
       <td>$1.00</td>
     </tr>
     <tr>
       <td>Delivery $2.00 <span class='smaller'>- Within 5 Miles Of Store</span></td>
       <td><label>
-        <input type="checkbox" name="deliveryBox" id="deliveryBox" />
+        <input type="checkbox" name="deliveryBox" 
+        title="Delivery - Yes!" id="deliveryBox" />
         Yes</label></td>
     </tr>
     <tr>
