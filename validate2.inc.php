@@ -83,5 +83,5 @@ else{
 	// if all check out call function that prints out the above
 	// else redirect back to the form
 	//
-}
+}}
  ?>

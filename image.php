@@ -15,6 +15,10 @@
 	* @since      Mar 11, 2011-2011
 */
 session_start();
+/*
+ * Generate a string with a length of $length using $characters as possible
+ * parts.
+ */
 function stringGen($length){
   $characters = "abcdefhkmnrstuvwxyz2345678";
   srand((double)microtime()*1000000);
@@ -28,6 +32,10 @@ function stringGen($length){
     }
     return $str;
 }
+/*
+ * Just as it says, this fuction will generate a random font, and return the 
+ * path to that font for usage in the imagettftext fuction.
+ */
 function randomFont(){
   $fonts = array("ASafePlacetoFall.ttf","AYearWithoutRain.ttf",
                 "Herkules.ttf","guanine.ttf");
@@ -45,11 +53,8 @@ $imgPath = "captcha/backgrounds/bg". rand(1,5). ".jpg";
 
 $img = imagecreatefromjpeg($imgPath);
 /*
- * Choose Random font from list of 6 fonts
+ * Set color variables for later use
  */
-
-
-
 $white = imagecolorallocate($img, 255, 255, 255);
 $black = imagecolorallocate($img,0,0,0);
 $red = imagecolorallocate($img,138,6,6);
@@ -77,7 +82,10 @@ while($i <= $wordLength){
   $x=$x+40;
   $i++;
 }
-
+/*
+ * Public key used to encrypt the solution before base64 encoding and
+ * storing it to a session variable.
+ */
 $pubKey = "-----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDXPiEI69TtMmMefTwh/0u4k4C4
 TEVk5kwXGa4SgR+CVbhHSRKs+5s1a8/VOOtrKWljR2fa3+bIZYqMnD2vxRu0VMlk
@@ -85,11 +93,22 @@ TEVk5kwXGa4SgR+CVbhHSRKs+5s1a8/VOOtrKWljR2fa3+bIZYqMnD2vxRu0VMlk
 9FJdOTf/vXNsqScPOwIDAQAB
 -----END PUBLIC KEY-----";
 $encryptedData = "";
-
+/*
+ * encrypt the solution using above key
+ */
 openssl_public_encrypt($solution, $encryptedData, $pubKey);
+/*
+ * apply base 64 encoding to the encrypted solution
+ */
 $encryptedData = base64_encode($encryptedData);
+/*
+ * Store solution for later use
+ */
 $_SESSION['solution'] = $encryptedData;
-
+/*
+ * Push newly created captcha image to the buffer, it will then be pushed 
+ * to the browser.
+ */
 header("Content-type: image/jpg");
 imagejpeg($img);
 imagedestroy($img);

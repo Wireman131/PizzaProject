@@ -11,20 +11,85 @@
 	* @link       git@github.com:Wireman131/PizzaProject
 	* @since      Mar 11, 2011-2011
 */
-// activate session
-
-
+/*
+ * This code will nuke all session variables
+ */
+session_unset();
 
 ?>
-
-
-
 <div id='container'>
 <div id='headerImage'><img src='images/header.png' /></div>
+<?php 
+/*
+ * Form submits to the validate.inc.php page if the client side validaton passes.
+ */
+?>
 <form name='pizza' class="cmxform" id="pizza" action='index.php?pid=validate' method="post" >
+<div id="topBox">
+<div id="CustomerInfo">
+<h3 class="left">Customer Info</h3>
+  <table >
+    <tr>
+      <td class="col1"><label for="customerName">Name</label></td>
+      <td><input type="text" name="customerName" id="customerName"  class="required"/>
+      </td><td></td>
+    </tr>
+    
+    <tr>
+      <td class="col1"><label for="customerAddress">Address</label></td>
+      <td><input type="text" name="address" id="customerAddress" class="required"/>
+      </td><td></td>
+    </tr>
+    <tr>
+      <td class="col1"><label for="billAddress">Billing Address</label></td>
+      <td><input type="text" name="billingAddress" id="billAddress" class="required" />
+      </td><td></td>
+    </tr>
+    <tr>
+      <td class="col1"><label for="customerPhone">Phone Number</label></td> 
+      <td><input type="text" name="phone" id="customerPhone" class="required phoneUS"/>
+      </td><td></td>
+    </tr>
+    <tr>
+      <td class="col1"><label for="customerEmail">Email Address</label></td>
+			<td><input type="text" name="email" id="customerEmail" class="required email"/>
+		  </td><td></td>
+    </tr>
+    
+  </table>
+  
+  </div>
+  <div id="Payment">
+ <h3>Payment Method</h3>
+  <table width="300" border="0">
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="cash" value="Cash" checked />
+        Cash</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="creditcard" value="Credit Card" " />
+        Credit Card</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="payMethod" id="check" value="Check" " />
+        Check</label></td>
+    </tr>
+    <tr>
+      <td> <label for="couponCode">Coupon Code</label>
+        <input type="text" name="couponCode" id="couponCode"  />
+         </td>
+    </tr>
+  </table>
+ </div>
+  </div> 
+<!-- make another Div to hold all this crap -->
+<div id="pizzaSection">
 <div id="PizzaSizes">
   <h3>Choose Your Size</h3>
-  <table width="200" border="0">
+  <table  border="0">
     <tr>
       <td><label>
 			<input type="radio" name="pizzaSize" id="pizzaSize_0" value="Small" />
@@ -50,20 +115,38 @@
       <td>$14.00</td>
     </tr>
   </table>
-  <div id="pizzaImage"><img src="images/pizza.png" alt="Pizza Image" width="200" height="150" /></div>
+  <div id="pizzaImage"><img src="images/pizza.png" alt="Pizza Image"  height="150" /></div>
+  <div id="submitButton">
+  <table width="60" border="0">
+    <tr>
+      <td><label>
+        <input type="submit" name="validateUser" id="submit" value="Submit Order!" class="submit"/>
+      </label></td>
+      <td><label>
+        <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
+      </label></td>
+    </tr>
+    <tr><td colspan=2><input type="hidden" name="pid" value="validate">
+    									<input type="hidden" name="orderTotal" value="">
+    									<input type="hidden" name="orderSummary" value="">
+											<input type="hidden" name="pid" value="validate">
+											<input type="hidden" name="javascript" value="false">
+ 
+    
+    </td></tr>
+  </table>
+ </div>
+  
+  
+  
   </div>
+ 
   <div id="Toppings">
-    <h3>Choose Your Toppings
-      </h3>
-    <table width="250" border="0">
+    <h3>Choose Your Toppings</h3>
+    <table  border="0">
       <tr>
-      <?php
-      /*
-       * @todo use css to fix td widths 
-       */ 
-      ?>
-      <td width="169">Toppings</td>
-      <td width="87">Cost</td>
+        <td>Toppings</td>
+        <td>Cost</td>
       </tr>
     <tr>
       <td>&nbsp;</td>
@@ -118,7 +201,7 @@
       <td>$1.00</td>
     </tr>
     <tr>
-      <td>Delivery $2.00 <span class='smaller'>- Within 5 Mile Radius Of Store</span></td>
+      <td>Delivery $2.00 <span class='smaller'>- Within 5 Miles Of Store</span></td>
       <td><label>
         <input type="checkbox" name="delivery" id="delivery" />
         Yes</label></td>
@@ -129,9 +212,11 @@
     </tr>
   </table>
   </div> 
+  
+  
   <div id="OrderTally">
     <h3>Your Order</h3>
-    <table width="400" border="6" cellpadding="2" bgcolor="#FFFF66">
+    <table border="6" cellpadding="2" bgcolor="#FFFF66">
   <tr>
     <td id="tallySize" width="260">&nbsp;</td>
     <td id="tallyPiePrice" width="122">&nbsp;</td>
@@ -177,7 +262,7 @@
   	<td id="tallyCouponValue">&nbsp;</td>
   </tr>
   <tr>
-    <td><em><strong>Sales Tax <span class="smaller">(Michigan 6% Rate)</span></strong></em></td>
+    <td><em><strong>Sales Tax <span class="smaller">(Mi 6% Rate)</span></strong></em></td>
     <td id="tallySalesTax">&nbsp;</td>
   </tr>
   <tr>
@@ -187,84 +272,14 @@
 </table>
 
   </div>
-  <br /> <br /> <br /> <br />
-  <div id="OrderName">
- <h3>Payment Method</h3>
-  <table width="200" border="0">
-    <tr>
-      <td><label>
-        <input type="radio" name="payMethod" id="cash" value="Cash" checked />
-        Cash</label></td>
-    </tr>
-    <tr>
-      <td><label>
-        <input type="radio" name="payMethod" id="creditcard" value="Credit Card" " />
-        Credit Card</label></td>
-    </tr>
-    <tr>
-      <td><label>
-        <input type="radio" name="payMethod" id="check" value="Check" " />
-        Check</label></td>
-    </tr>
-  </table>
-  <table width="390" border="0">
-    <tr>
-      <td> <label>Name
-        <input type="text" name="customerName" id="customerName"  class="required"/>
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Address
-        <input type="text" name="address" id="customerAddress" class="required"/>
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Billing Address
-        <input type="text" name="billingAddress" id="billAddress" class="required" />
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Phone Number 
-        <input type="text" name="phone" id="customerPhone" class="required phoneUS"/>
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Email Address
-				<input type="text" name="email" id="customerEmail" class="required email"/>
-		 </label></td>
-    </tr>
-    <tr>
-      <td> <label>Coupon Code
-        <input type="text" name="couponCode" id="couponCode"  />
-      </label></td>
-    </tr>
-  </table>
-  
   </div>
-  
-   <br />
-
-  
-
-  
-  <table width="60" border="0">
-    <tr>
-      <td><label>
-        <input type="submit" name="validateUser" id="submit" value="Submit Order!" class="submit"/>
-      </label></td>
-      <td><label>
-        <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
-      </label></td>
-    </tr>
-    <tr><td colspan=2><input type="hidden" name="pid" value="validate">
-    									<input type="hidden" name="orderTotal" value="">
-    									<input type="hidden" name="orderSummary" value="">
-											<input type="hidden" name="pid" value="validate">
-											<input type="hidden" name="javascript" value="false">
  
-    
-    </td></tr>
-  </table>
+  
+
  
 
 </form></div><br/>
+<?php 
+ob_flush();
+
+?>

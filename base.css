@@ -13,8 +13,7 @@
   * @since      Mar 11, 2011-2011
 */
 
-label { width: 10em; float: left; }
-label.error { float: none; color: blue; padding-left: .5em; vertical-align: top; }
+
 
 
 body	{
@@ -25,6 +24,10 @@ body	{
 h3  {
 	text-align:center;
 	}
+h3.left {
+	text-align:left;
+	padding-left:60px;
+}
 	#captcha {
 	position:relative;
 	display:inline;
@@ -39,12 +42,7 @@ h3  {
 	margin-left:auto;
 	margin-right:auto;
 }
-#pizza {
-	width:500px;
-	background-color:green;
-	margin:0 auto;
-	text-align:center;
-}
+
 #header  {
 	font-size:larger;
 	font-weight:bold;
@@ -62,25 +60,85 @@ h3  {
 
 #OrderTally  {
 	position:relative;
-	float:left;
-	width:475px;
-	height:450px;
+	float:right;
+	width:425px;
+	height:500px;
 }
 
-#OrderName input {
-	width:250px;
-	position:absolute;
-	right:35px;	
+#CustomerInfo input {
+	width:200px;
+	position:relative;
+	right:5px;	
 	}
 
-#OrderName {
+#topBox {
+	width:90%;
+	margin:0 auto;
+	border-left:3px solid black;
+	border-right:3px solid black;
+	border-bottom:3px solid black;
+	margin-bottom:20px;
+	min-height:350px;
+	border-bottom-right-radius:10px;
+	-moz-border-bottom-right-radius:10px;
+	}
+#CustomerInfo {
 	position:relative;
-	width:450px;
-	height:125px;
-	clear:both;
+	width:60%;
+	font-size:16pt;
 	float: left;
 	}
-
+#CustomerInfo table {
+	position:relative;
+	float:left;
+	left:10px;
+	top:-25px;
+	padding:10px;
+	background-color:lightgreen;
+	border:3px solid black;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	
+	}
+#CustomerInfo table td{
+	background-color:lightgreen;
+		padding:5px;
+	}
+#CustomerInfo label {
+	position:relative;
+	top:7px;
+	font-weight:bold;
+	
+	color:brown;
+	}
+.col1 {
+	width:50px;
+}
+#CustomerInfo label.error { 
+  position:relative;
+  top:5px;
+ 
+  font-weight:bold;
+  color: red; 
+  font-size:10pt;
+    }
+#Payment {
+	position:relative;
+	width:40%;
+	float:left;
+	text-align:center;
+}
+#pizzaSection {
+	width:100%;
+	float:left;
+	margin:0 auto;
+	}
+#PizzaSizes   {
+  width:300px;
+  position: relative;
+  float:left;
+}
 #pizzaImage {
 	width:200px;
 	height:200px;
@@ -88,19 +146,20 @@ h3  {
 	margin-right:auto;
 	margin-top:20px;
 }
-
-#PizzaSizes		{
-	width:225px;
-	height:400px;
-	position: relative;
-	float:left;
+#Toppings {
+	width:275px;
+  position:relative;
+  float:left;
 }
 
-#SubmitBox  {
+
+#SubmitButton  {
 position:relative;
-margin-top:200px;
 clear:left;
-margin-left:175px;
+float:left;
+padding-top:30px;
+padding-left:30px;
+
 }
 
 table {
@@ -108,25 +167,9 @@ table {
 	margin-right:auto;
 		}
 
-#Toppings	{
-	width:300px;
-	height:400px;
-	position:relative;
-	float:left;
-}
 .smaller {
 	font-size:60%;
 		}
-#outputContainer {
-	width:500px;
-	height:400px;
-	padding:20px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:50px;
-	background-color:#090;
-	color:black;
-	}
 	
 	#confirmEmail #container {
   position:relative;
@@ -178,3 +221,5 @@ table {
   color:white;
   background-color:black;
   text-align:center;
+}
+

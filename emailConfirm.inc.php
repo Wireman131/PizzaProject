@@ -27,21 +27,10 @@ $timeOfDelievery = Date("l, F j, Y, g:i a", strtotime("+30 minutes"));
 $_SESSION['timeOfOrder'] = $timeOfOrder;
 $_SESSION['deliveryTime'] = $timeOfDelievery;
 
-
 /*
-Validate all submitted fields to make sure they are compliant...
-firstName -> combined into fullName
-lastName  -> combined into fullName
-address 
-billingAddress
-email
-payMethod
-emailCoupon
-timeOfOrder
-deliveryTime
-*/
-
-//print_r($_SESSION);
+ * Bring in emailBody.php - Display results to browser.  If the email
+ * was successful there will be notification at the bottom of the page.
+ */
 include 'emailBody.php';
 
 //exit(); // temporary block of the emailer for testing purposes
@@ -117,6 +106,7 @@ $emailConfirm .= "<h4>" . $_SESSION['delivery'] . $_SESSION['deliveryTime'] . "<
 $emailConfirm .= "<h4>For : " . $_SESSION['customerName'] . "</h4><br/>";
 $emailConfirm .= "<h4>Please be ready to pay $" . $_SESSION['orderTotal'] . " with "
 	. $_SESSION['payMethod'] . "</h4><br/>";
+$emailConfirm .= "<h4>Your Coupon Value : " . $_SESSION['couponValue'] . "<br/>";
 $emailConfirm .= "<h2>Thank You For Your Order!!</h2>";
 $message->setBody($emailConfirm, 'text/html');
 /*

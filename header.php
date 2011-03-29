@@ -39,8 +39,11 @@
 <title>Advanced PHP Pizza Shop</title>
 <?php
 echo '<link rel="stylesheet" type="text/css" href="base.css"/>';
-echo '<script src="library' . SLASH . 'jquery' . SLASH . '1.5.1'  . SLASH .  'jquery.js" type="text/javascript"></script>';
-echo '<script src="library' . SLASH . 'jquery-validation' . SLASH . 'jquery.validate.js" type="text/javascript"></script>';
-echo '<script src="library' . SLASH . 'jquery-validation' . SLASH . 'additional-methods.js" type="text/javascript"></script>';
+//echo '<script src="library' . SLASH . 'jquery' . SLASH . '1.5.1'  . SLASH .  'jquery.js" type="text/javascript"></script>';
+//echo '<script src="library' . SLASH . 'jquery-validation' . SLASH . 'jquery.validate.js" type="text/javascript"></script>';
+//echo '<script src="library' . SLASH . 'jquery-validation' . SLASH . 'additional-methods.js" type="text/javascript"></script>';
+echo '<script src="library/jquery/1.5.1/jquery.js" type="text/javascript"></script>';
+echo '<script src="library/jquery-validation/jquery.validate.js" type="text/javascript"></script>';
+echo '<script src="library/jquery-validation/additional-methods.js" type="text/javascript"></script>';
 echo '<script src="Project 2.js" type="text/javascript"></script>';
 ?>

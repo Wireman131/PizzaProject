@@ -18,11 +18,9 @@ $rvl = 'Respect' . SLASH . 'Validation' . SLASH . 'Validator.php';
 require('$rvl');
 
 //print_r($_POST);
-//echo "<br/><br/>";
-
-//echo "Welcome " . $_POST['name'];
 /*
- * Sample - Temporary Data for testing:
+ * Pull in posted variable from the form, test them, then set session variables
+ * accrodingly. 
  */
 $formFields = Array('customerName','address','billingAddress','email','payMethod','emailCoupon','orderSummary','orderTotal','javascript');
 for ($i=0;$i<count($formfields);$i++){
@@ -47,6 +45,19 @@ if (!isset($_SESSION['payMethod'])){
 if (!isset($_SESSION['emailCoupon'])){
   $_SESSION['emailCoupon'] = $_POST['couponCode'];
 }
+$val = $_SESSION['emailCoupon'];
+if (!isset($_SESSION['couponValue'])){
+if($val == "twitter2"){
+   $_SESSION['couponValue'] = "Your Coupon equals 2 bucks off!<br/>";
+}else if ($val == "springbreak"){
+   $_SESSION['couponValue'] = "Your Coupon equals 1 buck off!</br>";
+}else if ($val == "freepizza"){
+   $_SESSION['couponValue'] = "Coupon equals add 2 bucks sucker!<br/>Only
+   a complete fool would think that we would give you FREE PIZZA!<br/>";
+} else {
+   $_SESSION['couponValue'] = "Coupon equals nothing";
+     }}
+     
 if (!isset($_SESSION['orderSummary'])){
   $_SESSION['orderSummary'] = $_POST['orderSummary'];
 } 
@@ -59,6 +70,7 @@ if (isset($_POST['deliveryBox'])){
 } else {
   $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
 }
+
 if (isset($_POST['javascript'])){
   $_SESSION['javascript'] = $_POST['javascript'];
 
@@ -111,6 +123,11 @@ $_SESSION['email'])){
 
 
 function inputValidated(){
+
+/*
+ * Begin section that will display a custom built captcha
+ */
+
 echo"<div id='pizza'>Real User Validation<br/>";
 echo $_SESSION['customerName'] . " Please confirm that you are human!<br/><br/>\n";
 echo "<div id='captcha'>";
