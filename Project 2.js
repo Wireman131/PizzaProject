@@ -50,9 +50,15 @@ function couponCheck(){
 $(function(){
   $('.auto-focus:first').focus();
 // call to jquery validation occurs here!!!
-$("#pizza").validate().form({
+$("#pizza").validate({
   messages: {
-    customerName: "*",
+    customerName: "You Must Submit Your Name.",
+    address: "Address Is Required",
+    billAddress: "Billing Address Is Required",
+    phone: {
+      required: "Phone Number Is Required!!",
+      phone: "Number Must Be In This Format xxx-xxx-xxxx"
+    },
     email: {
       required: "We need your email address to contact you",
       email: "Your email address must be in the format of name@domain.com"
@@ -61,13 +67,10 @@ $("#pizza").validate().form({
   },
   errorPlacement: function(error, element) {
     error.appendTo( element.parent("td").next("td") );
-  },
-  debug:true
-
-
+  }
+  
 });
 
-//alert("jquery is on");
   $("input").change(
     function(){
       //alert('here');
