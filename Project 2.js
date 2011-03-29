@@ -49,7 +49,22 @@ function couponCheck(){
 //alert("javascript file is here");
 $(function(){
 // call to jquery validation occurs here!!!
-$("#pizza").validate();
+$("#pizza").validate({
+  messages: {
+    customerName: "*",
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com"
+    }
+    
+  },
+  errorPlacement: function(error, element) {
+    error.appendTo( element.parent("td").next("td") );
+  },
+  debug:true
+
+
+});
 
 //alert("jquery is on");
   $("input").change(

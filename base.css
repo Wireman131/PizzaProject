@@ -13,16 +13,8 @@
   * @since      Mar 11, 2011-2011
 */
 
-label { 
-	width: 10em; 
-	float: left; 
-	}
-label.error { 
-	float: none; 
-	color: red; 
-	padding-left: .5em; 
-	vertical-align: top; 
-	}
+
+
 
 body	{
 	background-color:#C00;
@@ -32,6 +24,10 @@ body	{
 h3  {
 	text-align:center;
 	}
+h3.left {
+	text-align:left;
+	padding-left:60px;
+}
 	#captcha {
 	position:relative;
 	display:inline;
@@ -71,24 +67,62 @@ h3  {
 
 #CustomerInfo input {
 	width:200px;
-	position:absolute;
+	position:relative;
 	right:5px;	
 	}
 
 #topBox {
-	width:80%;
+	width:90%;
 	margin:0 auto;
 	border-left:3px solid black;
 	border-right:3px solid black;
 	border-bottom:3px solid black;
 	margin-bottom:20px;
-	min-height:240px;
+	min-height:350px;
+	border-bottom-right-radius:10px;
+	-moz-border-bottom-right-radius:10px;
 	}
 #CustomerInfo {
 	position:relative;
 	width:60%;
+	font-size:16pt;
 	float: left;
 	}
+#CustomerInfo table {
+	position:relative;
+	float:left;
+	left:10px;
+	top:-25px;
+	padding:10px;
+	background-color:lightgreen;
+	border:3px solid black;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	
+	}
+#CustomerInfo table td{
+	background-color:lightgreen;
+		padding:5px;
+	}
+#CustomerInfo label {
+	position:relative;
+	top:7px;
+	font-weight:bold;
+	
+	color:brown;
+	}
+.col1 {
+	width:50px;
+}
+#CustomerInfo label.error { 
+  position:relative;
+  top:5px;
+ 
+  font-weight:bold;
+  color: red; 
+  font-size:10pt;
+    }
 #Payment {
 	position:relative;
 	width:40%;

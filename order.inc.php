@@ -27,32 +27,33 @@ session_unset();
 <form name='pizza' class="cmxform" id="pizza" action='index.php?pid=validate' method="post" >
 <div id="topBox">
 <div id="CustomerInfo">
-<h3>Customer Info</h3>
-  <table width="300" border="0">
+<h3 class="left">Customer Info</h3>
+  <table >
     <tr>
-      <td> <label>Name
-        <input type="text" name="customerName" id="customerName"  class="required"/>
-      </label></td>
+      <td class="col1"><label for="customerName">Name</label></td>
+      <td><input type="text" name="customerName" id="customerName"  class="required"/>
+      </td><td></td>
+    </tr>
+    
+    <tr>
+      <td class="col1"><label for="customerAddress">Address</label></td>
+      <td><input type="text" name="address" id="customerAddress" class="required"/>
+      </td><td></td>
     </tr>
     <tr>
-      <td><label>Address
-        <input type="text" name="address" id="customerAddress" class="required"/>
-      </label></td>
+      <td class="col1"><label for="billAddress">Billing Address</label></td>
+      <td><input type="text" name="billingAddress" id="billAddress" class="required" />
+      </td><td></td>
     </tr>
     <tr>
-      <td><label>Billing Address
-        <input type="text" name="billingAddress" id="billAddress" class="required" />
-      </label></td>
+      <td class="col1"><label for="customerPhone">Phone Number</label></td> 
+      <td><input type="text" name="phone" id="customerPhone" class="required phoneUS"/>
+      </td><td></td>
     </tr>
     <tr>
-      <td><label>Phone Number 
-        <input type="text" name="phone" id="customerPhone" class="required phoneUS"/>
-      </label></td>
-    </tr>
-    <tr>
-      <td><label>Email Address
-				<input type="text" name="email" id="customerEmail" class="required email"/>
-		 </label></td>
+      <td class="col1"><label for="customerEmail">Email Address</label></td>
+			<td><input type="text" name="email" id="customerEmail" class="required email"/>
+		  </td><td></td>
     </tr>
     
   </table>
