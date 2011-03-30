@@ -46,44 +46,6 @@ function couponCheck(){
 }
       
 
-//alert("javascript file is here");
-$(function(){
-  $('.auto-focus:first').focus();
-// call to jquery validation occurs here!!!
-$("#pizza").validate({
-  messages: {
-    customerName: "You Must Submit Your Name.",
-    address: "Address Is Required",
-    billAddress: "Billing Address Is Required",
-    phone: {
-      required: "Phone Number Is Required!!",
-      phone: "Number Must Be In This Format xxx-xxx-xxxx"
-    },
-    email: {
-      required: "We need your email address to contact you",
-      email: "Your email address must be in the format of name@domain.com"
-    }
-    
-  },
-  errorPlacement: function(error, element) {
-    error.appendTo( element.parent("td").next("td") );
-  }
-  
-});
-
-  $("input").change(
-    function(){
-      //alert('here');
-      sizer();
-      topper();
-      couponCheck();
-      calcTotal();  //tally sheet total subtotal, then add sales tax format output
-        });
-  
- 
-    });
-
-
 //  ajax routine to reload captcha
 function newCaptcha(){
   //  Create an XMLHttpRequest object
@@ -295,68 +257,7 @@ function pricer(size) {  // determine price of pie based on size
   
   
   var name,address,phone,email; // declare 4 global variables so they can be used in popup
-    function verifyCustomerInfo() {
-//    alert("verify customer info");
-    //we're only interested in validating the name, address, city, zip and phone number
-    var c_name, c_address, cb_address, c_phone; 
-    c_name = $("#customerName").val();
-    c_address = $("#customerAddress").val();
-    cb_address = $("#billAddress").val();
-    c_phone = $("#customerPhone").val();
-//    alert("jquery grabs = " + c_name + c_address + cb_address + c_phone);
-    if ( c_name == "") {
-      window.alert("You Must Enter Your Name!");
-      //return false;
-    } else {
-      var customerName = document.getElementById("customerName").value;
-      //passThru += 1;
-      //window.alert("Name was :" + name + //passThru);
-        }
-    if ($("#customerAddress").value == "") {
-      window.alert("You must enter your address!");
-      //document.getElementById("customerAddress").focus();
-      //return false;
-    } else {
-      var address = document.getElementById("customerAddress").value;
-      //passThru += 1;
-      //window.alert("Address was:" + address + //passThru);
-        }
-    if ($("#billAddress").value == "") {
-      window.alert("You must enter your billing address!");
-      //document.getElementById("customerAddress").focus();
-      //return false;
-    } else {
-       //passThru += 1;
-      //window.alert("Address was:" + address + //passThru);
-        }
-    if ($("#customerPhone").value == "") {
-      window.alert("You must enter your phone number!");
-      //document.getElementById("customerPhone").focus();
-      //return false;
-    } else {
-      var phone = document.getElementById("customerPhone").value;
-      //passThru += 1;
-      //window.alert("Phone Number was:"+ phone +//passThru);
-      
-    }
-    if ($("#customerEmail").value == "") {
-      window.alert("You must enter your email address!");
-      //document.getElementById("customerEmail").focus();
-      //return false;
-    } else {
-      var email = document.getElementById("customerEmail").value;
-      //passThru += 1;
-      //window.alert("Email address was:"+ email+//passThru);
-          } 
-    //if (//passThru == 5) {
-      
-      return true;
-     // alert("code to unhide the captcha box");
-      //document.pizza.submit();
-    //} 
-      
-  }
-      
+     
       
 
     

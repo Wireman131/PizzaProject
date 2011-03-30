@@ -46,4 +46,6 @@ echo '<script src="library/jquery/1.5.1/jquery.js" type="text/javascript"></scri
 echo '<script src="library/jquery-validation/jquery.validate.js" type="text/javascript"></script>';
 echo '<script src="library/jquery-validation/additional-methods.js" type="text/javascript"></script>';
 echo '<script src="Project 2.js" type="text/javascript"></script>';
+echo '<script src="pizza_jQuery.js" type="text/javascript"></script>';
+
 ?>
