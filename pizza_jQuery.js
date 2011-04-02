@@ -24,7 +24,7 @@ $("#pizza").validate({
     billAddress: "Billing Address Is Required",
     phone: {
       required: "Phone Number Is Required!!",
-      phone: "Number Must Be In This Format xxx-xxx-xxxx"
+      phone: "Number Must Be In This Format"
     },
     email: {
       required: "We need your email address to contact you",

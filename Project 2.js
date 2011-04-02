@@ -241,7 +241,7 @@ function pricer(size) {  // determine price of pie based on size
   function calcTotal() {
     var w = parseFloat(toppingTotal);
     //alert("variable w: "+w);
-    var x = parseFloat(piePrice) + w;
+    var x = parseFloat(piePrice) + w + couponValue;
     var y = x * .06;
     
     //alert("variable y: "+y);

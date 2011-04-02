@@ -23,6 +23,16 @@ session_unset();
 /*
  * Form submits to the validate.inc.php page if the client side validaton passes.
  */
+if(isset($_SESSION['customerName'])){
+  $customerName = $_SESSION['customerName'];
+} else {
+  $customerName = "";
+}
+if(isset($_SESSION['customerNameError'])){
+  $customerNameError = $_SESSION['customerNameError'];
+  }else{
+    $customerNameError = "";
+  }
 ?>
 <form name='pizza' class="cmxform" id="pizza" action='index.php?pid=validate' method="post" >
 <div id="topBox">
@@ -31,9 +41,9 @@ session_unset();
   <table >
     <tr>
       <td class="col1"><label for="customerName">Name</label></td>
-
-			<td><input type="text" name="customerName" id="customerName"  class="required" value="<?php if(isset($_SESSION['customerName'])){echo ){}?>"/>
-			</td><td><?php if(isset($_SESSION['customerNameError'])){echo "Please enter your name";} ?></td>
+			<td><input type="text" name="customerName" id="customerName" 
+						class="required" value="<?php echo $customerName; ?>"/>
+			</td><td><?php echo $customerNameError; ?></td>
    </tr>
     
     <tr>
@@ -51,7 +61,7 @@ session_unset();
     <tr>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
       <td><input type="text" name="phone" id="customerPhone" 
-      title="Input Your Phone Number With Area Code" class="required phoneUS"/>
+      title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" class="required phoneUS"/>
       </td><td></td>
     </tr>
     <tr>
@@ -102,7 +112,7 @@ session_unset();
     <tr>
       <td><label>
 			<input type="radio" name="pizzaSize" id="pizzaSize_0" 
-			title="Small Pizza" value="Small" />
+			title="Small Pizza" value="Small" checked />
         Small</label></td>
       <td>$8.00</td>
     </tr>
@@ -168,9 +178,9 @@ session_unset();
     <tr>
       <td><label>
         <input type="checkbox" name="Pepperoni" id="topping_0" 
-        title="Pepperoni" value="1.25" />
+        title="Pepperoni" value=".50" />
       Pepperoni </label></td>
-      <td>$1.25</td>
+      <td>$.50</td>
     </tr>
     <tr>
       <td><label>
@@ -182,54 +192,50 @@ session_unset();
     <tr>
       <td><label>
         <input type="checkbox" name="Onions" id="topping_2" 
-        title="Onions" value=".75" />
+        title="Onions" value=".50" />
       Onions</label></td>
-      <td>$.75</td>
+      <td>$.50</td>
     </tr>
     <tr>
       <td><label>
         <input type="checkbox" name="Green Peppers" id="topping_3" 
-        title="Green Peppers" value=".90" />
+        title="Green Peppers" value=".50" />
       Green Peppers</label></td>
-      <td>$.90</td>
+      <td>$.50</td>
     </tr>
     <tr>
       <td><label>
         <input type="checkbox" name="Sausage" id="topping_4" 
-        title="Sausage" value="1.40" />
+        title="Sausage" value=".50" />
       Sausage</label></td>
-      <td>$1.40</td>
+      <td>$.50</td>
     </tr>
     <tr>
       <td><label>
         <input type="checkbox" name="Bacon" id="topping_5" 
-        title="Everything Is Better With Bacon!" value="1.75" />
+        title="Everything Is Better With Bacon!" value=".50" />
       Bacon</label></td>
-      <td>$1.75</td>
+      <td>$.50</td>
     </tr>
     <tr>
       <td><label>
         <input type="checkbox" name="Jalapeno" id="topping_6" 
-        title="Jalepeno" value=".55" />
+        title="Jalepeno" value=".50" />
       Jalapeno</label></td>
-      <td>$.55</td>
+      <td>$.50</td>
     </tr>
     <tr>
       <td><label>
         <input type="checkbox" name="Green Olive" id="topping_7" 
-        title="Green Olive" value="1.00" />
+        title="Green Olive" value=".50" />
       Green Olive</label></td>
-      <td>$1.00</td>
+      <td>$.50</td>
     </tr>
     <tr>
       <td>Delivery $2.00 <span class='smaller'>- Within 5 Miles Of Store</span></td>
       <td><label>
-<<<<<<< HEAD
-        <input type="checkbox" name="delivery" id="delivery" />
-=======
         <input type="checkbox" name="deliveryBox" 
         title="Delivery - Yes!" id="deliveryBox" />
->>>>>>> upstream/master
         Yes</label></td>
     </tr>
     <tr>
