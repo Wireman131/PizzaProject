@@ -87,10 +87,6 @@ if (isset($_POST['deliveryBox'])){
 } else {
   $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
 }
-
-if (isset($_POST['javascript'])){ $_SESSION['javascript'] = $_POST['javascript']; }
-//echo ($_SESSION['javascript']);
-
 //$_SESSION['address'] = "123 Main Street";
 //$_SESSION['billingAddress'] = "321 South Main Street";
 //$_SESSION['email'] = "wireman131@wireman131.com";
@@ -100,27 +96,10 @@ if (isset($_POST['javascript'])){ $_SESSION['javascript'] = $_POST['javascript']
 //$_SESSION['emailCoupon'] = "None";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-//if the javascript has been set, then the order has been placed
-if(eval($_SESSION['javascript'])){
-inputValidated();
+if(!$isValid){
+	include('order.inc.php');
 }
-else{
-	$isValid = true; //we'll assume that it's okay until we know better
-	// the javascript validation didn't fire, so we have to validate the user input]
-	if($_SESSION['customerName'] == ''){
-		$isValid = false;
-		$_SESSION['customerNameError'] = "Enter Name Please";
-	}
-	// check address and billing address are present
-	// check phone number is a number
-	// check email address is an email address
-	// if all check out call inputValidated()
-	// else redirect back to the form
-	//
-	if(!$isValid){
-		include('order.inc.php');
-	}
-}
+
 
 
 

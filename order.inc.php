@@ -23,6 +23,46 @@ session_unset();
 /*
  * Form submits to the validate.inc.php page if the client side validaton passes.
  */
+$isValid = true; //we'll assume that it's okay until we know better
+
+//name
+
+if($_SESSION['customerName'] == ''){
+$isValid = false;
+//$_SESSION['customerNameError'] = "Enter Name Please";
+}
+
+//address
+
+if($_SESSION['address'] == ''){
+$isValid = false;
+//$_SESSION['addressError'] = "Enter Address Please";
+}
+
+//billing address
+
+if($_SESSION['billingAddress'] == ''){
+$isValid = false;
+//$_SESSION['billingAddressError'] = "Enter Address Please";
+}
+
+//phone
+
+if($_SESSION['customerphone'] == ''){
+$isValid = false;
+//$_SESSION['customerphoneError'] = "Enter Phone Number Please";
+}
+
+
+//email
+
+if($_SESSION['email'] == ''){
+$isValid = false;
+//$_SESSION['email'] = "Enter Email Address Please";
+}
+
+
+
 if(isset($_SESSION['customerName'])){
   $customerName = $_SESSION['customerName'];
 } else {

@@ -8,3 +8,4 @@
 [29-Mar-2011 16:49:03] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
 [29-Mar-2011 16:49:03] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
 [30-Mar-2011 11:17:54] PHP Parse error:  syntax error, unexpected ')' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
+[02-Apr-2011 15:55:05] PHP Notice:  Undefined index: customerphone in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 124
