@@ -15,66 +15,66 @@
  * This code will nuke all session variables
  */
 session_unset();
-
 ?>
 <div id='container'>
 <div id='headerImage'><img src='images/header.png' /></div>
 <?php 
-/*
- * Form submits to the validate.inc.php page if the client side validaton passes.
- */
+$customerNameError = "";
+$addressError = "";
+$billingAddressError = "";
+$phoneError = "";
+$emailError = "";
+
+if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) || (isset($_post['billingaddress'])) || (isset($_post['customerPhone'])) || (isset($_post['email'])) ){
+ /*
+	* at least one of these values was entered, so we need to validate all of them
+	*/
 $isValid = true; //we'll assume that it's okay until we know better
 
-//name
+//validate name
 
-if($_SESSION['customerName'] == ''){
+if($_POST['customerName'] == ''){
 $isValid = false;
-//$_SESSION['customerNameError'] = "Enter Name Please";
+$customerNameError = "Please Enter Your Name";
 }
 
-//address
+//validate address
 
-if($_SESSION['address'] == ''){
+if($_POST['address'] == ''){
 $isValid = false;
-//$_SESSION['addressError'] = "Enter Address Please";
+$addressError = "Please Enter Your Address";
 }
 
-//billing address
+//validate billing address
 
-if($_SESSION['billingAddress'] == ''){
+if($_POST['billingAddress'] == ''){
 $isValid = false;
-//$_SESSION['billingAddressError'] = "Enter Address Please";
+$billingAddressError = "Enter Address Please";
 }
 
-//phone
+//validate phone number
 
-if($_SESSION['customerphone'] == ''){
+if($_POST['customerphone'] == ''){
 $isValid = false;
-//$_SESSION['customerphoneError'] = "Enter Phone Number Please";
+$phoneError = "Enter Phone Number Please";
 }
 
+//validate email address
 
-//email
-
-if($_SESSION['email'] == ''){
+if($_POST['email'] == ''){
 $isValid = false;
-//$_SESSION['email'] = "Enter Email Address Please";
+$emailError = "Enter Email Address Please";
 }
 
-
-
-if(isset($_SESSION['customerName'])){
-  $customerName = $_SESSION['customerName'];
-} else {
-  $customerName = "";
+//if all of these tests have passed, then the form is ready to
+//redirect to validate.inc.php
+if($isValid){
+	header("Location: index.php?pid=validate"); 
 }
-if(isset($_SESSION['customerNameError'])){
-  $customerNameError = $_SESSION['customerNameError'];
-  }else{
-    $customerNameError = "";
-  }
+}
+
 ?>
-<form name='pizza' class="cmxform" id="pizza" action='index.php?pid=validate' method="post" >
+<form name='pizza' class="cmxform" id="pizza" action='index.php?pid=order' method="post" >
 <div id="topBox">
 <div id="CustomerInfo">
 <h3 class="left">Customer Info</h3>
@@ -90,25 +90,25 @@ if(isset($_SESSION['customerNameError'])){
       <td class="col1"><label for="customerAddress">Address</label></td>
       <td><input type="text" name="address" id="customerAddress" 
       title="Input Your Address" class="required"/>
-      </td><td></td>
+      </td><td><?php echo $addressError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="billAddress">Billing Address</label></td>
       <td><input type="text" name="billingAddress" id="billAddress" 
       title="Input Billing Address" class="required" />
-      </td><td></td>
+      </td><td><?php echo $billingAddressError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
       <td><input type="text" name="phone" id="customerPhone" 
       title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" class="required phoneUS"/>
-      </td><td></td>
+      </td><td><?php echo $phoneError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerEmail">Email Address</label></td>
 			<td><input type="text" name="email" id="customerEmail" 
 			title="Input Email Address" class="required email"/>
-		  </td><td></td>
+		  </td><td><?php echo $emailError; ?></td>
     </tr>
     
   </table>
