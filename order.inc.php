@@ -96,11 +96,13 @@ if(isset($_SESSION['customerNameError'])){
         Check</label></td>
     </tr>
     <tr>
-      <td> <label for="couponCode">Coupon Code</label>
+      <td> <img alt="Check" src="images/arrow.png"/>
+      <label for="couponCode">Coupon Code</label>
         <input type="text" name="couponCode" id="couponCode"
         title="Please Enter Your Coupon Code"  />
          </td>
     </tr>
+    <tr><td><span id="couponVal">&nbsp;</span></td></tr>
   </table>
  </div>
   </div> 

@@ -24,26 +24,39 @@ var couponValue;
 function couponCheck(){
   //alert('Coupon Checker');
   couponCode = document.getElementById("couponCode").value;
-  switch(couponCode)
+  
+  if (couponCode.length == 0){
+    alert(couponCode.length);
+    document.getElementById("couponVal").innerHTML = "&nbsp;";
+    couponValue = 0;
+    document.getElementById("tallyCouponValue").innerHTML = "<strong>$0.00</strong>";
+    return;
+  } else {
+  
+   switch(couponCode)
   {
   case "twitter2":
   couponValue = -2;
   document.getElementById("tallyCouponValue").innerHTML = "<strong>-$2.00</strong>";
+  document.getElementById("couponVal").innerHTML = "Valid Coupon - 2 Bucks Off!";
     break;
   case "freepizza":
   couponValue = 2;
   document.getElementById("tallyCouponValue").innerHTML = "<strong>+$2.00</strong>";
+  document.getElementById("couponVal").innerHTML = "Valid Coupon - Add 2 Bucks!<br/>No Such Thing As Free Pizza!!";
     break;
   case "springbreak":
     couponValue = -1;
     document.getElementById("tallyCouponValue").innerHTML = "<strong>-$1.00</strong>";
+    document.getElementById("couponVal").innerHTML = "Valid Coupon - 1 Buck Off!";
     break;
   default:
     couponValue = 0;
     document.getElementById("tallyCouponValue").innerHTML = "<strong>$0.00</strong>";
+    document.getElementById("couponVal").innerHTML = "Not A Valid Coupon";
   }
   return;
-}
+}}
       
 
 //  ajax routine to reload captcha

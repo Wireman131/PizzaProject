@@ -111,6 +111,9 @@ input {
 	border-radius:5px;
 	-moz-border-radius:5px;
 	}
+input {
+	font-weight:bold;
+}
 input:focus {
 	background-color:#1FE256;
 	border:3px solid black;
@@ -138,6 +141,12 @@ input:focus {
 	float:left;
 	text-align:center;
 }
+#couponVal {
+	text-align:center;
+	font-weight:bold;
+	color:white;
+	margin:0 auto;
+	}
 #pizzaSection {
 	width:100%;
 	float:left;
