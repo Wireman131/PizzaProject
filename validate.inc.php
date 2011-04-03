@@ -96,20 +96,12 @@ if (isset($_POST['deliveryBox'])){
 //$_SESSION['emailCoupon'] = "None";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-if(!$isValid){
-	include('order.inc.php');
-}
 
 
-
-
-
-function inputValidated(){
 
 /*
  * Begin section that will display a custom built captcha
  */
-echo"<div id='pizza'>Real User Validation<br/>";
 
 echo"<div id='validate'>Real User Validation<br/>";
 
@@ -120,6 +112,5 @@ echo "</div><p>WTF!?!?! I Can't Read This!<br/></p>
 <form><button type='submit' onclick=\"newCaptcha();return true\">Reload</button>
 <input type=\"hidden\" name=\"pid\" value=\"validate\">
 </form></div>";
-}
 
 ?>

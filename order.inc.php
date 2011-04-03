@@ -15,17 +15,18 @@
  * This code will nuke all session variables
  */
 session_unset();
-?>
-<div id='container'>
-<div id='headerImage'><img src='images/header.png' /></div>
-<?php 
+
+
 $customerNameError = "";
 $addressError = "";
 $billingAddressError = "";
 $phoneError = "";
 $emailError = "";
-
-if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) || (isset($_post['billingaddress'])) || (isset($_post['customerPhone'])) || (isset($_post['email'])) ){
+//print_r($_POST);
+if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) || 
+    (isset($_post['billingaddress'])) || (isset($_post['phone'])) || 
+    (isset($_post['email'])) ){
+      //echo "all set";
  /*
 	* at least one of these values was entered, so we need to validate all of them
 	*/
@@ -36,6 +37,8 @@ $isValid = true; //we'll assume that it's okay until we know better
 if($_POST['customerName'] == ''){
 $isValid = false;
 $customerNameError = "Please Enter Your Name";
+} else {
+  $customerName = $_POST['customerName'];
 }
 
 //validate address
@@ -43,6 +46,8 @@ $customerNameError = "Please Enter Your Name";
 if($_POST['address'] == ''){
 $isValid = false;
 $addressError = "Please Enter Your Address";
+} else {
+  $address = $_POST['address'];
 }
 
 //validate billing address
@@ -50,13 +55,17 @@ $addressError = "Please Enter Your Address";
 if($_POST['billingAddress'] == ''){
 $isValid = false;
 $billingAddressError = "Enter Address Please";
+} else {
+  $billingAddress = $_POST['billingAddress'];
 }
 
 //validate phone number
 
-if($_POST['customerphone'] == ''){
+if($_POST['phone'] == ''){
 $isValid = false;
 $phoneError = "Enter Phone Number Please";
+} else {
+  $customerPhone = $_POST['phone'];
 }
 
 //validate email address
@@ -64,16 +73,21 @@ $phoneError = "Enter Phone Number Please";
 if($_POST['email'] == ''){
 $isValid = false;
 $emailError = "Enter Email Address Please";
+} else {
+  $email = $_POST['email'];
 }
 
 //if all of these tests have passed, then the form is ready to
 //redirect to validate.inc.php
 if($isValid){
+  echo "is valid";
 	header("Location: index.php?pid=validate"); 
 }
 }
 
 ?>
+<div id='container'>
+<div id='headerImage'><img src='images/header.png' /></div>
 <form name='pizza' class="cmxform" id="pizza" action='index.php?pid=order' method="post" >
 <div id="topBox">
 <div id="CustomerInfo">
@@ -89,25 +103,29 @@ if($isValid){
     <tr>
       <td class="col1"><label for="customerAddress">Address</label></td>
       <td><input type="text" name="address" id="customerAddress" 
-      title="Input Your Address" class="required"/>
+      title="Input Your Address" class="required"
+      value="<?php echo $address; ?>"/>
       </td><td><?php echo $addressError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="billAddress">Billing Address</label></td>
       <td><input type="text" name="billingAddress" id="billAddress" 
-      title="Input Billing Address" class="required" />
+      title="Input Billing Address" class="required"
+      value="<?php echo $billingAddress; ?>" />
       </td><td><?php echo $billingAddressError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
       <td><input type="text" name="phone" id="customerPhone" 
-      title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" class="required phoneUS"/>
+      title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" 
+      class="required phoneUS" value="<?php echo $customerPhone; ?>"/>
       </td><td><?php echo $phoneError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerEmail">Email Address</label></td>
 			<td><input type="text" name="email" id="customerEmail" 
-			title="Input Email Address" class="required email"/>
+			title="Input Email Address" class="required email"
+			value="<?php echo $email; ?>"/>
 		  </td><td><?php echo $emailError; ?></td>
     </tr>
     
@@ -191,10 +209,10 @@ if($isValid){
         <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
       </label></td>
     </tr>
-    <tr><td colspan=2><input type="hidden" name="pid" value="validate">
+    <tr><td colspan=2>
     									<input type="hidden" name="orderTotal" value="">
     									<input type="hidden" name="orderSummary" value="">
-											<input type="hidden" name="pid" value="validate">
+											
 											<input type="hidden" name="javascript" value="false">
  
     

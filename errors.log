@@ -1,27 +1,167 @@
-
-[29-Mar-2011 16:48:34] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[29-Mar-2011 16:48:36] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[29-Mar-2011 16:48:37] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[29-Mar-2011 16:48:38] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[29-Mar-2011 16:48:40] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[29-Mar-2011 16:49:01] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[29-Mar-2011 16:49:03] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[29-Mar-2011 16:49:03] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[30-Mar-2011 11:17:54] PHP Parse error:  syntax error, unexpected ')' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 35
-[02-Apr-2011 15:55:05] PHP Notice:  Undefined index: customerphone in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 124
-[02-Apr-2011 18:30:14] PHP Parse error:  syntax error, unexpected T_VARIABLE in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 26
-[02-Apr-2011 18:32:19] PHP Parse error:  syntax error, unexpected T_VARIABLE in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 26
-[02-Apr-2011 18:32:21] PHP Parse error:  syntax error, unexpected T_VARIABLE in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 26
-[02-Apr-2011 18:32:23] PHP Parse error:  syntax error, unexpected T_VARIABLE in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 26
-[02-Apr-2011 18:32:59] PHP Notice:  Undefined variable: customerName in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 85
-[02-Apr-2011 18:33:00] PHP Notice:  Undefined variable: customerName in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 85
-[02-Apr-2011 18:33:41] PHP Notice:  Undefined variable: customerName in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 85
-[02-Apr-2011 18:34:01] PHP Notice:  Undefined variable: customerName in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 85
-[02-Apr-2011 18:34:16] PHP Notice:  Undefined variable: customerName in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 85
-[02-Apr-2011 18:34:20] PHP Notice:  Undefined variable: isValid in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 99
-[02-Apr-2011 18:34:20] PHP Notice:  Undefined index: customerphone in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 57
-[02-Apr-2011 18:34:20] PHP Notice:  Undefined variable: customerName in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 85
-[02-Apr-2011 18:36:19] PHP Notice:  Undefined variable: customerName in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 85
-[02-Apr-2011 18:36:22] PHP Notice:  Undefined variable: isValid in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 99
-[02-Apr-2011 18:36:22] PHP Notice:  Undefined index: customerphone in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 57
-[02-Apr-2011 18:36:22] PHP Notice:  Undefined variable: customerName in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 85
+[03-Apr-2011 12:49:52] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 101
+[03-Apr-2011 12:49:52] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 109
+[03-Apr-2011 12:49:52] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 116
+[03-Apr-2011 12:49:52] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 123
+[03-Apr-2011 12:49:52] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 130
+[03-Apr-2011 12:50:51] PHP Warning:  Cannot modify header information - headers already sent by (output started at F:\WORKSPACE\Projects\PizzaProject\order.inc.php:87) in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 88
+[03-Apr-2011 12:50:51] PHP Notice:  ob_flush() [<a href='ref.outcontrol'>ref.outcontrol</a>]: failed to flush buffer. No buffer to flush. in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 377
+[03-Apr-2011 12:51:53] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:51:53] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:51:53] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:51:53] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:51:54] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:51:58] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:51:58] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:51:58] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:51:58] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:51:58] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined variable: isValid in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 99
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:52:12] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:55:57] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:55:57] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:55:57] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:55:57] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:55:57] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:56:11] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:56:11] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:56:11] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:56:11] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:56:11] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:57:27] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:57:27] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:57:27] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:57:27] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:57:27] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:58:44] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:58:44] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:58:44] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:58:44] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:58:44] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:58:47] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:58:47] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:58:47] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:58:47] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:58:47] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:58:55] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 12:58:55] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 12:58:55] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 12:58:55] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 12:58:55] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 12:59:07] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 12:59:38] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 13:00:34] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 13:01:00] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 13:01:43] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 13:01:52] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 13:01:53] PHP Notice:  Send Error Message: exception 'Swift_RfcComplianceException' with message 'Address in mailbox given [] does not comply with RFC 2822, 3.6.2.' in F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php:309
+Stack trace:
+#0 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php(239): Swift_Mime_Headers_MailboxHeader->_assertValidAddress('')
+#1 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php(97): Swift_Mime_Headers_MailboxHeader->normalizeMailboxes(Array)
+#2 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php(61): Swift_Mime_Headers_MailboxHeader->setNameAddresses(Array)
+#3 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\SimpleHeaderFactory.php(64): Swift_Mime_Headers_MailboxHeader->setFieldBodyModel(Array)
+#4 F:\WORKSPACE\Projects\PizzaProject\lib in F:\WORKSPACE\Projects\PizzaProject\emailConfirm.inc.php on line 147
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 13:02:09] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 13:02:10] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 13:02:10] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 13:02:10] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 13:02:10] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 13:02:10] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 13:02:47] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[03-Apr-2011 13:02:47] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 107
+[03-Apr-2011 13:02:47] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 114
+[03-Apr-2011 13:02:47] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 121
+[03-Apr-2011 13:02:47] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 128
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 13:03:38] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 13:03:46] PHP Notice:  Undefined index: customerName in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 45
+[03-Apr-2011 13:03:46] PHP Notice:  Undefined index: address in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 48
+[03-Apr-2011 13:03:46] PHP Notice:  Undefined index: billingAddress in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 51
+[03-Apr-2011 13:03:46] PHP Notice:  Undefined index: email in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 54
+[03-Apr-2011 13:03:46] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 57
+[03-Apr-2011 13:03:47] PHP Notice:  Undefined index: payMethod in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 60
+[03-Apr-2011 13:03:47] PHP Notice:  Undefined index: couponCode in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 63
+[03-Apr-2011 13:03:47] PHP Notice:  Undefined index: orderSummary in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 79
+[03-Apr-2011 13:03:47] PHP Notice:  Undefined index: orderTotal in F:\WORKSPACE\Projects\PizzaProject\validate.inc.php on line 82
+[03-Apr-2011 13:03:47] PHP Notice:  Send Error Message: exception 'Swift_RfcComplianceException' with message 'Address in mailbox given [] does not comply with RFC 2822, 3.6.2.' in F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php:309
+Stack trace:
+#0 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php(239): Swift_Mime_Headers_MailboxHeader->_assertValidAddress('')
+#1 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php(97): Swift_Mime_Headers_MailboxHeader->normalizeMailboxes(Array)
+#2 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php(61): Swift_Mime_Headers_MailboxHeader->setNameAddresses(Array)
+#3 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\SimpleHeaderFactory.php(64): Swift_Mime_Headers_MailboxHeader->setFieldBodyModel(Array)
+#4 F:\WORKSPACE\Projects\PizzaProject\lib in F:\WORKSPACE\Projects\PizzaProject\emailConfirm.inc.php on line 147

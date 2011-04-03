@@ -23,10 +23,10 @@ if (!isset($_REQUEST['pid'])) include("order.inc.php");
 				$content = $_REQUEST['pid']; 
 				$nextpage = $content . ".inc.php";
 				if (file_exists($nextpage)) { // check to see if include file exists.  If not, show home.inc.php
-					echo $nextpage;
+					//echo $nextpage;
 				  include($nextpage);
 				} else { 
-					include("order.inc.php");
+				  include("order.inc.php");
 				}
 					
 			} 

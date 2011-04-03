@@ -26,7 +26,7 @@ function couponCheck(){
   couponCode = document.getElementById("couponCode").value;
   
   if (couponCode.length == 0){
-    alert(couponCode.length);
+    //alert(couponCode.length);
     document.getElementById("couponVal").innerHTML = "&nbsp;";
     couponValue = 0;
     document.getElementById("tallyCouponValue").innerHTML = "<strong>$0.00</strong>";
