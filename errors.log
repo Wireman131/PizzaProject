@@ -165,3 +165,8 @@ Stack trace:
 #2 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\Headers\MailboxHeader.php(61): Swift_Mime_Headers_MailboxHeader->setNameAddresses(Array)
 #3 F:\WORKSPACE\Projects\PizzaProject\library\SwiftMailer\V4.0.6\lib\classes\Swift\Mime\SimpleHeaderFactory.php(64): Swift_Mime_Headers_MailboxHeader->setFieldBodyModel(Array)
 #4 F:\WORKSPACE\Projects\PizzaProject\lib in F:\WORKSPACE\Projects\PizzaProject\emailConfirm.inc.php on line 147
+[04-Apr-2011 17:06:59] PHP Notice:  Undefined variable: customerName in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 99
+[04-Apr-2011 17:06:59] PHP Notice:  Undefined variable: address in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 108
+[04-Apr-2011 17:06:59] PHP Notice:  Undefined variable: billingAddress in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 115
+[04-Apr-2011 17:06:59] PHP Notice:  Undefined variable: customerPhone in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 122
+[04-Apr-2011 17:06:59] PHP Notice:  Undefined variable: email in F:\WORKSPACE\Projects\PizzaProject\order.inc.php on line 130
