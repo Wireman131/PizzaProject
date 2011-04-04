@@ -15,8 +15,12 @@
  * This code will nuke all session variables
  */
 session_unset();
-
-
+//temp variable is just that, never assume it's empty, clear before you set it
+$customerName = "";
+$address = "";
+$billingAddress = "";
+$customerPhone = "";
+$email = "";
 $customerNameError = "";
 $addressError = "";
 $billingAddressError = "";
@@ -26,63 +30,69 @@ $emailError = "";
 if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) || 
     (isset($_post['billingaddress'])) || (isset($_post['phone'])) || 
     (isset($_post['email'])) ){
-      //echo "all set";
- /*
-	* at least one of these values was entered, so we need to validate all of them
-	*/
-$isValid = true; //we'll assume that it's okay until we know better
+		//echo "all set";
+	 /*
+		* at least one of these values was entered, so we need to validate all of them
+		*/
+	$isValid = true; //we'll assume that it's okay until we know better
 
-//validate name
+	//validate name, verify it's 2 letters or longer
+	$temp = $_POST['customerName'];
+	if($temp == ''){
+		//if it's empty just tell them to fill it in
+		$isValid = false;
+		$customerNameError = "Please Enter Your Name";
+	}
+	elseif(!preg_match("/[a-zA-z]{2}/",$temp)){
+		//if it's there, but it's not Letters
+		$isValid = false;
+		$customerNameError = "Only Alphabetical Characters Please";
+	}	
+	else {
+		$customerName = $_POST['customerName'];
+	}
 
-if($_POST['customerName'] == ''){
-$isValid = false;
-$customerNameError = "Please Enter Your Name";
-} else {
-  $customerName = $_POST['customerName'];
-}
+	//validate address
+	$temp = $_POST['address']; 
+	if(($temp != '') && (preg_match("/^\s*((?:(?:\d+(?:\x20+\w+\.?)+(?:(?:\x20+STREET|ST|DRIVE|DR|AVENUE|AVE|ROAD|RD|LOOP|COURT|CT|CIRCLE|LANE|LN|BOULEVARD|BLVD)\.?)?)|(?:(?:P\.\x20?O\.|P\x20?O)\x20*Box\x20+\d+)|(?:General\x20+Delivery)|(?:C[\\\/]O\x20+(?:\w+\x20*)+))\,?\x20*(?:(?:(?:APT|BLDG|DEPT|FL|HNGR|LOT|PIER|RM|S(?:LIP|PC|T(?:E|OP))|TRLR|UNIT|\x23)\.?\x20*(?:[a-zA-Z0-9\-]+))|(?:BSMT|FRNT|LBBY|LOWR|OFC|PH|REAR|SIDE|UPPR))?)\,?\s+((?:(?:\d+(?:\x20+\w+\.?)+(?:(?:\x20+STREET|ST|DRIVE|DR|AVENUE|AVE|ROAD|RD|LOOP|COURT|CT|CIRCLE|LANE|LN|BOULEVARD|BLVD)\.?)?)|(?:(?:P\.\x20?O\.|P\x20?O)\x20*Box\x20+\d+)|(?:General\x20+Delivery)|(?:C[\\\/]O\x20+(?:\w+\x20*)+))\,?\x20*(?:(?:(?:APT|BLDG|DEPT|FL|HNGR|LOT|PIER|RM|S(?:LIP|PC|T(?:E|OP))|TRLR|UNIT|\x23)\.?\x20*(?:[a-zA-Z0-9\-]+))|(?:BSMT|FRNT|LBBY|LOWR|OFC|PH|REAR|SIDE|UPPR))?)?\,?\s+((?:[A-Za-z]+\x20*)+)\,\s+(A[LKSZRAP]|C[AOT]|D[EC]|F[LM]|G[AU]|HI|I[ADLN]|K[SY]|LA|M[ADEHINOPST]|N[CDEHJMVY]|O[HKR]|P[ARW]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY])\s+(\d+(?:-\d+)?)\s*$/"))){
+	$isValid = false;
+	$addressError = "Please Enter Your Address";
+	} else {
+		$address = $_POST['address'];
+	}
+	//validate billing address
 
-//validate address
+	if($_POST['billingAddress'] == ''){
+	$isValid = false;
+	$billingAddressError = "Enter Address Please";
+	} else {
+		$billingAddress = $_POST['billingAddress'];
+	}
 
-if($_POST['address'] == ''){
-$isValid = false;
-$addressError = "Please Enter Your Address";
-} else {
-  $address = $_POST['address'];
-}
+	//validate phone number
 
-//validate billing address
+	if($_POST['phone'] == ''){
+	$isValid = false;
+	$phoneError = "Enter Phone Number Please";
+	} else {
+		$customerPhone = $_POST['phone'];
+	}
 
-if($_POST['billingAddress'] == ''){
-$isValid = false;
-$billingAddressError = "Enter Address Please";
-} else {
-  $billingAddress = $_POST['billingAddress'];
-}
+	//validate email address
 
-//validate phone number
+	if($_POST['email'] == ''){
+	$isValid = false;
+	$emailError = "Enter Email Address Please";
+	} else {
+		$email = $_POST['email'];
+	}
 
-if($_POST['phone'] == ''){
-$isValid = false;
-$phoneError = "Enter Phone Number Please";
-} else {
-  $customerPhone = $_POST['phone'];
-}
-
-//validate email address
-
-if($_POST['email'] == ''){
-$isValid = false;
-$emailError = "Enter Email Address Please";
-} else {
-  $email = $_POST['email'];
-}
-
-//if all of these tests have passed, then the form is ready to
-//redirect to validate.inc.php
-if($isValid){
-  echo "is valid";
-	header("Location: index.php?pid=validate"); 
-}
+	//if all of these tests have passed, then the form is ready to
+	//redirect to validate.inc.php
+	if($isValid){
+		echo "is valid";
+		header("Location: index.php?pid=validate"); 
+	}
 }
 
 ?>
