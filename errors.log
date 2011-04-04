@@ -13,3 +13,14 @@
 [04-Apr-2011 14:33:52] PHP Parse error:  syntax error, unexpected $end in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 383
 [04-Apr-2011 14:36:23] PHP Parse error:  syntax error, unexpected $end in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 383
 [04-Apr-2011 14:39:33] PHP Parse error:  syntax error, unexpected $end in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 383
+[04-Apr-2011 15:08:26] PHP Parse error:  syntax error, unexpected '}' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 65
+[04-Apr-2011 15:09:10] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 61
+[04-Apr-2011 15:09:28] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 61
+[04-Apr-2011 15:11:06] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 61
+[04-Apr-2011 15:11:30] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 61
+[04-Apr-2011 15:49:25] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 79
+[04-Apr-2011 15:49:25] PHP Notice:  Undefined variable: address in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 140
+[04-Apr-2011 15:49:25] PHP Notice:  Undefined variable: billingAddress in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 147
+[04-Apr-2011 17:40:13] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 61
+[04-Apr-2011 17:40:58] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 63
+[04-Apr-2011 17:42:13] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 63
