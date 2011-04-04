@@ -113,7 +113,8 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) ||
     <tr>
       <td class="col1"><label for="customerName">Name</label></td>
 			<td><input type="text" name="customerName" id="customerName" 
-						class="required" value="<?php echo $customerName; ?>"/>
+						class="required" value="<?php echo $customerName; ?>"
+						maxlength="25"/>
 			</td><td><?php echo $customerNameError; ?></td>
    </tr>
     
@@ -121,28 +122,29 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) ||
       <td class="col1"><label for="customerAddress">Address</label></td>
       <td><input type="text" name="address" id="customerAddress" 
       title="Input Your Address" class="required"
-      value="<?php echo $address; ?>"/>
+      value="<?php echo $address; ?>" maxlength="30"/>
       </td><td><?php echo $addressError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="billAddress">Billing Address</label></td>
       <td><input type="text" name="billingAddress" id="billAddress" 
       title="Input Billing Address" class="required"
-      value="<?php echo $billingAddress; ?>" />
+      value="<?php echo $billingAddress; ?>" maxlength="30" />
       </td><td><?php echo $billingAddressError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
       <td><input type="text" name="phone" id="customerPhone" 
       title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" 
-      class="required phoneUS" value="<?php echo $customerPhone; ?>"/>
+      class="required phoneUS" value="<?php echo $customerPhone; ?>"
+      maxlength="12"/>
       </td><td><?php echo $phoneError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerEmail">Email Address</label></td>
 			<td><input type="text" name="email" id="customerEmail" 
 			title="Input Email Address" class="required email"
-			value="<?php echo $email; ?>"/>
+			value="<?php echo $email; ?>" maxlength="30"/>
 		  </td><td><?php echo $emailError; ?></td>
     </tr>
     
@@ -174,7 +176,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) ||
       <td> <img alt="Check" src="images/arrow.png"/>
       <label for="couponCode">Coupon Code</label>
         <input type="text" name="couponCode" id="couponCode"
-        title="Please Enter Your Coupon Code"  />
+        title="Please Enter Your Coupon Code" maxlength="10" />
          </td>
     </tr>
     <tr><td><span id="couponVal">&nbsp;</span></td></tr>
