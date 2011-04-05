@@ -30,78 +30,11 @@ $emailError = "";
 if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) || 
     (isset($_post['billingaddress'])) || (isset($_post['phone'])) || 
     (isset($_post['email'])) ){
-		//echo "all set";
-	 /*
-		* at least one of these values was entered, so we need to validate all of them
-		*/
-	$isValid = true; //we'll assume that it's okay until we know better
-
-	//validate name, verify it's 2 letters or longer
-	$temp = $_POST['customerName'];
-	if($temp == ''){
-		//if it's empty just tell them to fill it in
-		$isValid = false;
-		$customerNameError = "Please Enter Your Name";
-	}
-	elseif(!preg_match("/[a-zA-z]{2}/",$temp)){
-		//if it's there, but it's not Letters
-		$isValid = false;
-		$customerNameError = "Only Alphabetical Characters Please";
-	}	
-	else {
-		$customerName = $_POST['customerName'];
-	}
-
-	//validate address
-	$temp = $_POST['address']; 
-	if($temp == ''){
-		$addressError = "Please Enter Your Address";
-		$isValid = false;
-	}
-	elseif(!preg_match("/^[0-9]+\s[a-zA-Z0-9]{3,}\s[a-zA-Z]{3,}\s[A-Z]{2}\s[0-9]{5}/",$temp)){
-		// "1 aaa aaa AA 12345" should pass
-		//elseif(!preg_match("/[a-z]{4,}/",$temp)){
-	$isValid = false;
-		$addressError = "Address Format: 123 Any St. AnyTown, City, ST 12345";
-
-	} else {
-		$address = $_POST['address'];
-	}
-	//validate billing address
-
-	if($_POST['billingAddress'] == ''){
-	$isValid = false;
-	$billingAddressError = "Enter Address Please";
-	} else {
-		$billingAddress = $_POST['billingAddress'];
-	}
-
-	//validate phone number
-
-	if($_POST['phone'] == ''){
-	$isValid = false;
-	$phoneError = "Enter Phone Number Please";
-	} else {
-		$customerPhone = $_POST['phone'];
-	}
-
-	//validate email address
-
-	if($_POST['email'] == ''){
-	$isValid = false;
-	$emailError = "Enter Email Address Please";
-	} else {
-		$email = $_POST['email'];
-	}
-
-	//if all of these tests have passed, then the form is ready to
-	//redirect to validate.inc.php
-	if($isValid){
-		echo "is valid";
-		header("Location: index.php?pid=validate"); 
-	}
-}
-
+	/*
+	 * at least one of these values was entered, so we need to validate all of them
+	 */
+		include('formValidate.inc.php');
+		}
 ?>
 <div id='container'>
 <div id='headerImage'><img src='images/header.png' /></div>
