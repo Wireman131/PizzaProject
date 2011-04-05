@@ -17,19 +17,19 @@
 session_unset();
 //temp variable is just that, never assume it's empty, clear before you set it
 $customerName = "";
-$address = "";
-$billingAddress = "";
+$customerAddress = "";
+$customerBillingAddress = "";
 $customerPhone = "";
-$email = "";
+$customerEmail = "";
 $customerNameError = "";
-$addressError = "";
-$billingAddressError = "";
-$phoneError = "";
-$emailError = "";
+$customerAddressError = "";
+$customerBillingAddressError = "";
+$customerPhoneError = "";
+$customerEmailError = "";
 //print_r($_POST);
-if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) || 
-    (isset($_post['billingaddress'])) || (isset($_post['phone'])) || 
-    (isset($_post['email'])) ){
+if(	(isset($_POST['customercustomerName'])) || (isset($_POST['customeraddress'])) || 
+    (isset($_post['customerbillingaddress'])) || (isset($_post['customerphone'])) || 
+    (isset($_post['customeremail'])) ){
 	/*
 	 * at least one of these values was entered, so we need to validate all of them
 	 */
@@ -53,32 +53,32 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) ||
     
     <tr>
       <td class="col1"><label for="customerAddress">Address</label></td>
-      <td><input type="text" name="address" id="customerAddress" 
+      <td><input type="text" name="customerAddress" id="customerAddress" 
       title="Input Your Address" class="required"
-      value="<?php echo $address; ?>" maxlength="30"/>
-      </td><td><?php echo $addressError; ?></td>
+      value="<?php echo $customerAddress; ?>" maxlength="30"/>
+      </td><td><?php echo $customerAddressError; ?></td>
     </tr>
     <tr>
-      <td class="col1"><label for="billAddress">Billing Address</label></td>
-      <td><input type="text" name="billingAddress" id="billAddress" 
+      <td class="col1"><label for="customerBillingAddress">Billing Address</label></td>
+      <td><input type="text" name="customerBillingAddress" id="customerBillingAddress" 
       title="Input Billing Address" class="required"
-      value="<?php echo $billingAddress; ?>" maxlength="30" />
-      </td><td><?php echo $billingAddressError; ?></td>
+      value="<?php echo $customerBillingAddress; ?>" maxlength="30" />
+      </td><td><?php echo $customerBillingAddressError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
-      <td><input type="text" name="phone" id="customerPhone" 
+      <td><input type="text" name="cutomerPhone" id="customerPhone" 
       title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" 
       class="required phoneUS" value="<?php echo $customerPhone; ?>"
-      maxlength="12"/>
-      </td><td><?php echo $phoneError; ?></td>
+      maxlength="22"/>
+      </td><td><?php echo $customerPhoneError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerEmail">Email Address</label></td>
-			<td><input type="text" name="email" id="customerEmail" 
+			<td><input type="text" name="customerEmail" id="customerEmail" 
 			title="Input Email Address" class="required email"
-			value="<?php echo $email; ?>" maxlength="30"/>
-		  </td><td><?php echo $emailError; ?></td>
+			value="<?php echo $customerEmail; ?>" maxlength="30"/>
+		  </td><td><?php echo $customerEmailError; ?></td>
     </tr>
     
   </table>
