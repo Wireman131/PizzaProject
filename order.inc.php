@@ -27,9 +27,9 @@ $customerBillingAddressError = "";
 $customerPhoneError = "";
 $customerEmailError = "";
 //print_r($_POST);
-if(	(isset($_POST['customercustomerName'])) || (isset($_POST['customeraddress'])) || 
-    (isset($_post['customerbillingaddress'])) || (isset($_post['customerphone'])) || 
-    (isset($_post['customeremail'])) ){
+if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) || 
+    (isset($_post['customerBillingAddress'])) || (isset($_post['customerPhone'])) || 
+    (isset($_post['customerEmail'])) ){
 	/*
 	 * at least one of these values was entered, so we need to validate all of them
 	 */

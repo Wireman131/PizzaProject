@@ -1,1 +1,19 @@
 
+[05-Apr-2011 08:54:25] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 51
+[05-Apr-2011 08:54:38] PHP Notice:  Undefined index: CustomerBillingAddress in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 48
+[05-Apr-2011 08:54:38] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 51
+[05-Apr-2011 09:00:10] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:00:18] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:00:48] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:00:58] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:04:25] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:04:32] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:07:34] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:12:19] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:12:26] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:12:38] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:12:45] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:13:36] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:13:42] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:14:36] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
+[05-Apr-2011 09:14:50] PHP Notice:  Undefined index: customerPhone in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 52
