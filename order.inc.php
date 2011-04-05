@@ -67,7 +67,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
     </tr>
     <tr>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
-      <td><input type="text" name="cutomerPhone" id="customerPhone" 
+      <td><input type="text" name="customerPhone" id="customerPhone" 
       title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" 
       class="required phoneUS" value="<?php echo $customerPhone; ?>"
       maxlength="22"/>
