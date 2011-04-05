@@ -15,76 +15,26 @@
  * This code will nuke all session variables
  */
 session_unset();
-
-
+//temp variable is just that, never assume it's empty, clear before you set it
+$customerName = "";
+$customerAddress = "";
+$customerBillingAddress = "";
+$customerPhone = "";
+$customerEmail = "";
 $customerNameError = "";
-$addressError = "";
-$billingAddressError = "";
-$phoneError = "";
-$emailError = "";
+$customerAddressError = "";
+$customerBillingAddressError = "";
+$customerPhoneError = "";
+$customerEmailError = "";
 //print_r($_POST);
-if(	(isset($_POST['customerName'])) || (isset($_POST['address'])) || 
-    (isset($_post['billingaddress'])) || (isset($_post['phone'])) || 
-    (isset($_post['email'])) ){
-      //echo "all set";
- /*
-	* at least one of these values was entered, so we need to validate all of them
-	*/
-$isValid = true; //we'll assume that it's okay until we know better
-
-//validate name
-
-if($_POST['customerName'] == ''){
-$isValid = false;
-$customerNameError = "Please Enter Your Name";
-} else {
-  $customerName = $_POST['customerName'];
-}
-
-//validate address
-
-if($_POST['address'] == ''){
-$isValid = false;
-$addressError = "Please Enter Your Address";
-} else {
-  $address = $_POST['address'];
-}
-
-//validate billing address
-
-if($_POST['billingAddress'] == ''){
-$isValid = false;
-$billingAddressError = "Enter Address Please";
-} else {
-  $billingAddress = $_POST['billingAddress'];
-}
-
-//validate phone number
-
-if($_POST['phone'] == ''){
-$isValid = false;
-$phoneError = "Enter Phone Number Please";
-} else {
-  $customerPhone = $_POST['phone'];
-}
-
-//validate email address
-
-if($_POST['email'] == ''){
-$isValid = false;
-$emailError = "Enter Email Address Please";
-} else {
-  $email = $_POST['email'];
-}
-
-//if all of these tests have passed, then the form is ready to
-//redirect to validate.inc.php
-if($isValid){
-  echo "is valid";
-	header("Location: index.php?pid=validate"); 
-}
-}
-
+if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) || 
+    (isset($_post['customerBillingAddress'])) || (isset($_post['customerPhone'])) || 
+    (isset($_post['customerEmail'])) ){
+	/*
+	 * at least one of these values was entered, so we need to validate all of them
+	 */
+		include('formValidate.inc.php');
+		}
 ?>
 <div id='container'>
 <div id='headerImage'><img src='images/header.png' /></div>
@@ -103,32 +53,32 @@ if($isValid){
     
     <tr>
       <td class="col1"><label for="customerAddress">Address</label></td>
-      <td><input type="text" name="address" id="customerAddress" 
+      <td><input type="text" name="customerAddress" id="customerAddress" 
       title="Input Your Address" class="required"
-      value="<?php echo $address; ?>" maxlength="30"/>
-      </td><td><?php echo $addressError; ?></td>
+      value="<?php echo $customerAddress; ?>" maxlength="30"/>
+      </td><td><?php echo $customerAddressError; ?></td>
     </tr>
     <tr>
-      <td class="col1"><label for="billAddress">Billing Address</label></td>
-      <td><input type="text" name="billingAddress" id="billAddress" 
+      <td class="col1"><label for="customerBillingAddress">Billing Address</label></td>
+      <td><input type="text" name="customerBillingAddress" id="customerBillingAddress" 
       title="Input Billing Address" class="required"
-      value="<?php echo $billingAddress; ?>" maxlength="30" />
-      </td><td><?php echo $billingAddressError; ?></td>
+      value="<?php echo $customerBillingAddress; ?>" maxlength="30" />
+      </td><td><?php echo $customerBillingAddressError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
-      <td><input type="text" name="phone" id="customerPhone" 
+      <td><input type="text" name="cutomerPhone" id="customerPhone" 
       title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" 
       class="required phoneUS" value="<?php echo $customerPhone; ?>"
-      maxlength="12"/>
-      </td><td><?php echo $phoneError; ?></td>
+      maxlength="22"/>
+      </td><td><?php echo $customerPhoneError; ?></td>
     </tr>
     <tr>
       <td class="col1"><label for="customerEmail">Email Address</label></td>
-			<td><input type="text" name="email" id="customerEmail" 
+			<td><input type="text" name="customerEmail" id="customerEmail" 
 			title="Input Email Address" class="required email"
-			value="<?php echo $email; ?>" maxlength="30"/>
-		  </td><td><?php echo $emailError; ?></td>
+			value="<?php echo $customerEmail; ?>" maxlength="30"/>
+		  </td><td><?php echo $customerEmailError; ?></td>
     </tr>
     
   </table>
