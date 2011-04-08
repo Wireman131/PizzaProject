@@ -44,6 +44,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
 <h3 class="left">Customer Info</h3>
   <table >
     <tr>
+    	<td><span class="reqd">*</span></td>
       <td class="col1"><label for="customerName">Name</label></td>
 			<td><input type="text" name="customerName" id="customerName" 
 						class="required" value="<?php echo $customerName; ?>"
@@ -52,6 +53,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
    </tr>
     
     <tr>
+    	<td><span class="reqd">*</span></td>
       <td class="col1"><label for="customerAddress">Address</label></td>
       <td><input type="text" name="customerAddress" id="customerAddress" 
       title="Input Your Address" class="required"
@@ -59,6 +61,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
       </td><td><?php echo $customerAddressError; ?></td>
     </tr>
     <tr>
+    	<td><span class="reqd">*</span></td>
       <td class="col1"><label for="customerBillingAddress">Billing Address</label></td>
       <td><input type="text" name="customerBillingAddress" id="customerBillingAddress" 
       title="Input Billing Address" class="required"
@@ -66,6 +69,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
       </td><td><?php echo $customerBillingAddressError; ?></td>
     </tr>
     <tr>
+    	<td><span class="reqd">*</span></td>
       <td class="col1"><label for="customerPhone">Phone Number</label></td> 
       <td><input type="text" name="customerPhone" id="customerPhone" 
       title="Input Your Phone Number With Area Code: XXX-XXX-XXXX" 
@@ -74,13 +78,18 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
       </td><td><?php echo $customerPhoneError; ?></td>
     </tr>
     <tr>
+    	<td><span class="reqd">*</span></td>
       <td class="col1"><label for="customerEmail">Email Address</label></td>
 			<td><input type="text" name="customerEmail" id="customerEmail" 
 			title="Input Email Address" class="required email"
 			value="<?php echo $customerEmail; ?>" maxlength="30"/>
 		  </td><td><?php echo $customerEmailError; ?></td>
     </tr>
-    
+    <tr>
+    	<td><span class="reqd">*</span></td>
+    	<td><span class="reqdText">Required</span></td>
+    	<td>&nbsp;</td>
+    	<td>&nbsp;</td>
   </table>
   
   </div>
