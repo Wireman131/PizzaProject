@@ -25,12 +25,12 @@
 //print_r($_SESSION);
 
 echo $_SESSION['customerName'] . " :<br/><br/>";
-echo "Customer Email : " .$_SESSION['email'] . " <br/><br/>";
+echo "Customer Email : " .$_SESSION['customerEmail'] . " <br/><br/>";
 echo $_SESSION['orderSummary'] . "<br/><br/>";
 echo "Order processed At :" . $_SESSION['timeOfOrder'] . "<br/><br/>";
 echo $_SESSION['delivery'] . $_SESSION['deliveryTime'] . "<br/><br/>";
-echo "Customer Address : " . $_SESSION['address'] . "<br/>";
-echo "Billing Address : " . $_SESSION['billingAddress'] . "<br/>";
+echo "Customer Address : " . $_SESSION['customerAddress'] . "<br/>";
+echo "Billing Address : " . $_SESSION['customerBillingAddress'] . "<br/>";
 echo "Please be ready to pay with " . $_SESSION['payMethod'] . "<br/>";
 //echo "Value of your coupon : $0.00 - Sorry, coupon code " . $_SESSION['emailCoupon'] . " is expired!<br/>";
 echo"Coupon Value : " . $_SESSION['couponValue'] . "<br/>";

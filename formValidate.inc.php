@@ -15,6 +15,7 @@ $customerNameError = "Only Alphabetical Characters Please";
 }
 else {
 $customerName = $temp;
+$_SESSION['customerName'] = $temp;
 }
 
 //validate customerAddress/////////////////////////////////////////////////
@@ -31,7 +32,9 @@ $customerAddressError = "Address Format: 123 STREET CITY ST 12345";
 } 
 else {
 $customerAddress = $temp;
+$_SESSION['customerAddress'] = $temp;
 }
+
 //validate billing address/////////////////////////////////////////////////
 $temp = $_POST['customerBillingAddress']; 
 if($temp == ''){
@@ -45,7 +48,8 @@ $isValid = false;
 $customerBillingAddressError = "Address Format: 123 STREET CITY ST 12345";
 } 
 else {
-$customerBillingAddress = $temp; 
+$customerBillingAddress = $temp; $_SESSION['customerBillingAddress'] = $temp;
+
 }
 
 //validate phone number/////////////////////////////////////////////////
@@ -56,11 +60,12 @@ $customerPhoneError = "Please Enter Phone Number";
 $isValid = false;
 }
 elseif(!preg_match("/^([\(]{1}[0-9]{3}[\)]{1}[\.| |\-]{0,1}|^[0-9]{3}[\.|\-| ]?)?[0-9]{3}(\.|\-| )?[0-9]{4}$/",$temp)){
-$isValid = false; echo $temp . " is the phone number you entered";
+$isValid = false; //echo $temp . " is the phone number you entered";
 $customerPhoneError = "Phone Number Format: 1234567890, no punctuation";
 } 
 else {
-$customerPhone = $temp; echo $temp . " is the phone number you entered";
+$customerPhone = $temp; $_SESSION['customerPhone'] = $temp;
+//echo $temp . " is the phone number you entered";
 
 }
 
@@ -75,14 +80,62 @@ $isValid = false;
 $customerEmailError = "Email Format: email@host.tld";
 } 
 else {
-$customerEmail = $temp; 
+$customerEmail = $temp; $_SESSION['customerEmail'] = $temp;
+
 }
 
 /////////////////////////////////////////////////////////////////////////
 //if all of these tests have passed, then the form is ready to
 //redirect to validate.inc.php
-if($isValid){
-echo "is valid";
+
+
+
+
+
+
+//this section came from validate.inc.php and needs to be added or the rest of it won't work.
+
+
+/*if (!isset($_SESSION['payMethod'])){
+  $_SESSION['payMethod'] = $_POST['payMethod'];
+}
+if (!isset($_SESSION['emailCoupon'])){
+  $_SESSION['emailCoupon'] = $_POST['couponCode'];
+}
+$val = $_SESSION['emailCoupon'];
+if (!isset($_SESSION['couponValue'])){
+if($val == "twitter2"){
+   $_SESSION['couponValue'] = "Your Coupon equals 2 bucks off!<br/>";
+}else if ($val == "springbreak"){
+   $_SESSION['couponValue'] = "Your Coupon equals 1 buck off!</br>";
+}else if ($val == "freepizza"){
+   $_SESSION['couponValue'] = "Coupon equals add 2 bucks sucker!<br/>Only
+   a complete fool would think that we would give you FREE PIZZA!<br/>";
+} else {
+   $_SESSION['couponValue'] = "No Coupon";
+     }}
+     
+if (!isset($_SESSION['orderSummary'])){
+  $_SESSION['orderSummary'] = $_POST['orderSummary'];
+} 
+if (!isset($_SESSION['orderTotal'])){
+  $_SESSION['orderTotal'] = $_POST['orderTotal'];
+}
+ 
+if (isset($_POST['deliveryBox'])){
+  $_SESSION['delivery'] = "Pizza will be delivered around ";
+} else {
+  $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
+}*/
+
+
+
+
+
+
+
+
+
 header("Location: index.php?pid=validate"); 
 }
 //otherwise the pizza order form will proceed to load.

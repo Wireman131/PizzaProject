@@ -1,6 +1,6 @@
 <?php
 /*
-	* Pizza Order form page
+No Coupon	* Pizza Order form page
 	*
 	* Description Long
 	*
@@ -173,10 +173,6 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
     <tr><td colspan=2>
     									<input type="hidden" name="orderTotal" value="">
     									<input type="hidden" name="orderSummary" value="">
-											
-											<input type="hidden" name="javascript" value="false">
- 
-    
     </td></tr>
   </table>
  </div>

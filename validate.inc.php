@@ -40,53 +40,6 @@ for ($i=0;$i<count($formFields);$i++){
 	echo $temp . " " . $i . " what is going on";
 }
  */
-
-if (!isset($_SESSION['customerName'])){
-	$_SESSION['customerName'] = $_POST['customerName'];
-}
-if (!isset($_SESSION['address'])){
-  $_SESSION['address'] = $_POST['address'];
-} 
-if (!isset($_SESSION['billingAddress'])){
-  $_SESSION['billingAddress'] = $_POST['billingAddress'];
-}
-if (!isset($_SESSION['email'])){
-  $_SESSION['email'] = $_POST['email'];
-}
-if (!isset($_SESSION['customerPhone'])){
-  $_SESSION['customerPhone'] = $_POST['payMethod'];
-}
-if (!isset($_SESSION['payMethod'])){
-  $_SESSION['payMethod'] = $_POST['payMethod'];
-}
-if (!isset($_SESSION['emailCoupon'])){
-  $_SESSION['emailCoupon'] = $_POST['couponCode'];
-}
-$val = $_SESSION['emailCoupon'];
-if (!isset($_SESSION['couponValue'])){
-if($val == "twitter2"){
-   $_SESSION['couponValue'] = "Your Coupon equals 2 bucks off!<br/>";
-}else if ($val == "springbreak"){
-   $_SESSION['couponValue'] = "Your Coupon equals 1 buck off!</br>";
-}else if ($val == "freepizza"){
-   $_SESSION['couponValue'] = "Coupon equals add 2 bucks sucker!<br/>Only
-   a complete fool would think that we would give you FREE PIZZA!<br/>";
-} else {
-   $_SESSION['couponValue'] = "Coupon equals nothing";
-     }}
-     
-if (!isset($_SESSION['orderSummary'])){
-  $_SESSION['orderSummary'] = $_POST['orderSummary'];
-} 
-if (!isset($_SESSION['orderTotal'])){
-  $_SESSION['orderTotal'] = $_POST['orderTotal'];
-}
- 
-if (isset($_POST['deliveryBox'])){
-  $_SESSION['delivery'] = "Pizza will be delivered around ";
-} else {
-  $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
-}
 //$_SESSION['address'] = "123 Main Street";
 //$_SESSION['billingAddress'] = "321 South Main Street";
 //$_SESSION['email'] = "wireman131@wireman131.com";
@@ -108,8 +61,7 @@ echo"<div id='validate'>Real User Validation<br/>";
 echo $_SESSION['customerName'] . " Please confirm that you are human!<br/><br/>\n";
 echo "<div id='captcha'>";
 require 'captcha.php';
-echo "</div><p>WTF!?!?! I Can't Read This!<br/></p>
-<form><button type='submit' onclick=\"newCaptcha();return true\">Reload</button>
+echo "<form><button type='submit' onclick=\"newCaptcha();return true\">Reload</button>
 <input type=\"hidden\" name=\"pid\" value=\"validate\">
 </form></div>";
 
