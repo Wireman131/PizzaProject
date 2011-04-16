@@ -115,22 +115,24 @@ case 'Large':
 case 'Extra Large':
 	$orderTotal = 14;
 	break;
+case default:
+	echo "oh crap, something's wrong";
 }
 
 //massive set of if's to check each topping until a more efficient method is devised. AKA, quick and dirty
-if(isset($_POST['Pepperoni'])){ 
+if(isset($_POST['Pepperoni']){ 
 	$orderSummary .= ", " . 'Pepperoni';
 	$orderTotal += .50;
 }
-if(isset($_POST['Mushroom'])){ 
+if(isset($_POST['Mushroom']){ 
 	$orderSummary .= ", " .'Mushroom';
 	$orderTotal += .50;
 }
-if(isset($_POST['Onion'])){ 
+if(isset($_POST['Onion']){ 
 	$orderSummary .= ", " . 'Onion';
 	$orderTotal += .50;
 }
-if(isset($_POST['Green Peppers'])){ 
+if(isset($_POST['Green Peppers']){ 
 	$orderSummary .= ", " . 'Green Peppers';
 	$orderTotal += .50;
 }
@@ -138,15 +140,15 @@ if(isset($_POST['Sausage'])){
 	$orderSummary .= ", " . 'Sausage';
 	$orderTotal += .50;
 }
-if(isset($_POST['Bacon'])){ 
+if(isset($_POST['Bacon']){ 
 	$orderSummary .= ", " . 'Bacon';
 	$orderTotal += .50;
 }
-if(isset($_POST['Jalapeno'])){ 
+if(isset($_POST['Jalapeno']){ 
 	$orderSummary .= ", " . 'Jalapeno';
 	$orderTotal += .50;
 }
-if(isset($_POST['Green Olive'])){ 
+if(isset($_POST['Green Olive']){ 
 	$orderSummary .= ", " . 'Green Olive';
 	$orderTotal += .50;
 }
