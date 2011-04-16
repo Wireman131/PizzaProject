@@ -1,0 +1,185 @@
+@charset "utf-8";
+/*
+  * CSS for Pizza Project
+  *
+  * Description Long
+  *
+  * @author     Tony Gaudio, David Sullivan
+  * @category   ANM293
+  * @package    PizzaProject
+  * @version    1
+  * @link       git@github.com:Wireman131/PizzaProject
+  * @link       git@github.com:teamsullivango/PizzaProject
+  * @since      Mar 11, 2011-2011
+*/
+body	{
+	background-color:#C00;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	
+	}
+h3  {
+	text-align:center;
+	}
+	#captcha {
+	position:relative;
+	display:inline;
+	}
+	
+#container  {
+	background-image:url(images/pizzaBG.jpg);
+	background-repeat:repeat-x;
+	border:5px solid black;
+	width:1000px;
+	height:1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#pizza {
+	width:500px;
+	background-color:green;
+	margin:0 auto;
+	text-align:center;
+}
+#header  {
+	font-size:larger;
+	font-weight:bold;
+	color:#9F6;
+	width:1000px;
+	height:50px;
+	background-color:#030;
+	text-align:center;
+	border-bottom:5px solid black;
+	position:relative;
+	top:0px;
+	left:0px;
+	padding-top:20px;
+}
+
+#OrderTally  {
+	position:relative;
+	float:left;
+	width:475px;
+	height:450px;
+}
+
+#tallyTable{
+	width : "400px";
+	border : "6px";
+  background-color : "#FFFF66";
+}
+
+#tallyTable td{
+	padding : "2px"; 
+}
+
+#OrderName input {
+	width:250px;
+	position:absolute;
+	right:35px;	
+	}
+
+#OrderName {
+	position:relative;
+	width:450px;
+	height:125px;
+	clear:both;
+	float: left;
+	}
+
+#pizzaImage {
+	width:200px;
+	height:200px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+}
+
+#PizzaSizes		{
+	width:225px;
+	height:400px;
+	position: relative;
+	float:left;
+}
+
+#SubmitBox  {
+position:relative;
+margin-top:200px;
+clear:left;
+margin-left:175px;
+}
+
+table {
+	margin-left:auto;
+	margin-right:auto;
+		}
+
+#Toppings	{
+	width:300px;
+	height:400px;
+	position:relative;
+	float:left;
+}
+.smaller {
+	font-size:60%;
+		}
+#outputContainer {
+	width:500px;
+	height:400px;
+	padding:20px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	background-color:#090;
+	color:black;
+	}
+	
+	#confirmEmail #container {
+  position:relative;
+  width:1000px;
+  min-height:800px;
+  background-color:#C00;
+  color:black;
+  margin:0 auto;
+}
+#confirmEmail #header {
+  width:100%;
+  min-height:150px;
+  background-color:#090;
+  text-align:center;
+}
+#confirmEmail #hElement {
+  width:100%;
+  min-height:25px;
+  background-color:#000;
+}
+#confirmEmail #content {
+	border:3px solid black;
+  border-radius:15px;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  position:relative;
+  width:750px;
+  padding:25px;
+  min-height:400px;
+  margin:100px;
+  background-color:#0C6;
+}
+#confirmEmail #orderSummary {
+	border:3px solid black;
+	border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+  font-family:georgia;
+  font-weight:bold;
+  width:600px;
+  padding:50px;
+  margin:25px;
+  background-color:#FF9;
+}
+#confirmEmail #footer {
+  width:1000px;
+  height:25px;
+  margin:0 auto;
+  color:white;
+  background-color:black;
+  text-align:center;
