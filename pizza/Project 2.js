@@ -93,7 +93,7 @@ var outputSize;
         var size = document.getElementById("pizzaSize_" +i).value;
         //window.alert("You picked " + size + "  as your pizza size");
         myOrderSummary = size + " Pizza, with ";
-        pricer(size); }  // pass the value size to the pricer function
+        pricer(size); topper(); }  // pass the value size to the pricer function
                 }
 }
 var piePrice;

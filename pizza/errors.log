@@ -1,21 +1,11 @@
-[16-Apr-2011 17:17:36] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 27
-[16-Apr-2011 17:17:36] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 28
-[16-Apr-2011 17:17:36] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 29
-[16-Apr-2011 17:17:36] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 30
-[16-Apr-2011 17:17:36] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 31
-[16-Apr-2011 17:17:36] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 32
-[16-Apr-2011 17:17:36] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 33
-[16-Apr-2011 17:17:36] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 34
-[16-Apr-2011 17:19:30] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 24
-[16-Apr-2011 17:19:30] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 25
-[16-Apr-2011 17:19:30] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 26
-[16-Apr-2011 17:19:30] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 27
-[16-Apr-2011 17:19:30] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 28
-[16-Apr-2011 17:19:30] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 29
-[16-Apr-2011 17:19:30] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 30
-[16-Apr-2011 17:19:30] PHP Notice:  Undefined variable: row in F:\WORKSPACE\Projects\PizzaProject\pizza\details.inc.php on line 31
-[16-Apr-2011 17:29:02] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
-[16-Apr-2011 17:29:11] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
-[16-Apr-2011 17:29:17] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
-[16-Apr-2011 17:29:23] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
-[16-Apr-2011 17:29:27] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
+[16-Apr-2011 15:42:21] PHP Parse error:  syntax error, unexpected '=' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 31
+[16-Apr-2011 15:42:49] PHP Parse error:  syntax error, unexpected ')' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 31
+[16-Apr-2011 15:43:39] PHP Parse error:  syntax error, unexpected ')' in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 31
+[16-Apr-2011 15:43:56] PHP Notice:  Undefined index: hiddenTest in /opt/lampp/htdocs/anm293/PizzaProject/order.inc.php on line 31
+[16-Apr-2011 15:43:59] PHP Notice:  Undefined index: customerName in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 61
+[16-Apr-2011 15:46:01] PHP Notice:  Undefined index: customerName in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 61
+[16-Apr-2011 15:50:27] PHP Notice:  Undefined index: customerName in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 61
+[16-Apr-2011 15:55:18] PHP Notice:  Use of undefined constant whatever - assumed 'whatever' in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 126
+[16-Apr-2011 15:55:18] PHP Notice:  Undefined variable: isValidToken in /opt/lampp/htdocs/anm293/PizzaProject/formValidate.inc.php on line 126
+[16-Apr-2011 16:24:53] PHP Notice:  Undefined index: couponCode in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 63
+[16-Apr-2011 17:07:40] PHP Notice:  Undefined index: couponCode in /opt/lampp/htdocs/anm293/PizzaProject/validate.inc.php on line 63
