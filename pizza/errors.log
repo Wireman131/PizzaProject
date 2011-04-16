@@ -19,3 +19,7 @@
 [16-Apr-2011 17:29:17] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
 [16-Apr-2011 17:29:23] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
 [16-Apr-2011 17:29:27] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
+[16-Apr-2011 17:31:16] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
+[16-Apr-2011 17:31:20] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
+[16-Apr-2011 17:32:10] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
+[16-Apr-2011 17:32:20] PHP Notice:  A session had already been started - ignoring session_start() in F:\WORKSPACE\Projects\PizzaProject\pizza\manageOrders.inc.php on line 2
