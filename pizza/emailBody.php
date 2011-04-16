@@ -14,8 +14,36 @@
 */
 
 @session_start();
-?>
 
+try {
+$dbh = new PDO('sqlite:../database/pizzaOrders.db'); //SQLite by default is UTF-8
+//$dbh->exec('SET NAMES utf8');
+$dbh->exec('CREATE TABLE orders(id INTEGER PRIMARY KEY, name CHAR(20), email CHAR(30), 
+						orderSummary CHAR(255), timeOfOrder CHAR(40), address CHAR(30), 
+						billingAddress CHAR(30), payMethod CHAR(10) ) ');
+$dbh->exec('INSERT INTO orders (name,email,orderSummary,timeOfOrder,address,billingAddress,payMethod)
+					  VALUES("Fred","fred@flintstone.com","Small Pizza with Pepperoni, Green Olives","12:30 PM Saturday April 16","1316 West Maple Street","123 Main Street","cash")');
+foreach( $dbh->query('select * from orders') as $row ){
+echo $row['name'] . chr(10);
+echo $row['email'] . chr(10);
+echo $row['orderSummary'] . chr(10);
+echo $row['timeOfOrder'] . chr(10);
+echo $row['address'] . chr(10);
+echo $row['billingAddress'] . chr(10);
+echo $row['payMethod'] . chr(10);
+
+}
+
+$dbh = NULL;
+}
+catch(PDOException $e)
+{
+die($e->getMessage());
+}
+
+
+
+?>
 <div id='confirmEmail'>
 <div id='container'>
 <div id='header'><img src='images/header.png'/></div>

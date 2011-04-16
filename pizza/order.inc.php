@@ -33,7 +33,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
 	/*
 	 * at least one of these values was entered, so we need to validate all of them
 	 */
-		//include('formValidate.inc.php');
+		include('formValidate.inc.php');
 		}
 ?>
 <div id='container'>
