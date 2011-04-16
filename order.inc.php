@@ -15,7 +15,7 @@ No Coupon	* Pizza Order form page
  * This code will nuke all session variables
  */
 session_unset();
-//temp variable is just that, never assume it's empty, clear before you set it
+//temp variable is just that, never assume it's empty, clear before you use it
 $customerName = "";
 $customerAddress = "";
 $customerBillingAddress = "";
@@ -27,10 +27,10 @@ $customerBillingAddressError = "";
 $customerPhoneError = "";
 $customerEmailError = "";
 //print_r($_POST);
-if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) || 
-    (isset($_post['customerBillingAddress'])) || (isset($_post['customerPhone'])) || 
-    (isset($_post['customerEmail'])) ){
-	/*
+//echo "if is about to fire";
+
+if(isset($_POST['submit'])){
+	 /*
 	 * at least one of these values was entered, so we need to validate all of them
 	 */
 		include('formValidate.inc.php');
@@ -164,7 +164,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
   <table width="60" border="0">
     <tr>
       <td><label>
-        <input type="submit" name="validateUser" id="submit" value="Submit Order!" class="submit"/>
+        <input type="submit" name="submit" id="submit" value="Submit Order!" class="submit"/>
       </label></td>
       <td><label>
         <input type="reset" name="reset" id="reset" value="Reset Order Form" onclick="tallyReset()" />
@@ -172,6 +172,7 @@ if(	(isset($_POST['customerName'])) || (isset($_POST['customerAddress'])) ||
     </tr>
     <tr><td colspan=2>
     									<input type="hidden" name="orderTotal" value="">
+<input type="hidden" name="hiddenTest" value="TRUE">
     									<input type="hidden" name="orderSummary" value="">
     </td></tr>
   </table>
