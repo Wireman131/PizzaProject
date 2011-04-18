@@ -89,7 +89,7 @@ $message->setReplyTo(array('tonyforschool@gmail.com' => 'Tony Gaudio'));
  * address, OR if you include a name.
  */
 $message->setTo(array(
-$_SESSION['email'] => $_SESSION['customerName']));
+$_SESSION['customerEmail'] => $_SESSION['customerName']));
   //'wireman131@chartermi.net' => 'Anthony Gaudio'));
 /*
  * Bounce path for messages that can not be delivered, or a Reply To address.
