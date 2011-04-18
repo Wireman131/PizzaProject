@@ -1,0 +1,7 @@
+[18-Apr-2011 15:48:09] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_CATCH in /opt/lampp/htdocs/anm293/PizzaProject/public/emailBody.php on line 53
+[18-Apr-2011 15:49:03] PHP Fatal error:  Call to a member function fetch() on a non-object in /opt/lampp/htdocs/anm293/PizzaProject/public/emailBody.php on line 41
+[18-Apr-2011 15:51:54] PHP Fatal error:  Call to a member function fetch() on a non-object in /opt/lampp/htdocs/anm293/PizzaProject/public/emailBody.php on line 41
+[18-Apr-2011 15:54:54] PHP Warning:  include(/library/SwiftMailer/V4.0.6/lib/swift_required.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /opt/lampp/htdocs/anm293/PizzaProject/public/emailConfirm.inc.php on line 44
+[18-Apr-2011 15:54:54] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/library/SwiftMailer/V4.0.6/lib/swift_required.php' for inclusion (include_path='.::/opt/lampp/htdocs/anm293/PizzaProject/public') in /opt/lampp/htdocs/anm293/PizzaProject/public/emailConfirm.inc.php on line 44
+[18-Apr-2011 15:54:54] PHP Fatal error:  Class 'Swift_SmtpTransport' not found in /opt/lampp/htdocs/anm293/PizzaProject/public/emailConfirm.inc.php on line 54
+[18-Apr-2011 15:56:45] PHP Notice:  A session had already been started - ignoring session_start() in /opt/lampp/htdocs/anm293/PizzaProject/public/manageOrders.inc.php on line 2
