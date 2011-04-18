@@ -36,7 +36,10 @@ $dbh->exec('CREATE TABLE orders(id INTEGER PRIMARY KEY, name CHAR(20), email CHA
 						billingAddress CHAR(30), payMethod CHAR(10) ) ');
 $dbh->exec($insertStatement);
 
-foreach( $dbh->query('select * from orders WHERE name = '.$_SESSION['customerName']) as $row ){
+//foreach( $dbh->query('select * from orders WHERE name = '.$_SESSION['customerName']) as $row ){
+$stmt = $dbh->query("SELECT * FROM orders WHERE name = '" . $_SESSION['customerName'] . "'");
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
 echo $row['name'] . chr(10);
 echo $row['email'] . chr(10);
 echo $row['orderSummary'] . chr(10);
@@ -45,7 +48,7 @@ echo $row['address'] . chr(10);
 echo $row['billingAddress'] . chr(10);
 echo $row['payMethod'] . chr(10);
 
-}
+
 
 $dbh = NULL;
 

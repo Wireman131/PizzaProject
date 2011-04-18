@@ -35,8 +35,8 @@ $bacon = "";
 $jalapeno = "";
 $greenOlive = "";
 $delivery = "";
-$size = "";
-$payMethod = "";
+$size = "small";
+$payMethod = "cash";
 $couponCode = "";
 $couponValue = "";
 
