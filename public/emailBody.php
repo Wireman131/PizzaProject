@@ -29,18 +29,14 @@ $dbh = new PDO('sqlite:../database/pizzaOrders.db'); //SQLite by default is UTF-
 //
 //build a string with the statement and evaluated session v's
 $insertStatement = "INSERT INTO orders (name, email, orderSummary, timeOfOrder, address, billingAddress, payMethod)" .
-	"VALUES(" . $_SESSION['customerName'] . ',' .	$_SESSION['customerEmail'] . ',' . $_SESSION['orderSummary'] . ',' .
-	$_SESSION['timeOfOrder'] .','. $_SESSION['customerAddress'] .','.	$_SESSION['customerBillingAddress'] .','. $_SESSION['payMethod'].')';
-
-echo "insert statement " . $insertStatement;
-$escapedStatement = $dbh->quote($insertStatement);
-echo "escaped statement " . $escapedStatement;
+	"VALUES('" . $_SESSION['customerName'] ."','".	$_SESSION['customerEmail'] ."','". $_SESSION['orderSummary'] ."','".
+	$_SESSION['timeOfOrder'] ."','". $_SESSION['customerAddress'] ."','".	$_SESSION['customerBillingAddress'] ."','". $_SESSION['payMethod']."')";
 $dbh->exec('CREATE TABLE orders(id INTEGER PRIMARY KEY, name CHAR(20), email CHAR(30), 
 						orderSummary CHAR(255), timeOfOrder CHAR(40), address CHAR(30), 
 						billingAddress CHAR(30), payMethod CHAR(10) ) ');
-$dbh->exec($excapedStatment);
+$dbh->exec($insertStatement);
 
-foreach( $dbh->query('select * from orders') as $row ){
+foreach( $dbh->query('select * from orders WHERE name = '.$_SESSION['customerName']) as $row ){
 echo $row['name'] . chr(10);
 echo $row['email'] . chr(10);
 echo $row['orderSummary'] . chr(10);

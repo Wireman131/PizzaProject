@@ -36,6 +36,9 @@ $jalapeno = "";
 $greenOlive = "";
 $delivery = "";
 $size = "";
+$payMethod = "";
+$couponCode = "";
+$couponValue = "";
 
 if(isset($_POST['submit'])){
 	 /*
