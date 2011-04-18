@@ -88,19 +88,17 @@ else {
 // we may want to do further verification in the
 // future
 
-if (!isset($_SESSION['payMethod'])){
-  $_SESSION['payMethod'] = $_POST['payMethod'];
-}
+//if (!isset($_SESSION['payMethod'])){
+$payMethod = $_POST['payMethod'];
+$_SESSION['payMethod'] = $payMethod;
+//} //DON'T FORGET THIS BRACKET
+
 //calculate the pizza order totals     
 //get size
-
-echo "post     " . print_r($_POST) . "<br />";
-
-echo "session        " . print_r($_SESSION) . "<br />";
-
+$size = $_POST['pizzaSize']; 
 
 // order Summary is
-$orderSummary = $_POST['pizzaSize'];
+$orderSummary =  $size . " Pizza";
 // get price of pie size
 switch($_POST['pizzaSize']){
 case 'Small':
@@ -116,88 +114,121 @@ case 'Extra Large':
 	$orderTotal = 14;
 	break;
 }
-
+$checkboxChecked = 'checked="yes"';
 //massive set of if's to check each topping until a more efficient method is devised. AKA, quick and dirty
 if(isset($_POST['Pepperoni'])){ 
-	$orderSummary .= ", " . 'Pepperoni';
+	$orderSummary .= ', Pepperoni';
 	$orderTotal += .50;
+	$pepperoni = $checkboxChecked;
 }
-if(isset($_POST['Mushroom'])){ 
-	$orderSummary .= ", " .'Mushroom';
-	$orderTotal += .50;
-}
-if(isset($_POST['Onion'])){ 
-	$orderSummary .= ", " . 'Onion';
-	$orderTotal += .50;
-}
-if(isset($_POST['Green Peppers'])){ 
-	$orderSummary .= ", " . 'Green Peppers';
-	$orderTotal += .50;
-}
-if(isset($_POST['Sausage'])){ 
-	$orderSummary .= ", " . 'Sausage';
-	$orderTotal += .50;
-}
-if(isset($_POST['Bacon'])){ 
-	$orderSummary .= ", " . 'Bacon';
-	$orderTotal += .50;
-}
-if(isset($_POST['Jalapeno'])){ 
-	$orderSummary .= ", " . 'Jalapeno';
-	$orderTotal += .50;
-}
-if(isset($_POST['Green Olive'])){ 
-	$orderSummary .= ", " . 'Green Olive';
-	$orderTotal += .50;
-}
+else $pepperoni = "";
 
+if(isset($_POST['Mushroom'])){ 
+	$orderSummary .= ', Mushroom';
+	$orderTotal += .50;
+	$mushroom = $checkboxChecked;
+}
+else $mushroom = "";
+
+if(isset($_POST['Onion'])){ 
+	$orderSummary .= ', Onion';
+	$orderTotal += .50;	
+	$onion = $checkboxChecked;
+}
+else $onion = "";
+
+if(isset($_POST['Green_Pepper'])){ 
+	$orderSummary .= ', Green Pepper';
+	$orderTotal += .50;	
+	$greenPepper = $checkboxChecked;
+}
+else $greenPepper = "";
+
+if(isset($_POST['Sausage'])){ 
+	$orderSummary .= ', Sausage';
+	$orderTotal += .50;	
+	$sausage = $checkboxChecked;
+}
+else $sausage = "";
+
+if(isset($_POST['Bacon'])){ 
+	$orderSummary .= ', Bacon';
+	$orderTotal += .50;	
+	$bacon = $checkboxChecked;
+}
+else $bacon = "";
+
+if(isset($_POST['Jalapeno'])){ 
+	$orderSummary .= ', Jalapeno';
+	$orderTotal += .50;	
+	$jalapeno = $checkboxChecked;
+}
+else $jalapeno = "";
+
+if(isset($_POST['Green_Olive'])){ 
+	echo "Green Olives were picked";
+	$orderSummary .= ', Green Olive';
+	$orderTotal += .50;	
+	$greenOlive = $checkboxChecked;
+}
+else $greenOlive = "";
 
 // check coupon ///////////////////////////////////////////////////////////////////
 
-if (isset($_POST['couponCode'])){
-  $_SESSION['couponCode'] = $_POST['couponCode'];
-}
+//if (isset($_POST['couponCode'])){
+$couponCode = "";
+$couponValue = "";
+$couponCode = $_POST['couponCode'];
+$_SESSION['couponCode'] = $couponCode;
+//}
 
-switch ($_POST['couponCode']){
+switch ($couponCode){
 case 'twitter2':
+	$couponValue = "Valid Coupon - 2 Bucks Off!";
 	$orderTotal += -2;
-	$_SESSION['couponValue'] = "Valid Coupon - 2 Bucks Off!";
 	break;
 case 'freepizza':
 	$orderTotal += 2;
-	$_SESSION['couponValue'] =	"Valid Coupon - Add 2 Bucks!<br/>No Such Thing As Free Pizza!!";
+	$couponValue =	"Valid Coupon - Add 2 Bucks!<br/>No Such Thing As Free Pizza!!";
 	break;
 case 'springbreak':
 	$orderTotal += -1;
-	$_SESSION['couponValue'] = "Valid Coupon - 1 Buck Off!";
+	$couponValue = "Valid Coupon - 1 Buck Off!";
 	break;
 default:
-	$_SESSION['couponValue'] = "No Coupon";
+	$couponValue = "No Dice";
 	break;
 }
 
+$_SESSION['couponValue'] = $couponValue; 
 
 
 // check delivery /////////////////////////////////////////////////////////////////
 if (isset($_POST['deliveryBox'])){
 	$orderTotal += 2;
+	$delivery = true;
 	$_SESSION['delivery'] = "Pizza will be delivered around ";
 } else {
+	$delivery = false;
   $_SESSION['delivery'] = "Pizza will be ready for pickup around ";
 }
 
 
 
 
-if (!isset($_SESSION['orderSummary'])){
-  $_SESSION['orderSummary'] = $_POST['orderSummary'];
-} 
-if (!isset($_SESSION['orderTotal'])){
-  $_SESSION['orderTotal'] = $_POST['orderTotal'];
-}
+//$_SESSION['orderSummary'] = $_POST['orderSummary'];
+ 
+//$_SESSION['orderTotal'] = $_POST['orderTotal'];
+
+$_SESSION['orderSummary'] = $orderSummary;
+$_SESSION['orderTotal'] = $orderTotal;
+
+//echo "post     " . print_r($_POST) . "<br />";
+
+//echo "session        " . print_r($_SESSION) . "<br />";
 
 if($isValid){
-//	header("Location: index.php?pid=validate"); 
+	header("Location: index.php?pid=validate"); 
 }
 else {
 	

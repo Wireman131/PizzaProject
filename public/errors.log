@@ -1,0 +1,5 @@
+[18-Apr-2011 10:45:08] PHP Warning:  include(/library/SwiftMailer/V4.0.6/lib/swift_required.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /opt/lampp/htdocs/anm293/PizzaProject/public/emailConfirm.inc.php on line 44
+[18-Apr-2011 10:45:08] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '/library/SwiftMailer/V4.0.6/lib/swift_required.php' for inclusion (include_path='.::/opt/lampp/htdocs/anm293/PizzaProject/public') in /opt/lampp/htdocs/anm293/PizzaProject/public/emailConfirm.inc.php on line 44
+[18-Apr-2011 10:45:08] PHP Fatal error:  Class 'Swift_SmtpTransport' not found in /opt/lampp/htdocs/anm293/PizzaProject/public/emailConfirm.inc.php on line 54
+[18-Apr-2011 11:59:32] PHP Parse error:  syntax error, unexpected ')' in /opt/lampp/htdocs/anm293/PizzaProject/public/order.inc.php on line 256
+[18-Apr-2011 11:59:35] PHP Parse error:  syntax error, unexpected ')' in /opt/lampp/htdocs/anm293/PizzaProject/public/order.inc.php on line 256

@@ -26,11 +26,20 @@
 try {
 $dbh = new PDO('sqlite:../database/pizzaOrders.db'); //SQLite by default is UTF-8
 //$dbh->exec('SET NAMES utf8');
+//
+//build a string with the statement and evaluated session v's
+$insertStatement = "INSERT INTO orders (name, email, orderSummary, timeOfOrder, address, billingAddress, payMethod)" .
+	"VALUES(" . $_SESSION['customerName'] . ',' .	$_SESSION['customerEmail'] . ',' . $_SESSION['orderSummary'] . ',' .
+	$_SESSION['timeOfOrder'] .','. $_SESSION['customerAddress'] .','.	$_SESSION['customerBillingAddress'] .','. $_SESSION['payMethod'].')';
+
+echo "insert statement " . $insertStatement;
+$escapedStatement = $dbh->quote($insertStatement);
+echo "escaped statement " . $escapedStatement;
 $dbh->exec('CREATE TABLE orders(id INTEGER PRIMARY KEY, name CHAR(20), email CHAR(30), 
 						orderSummary CHAR(255), timeOfOrder CHAR(40), address CHAR(30), 
 						billingAddress CHAR(30), payMethod CHAR(10) ) ');
-$dbh->exec('INSERT INTO orders (name,email,orderSummary,timeOfOrder,address,billingAddress,payMethod)
-					  VALUES("Fred","fred@flintstone.com","Small Pizza with Pepperoni, Green Olives","12:30 PM Saturday April 16","1316 West Maple Street","123 Main Street","cash")');
+$dbh->exec($excapedStatment);
+
 foreach( $dbh->query('select * from orders') as $row ){
 echo $row['name'] . chr(10);
 echo $row['email'] . chr(10);
@@ -43,6 +52,7 @@ echo $row['payMethod'] . chr(10);
 }
 
 $dbh = NULL;
+
 }
 catch(PDOException $e)
 {

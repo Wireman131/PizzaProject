@@ -26,8 +26,16 @@ $customerAddressError = "";
 $customerBillingAddressError = "";
 $customerPhoneError = "";
 $customerEmailError = "";
-//print_r($_POST);
-//echo "if is about to fire";
+$pepperoni = "";
+$mushroom = "";
+$onion = "";
+$greenPepper = "";
+$sausage = "";
+$bacon = "";
+$jalapeno = "";
+$greenOlive = "";
+$delivery = "";
+$size = "";
 
 if(isset($_POST['submit'])){
 	 /*
@@ -99,29 +107,30 @@ if(isset($_POST['submit'])){
     <tr>
       <td><label>
         <input type="radio" name="payMethod" id="cash" value="Cash" 
-        title="Pay w" checked />
+				title="Pay w"  <?php echo ($payMethod=="Cash"? "checked" : "" );?>/>
         Cash</label></td>
     </tr>
     <tr>
       <td><label>
         <input type="radio" name="payMethod" id="creditcard" value="Credit Card"
-        title="Pay With Credit Card" />
+        title="Pay With Credit Card" <?php echo ($payMethod=="Credit Card"? "checked" : "" );?> />
         Credit Card</label></td>
     </tr>
     <tr>
       <td><label>
         <input type="radio" name="payMethod" id="check" value="Check"
-        title="Pay With Check" />
+        title="Pay With Check" <?php echo ($payMethod=="Check"? 'checked' : '' );?>/>
         Check</label></td>
     </tr>
     <tr>
       <td> <img alt="Check" src="images/arrow.png"/>
       <label for="couponCode">Coupon Code</label>
         <input type="text" name="couponCode" id="couponCode"
-        title="Please Enter Your Coupon Code" maxlength="10" />
+				title="Please Enter Your Coupon Code" maxlength="10"
+				value="<?php echo $couponCode; ?>"	/>
          </td>
     </tr>
-    <tr><td><span id="couponVal">&nbsp;</span></td></tr>
+    <tr><td><span id="couponVal"><?php echo $couponValue; ?>&nbsp;</span></td></tr>
   </table>
  </div>
   </div> 
@@ -133,28 +142,28 @@ if(isset($_POST['submit'])){
     <tr>
       <td><label>
 			<input type="radio" name="pizzaSize" id="pizzaSize_0" 
-			title="Small Pizza" value="Small" checked />
+			title="Small Pizza" value="Small" <?php echo ($size=="Small"? "checked" : "" );?>  />
         Small</label></td>
       <td>$8.00</td>
     </tr>
     <tr>
       <td><label>
         <input type="radio" name="pizzaSize" id="pizzaSize_1" 
-        title="Medium Pizza" value="Medium"  />
+        title="Medium Pizza" value="Medium" <?php echo ($size=="Medium"? "checked" : "" );?>/>
         Medium</label></td>
       <td>$10.00</td>
     </tr>
     <tr>
       <td><label>
         <input type="radio" name="pizzaSize" id="pizzaSize_2" 
-        title="Large Pizza" value="Large" />
+        title="Large Pizza" value="Large" <?php echo ($size=="Large"? "checked" : "" );?>/>
         Large</label></td>
       <td>$12.00</td>
     </tr>
     <tr>
       <td><label>
         <input type="radio" name="pizzaSize" id="pizzaSize_3" 
-        title="Extra Large Pizza" value="Extra Large" />
+        title="Extra Large Pizza" value="Extra Large" <?php echo ($size="Extra Large"? "checked" : "" );?>/>
         XL</label></td>
       <td>$14.00</td>
     </tr>
@@ -172,7 +181,6 @@ if(isset($_POST['submit'])){
     </tr>
     <tr><td colspan=2>
     									<input type="hidden" name="orderTotal" value="">
-<input type="hidden" name="hiddenTest" value="TRUE">
     									<input type="hidden" name="orderSummary" value="">
     </td></tr>
   </table>
@@ -196,63 +204,63 @@ if(isset($_POST['submit'])){
     <tr>
       <td><label>
         <input type="checkbox" name="Pepperoni" id="topping_0" 
-        title="Pepperoni" value=".50" />
+        title="Pepperoni" value=".50" <?php echo $pepperoni; ?> />
       Pepperoni </label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Mushrooms" id="topping_1" 
-        title="Mushrooms" value=".50" />
-      Mushrooms</label></td>
+        <input type="checkbox" name="Mushroom" id="topping_1" 
+        title="Mushroom" value=".50" <?php echo $mushroom; ?> />
+      Mushroom</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Onions" id="topping_2" 
-        title="Onions" value=".50" />
-      Onions</label></td>
+        <input type="checkbox" name="Onion" id="topping_2" 
+        title="Onion" value=".50" <?php echo $onion; ?> />
+      Onion</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Green Peppers" id="topping_3" 
-        title="Green Peppers" value=".50" />
-      Green Peppers</label></td>
+        <input type="checkbox" name="Green Pepper" id="topping_3" 
+        title="Green Pepper" value=".50" <?php echo $greenPepper; ?>  />
+      Green Pepper</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
         <input type="checkbox" name="Sausage" id="topping_4" 
-        title="Sausage" value=".50" />
+        title="Sausage" value=".50" <?php echo $sausage; ?> />
       Sausage</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
         <input type="checkbox" name="Bacon" id="topping_5" 
-        title="Everything Is Better With Bacon!" value=".50" />
+        title="Everything Is Better With Bacon!" value=".50" <?php echo $bacon; ?> />
       Bacon</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
         <input type="checkbox" name="Jalapeno" id="topping_6" 
-        title="Jalepeno" value=".50" />
+        title="Jalepeno" value=".50" <?php echo $jalapeno; ?> />
       Jalapeno</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td><label>
-        <input type="checkbox" name="Green Olive" id="topping_7" 
-        title="Green Olive" value=".50" />
+        <input type="checkbox" name="Green Olive" id="topping_7"
+        title="Green Olive" value=".50" <?php echo $greenOlive; ?>  />
       Green Olive</label></td>
       <td>$.50</td>
     </tr>
     <tr>
       <td>Delivery $2.00 <span class='smaller'>- Within 5 Miles Of Store</span></td>
       <td><label>
-        <input type="checkbox" name="deliveryBox" 
+			<input type="checkbox" name="deliveryBox" <?php echo ($delivery ? "checked" : "" ); ?> 
         title="Delivery - Yes!" id="deliveryBox" />
         Yes</label></td>
     </tr>
