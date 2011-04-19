@@ -22,15 +22,22 @@ echo "<table class='results'>";
   $address = $row['address'];
   $billingAddress = $row['billingAddress'];
   $payMethod = $row['payMethod'];
-
+  $processed = $row['processed'];
+if ($processed == 0){
+    $processed = "No";
+  } else if ($processed == 1){
+    $processed = "Yes";
+  }
  
   echo "<tr><td>Details For Order Number: $xid</td></tr><tr><td>For: $name</td></tr>
   			<tr><td>Time Of Order: $timeOfOrder</td></tr><tr><td>Address :$address
   			</td></tr><tr><td>Order Summary: $orderSummary</td></tr>
   			<tr><td>Billing Address: $billingAddress</td></tr>
-  			<tr><td>Payment Method :$payMethod</td></tr>";
+  			<tr><td>Payment Method :$payMethod</td></tr>
+        <tr><td>Order Processed :$processed</td></tr>";
   
   echo "<tr><td><a href='index.php?pid=manageOrders'>Return To Manager Screen</a></td></tr>";
+  echo "<tr><td><a href='index.php'>Return To Order Screen</a></td></tr>";
   echo "</table>";
 
 

@@ -35,8 +35,8 @@ $bacon = "";
 $jalapeno = "";
 $greenOlive = "";
 $delivery = "";
-$size = "small";
-$payMethod = "cash";
+$size = "Small";
+$payMethod = "Cash";
 $couponCode = "";
 $couponValue = "";
 
@@ -49,6 +49,10 @@ if(isset($_POST['submit'])){
 ?>
 <div id='container'>
 <div id='headerImage'><img src='images/header.png' /></div>
+  <div id="manage">
+  	<a href="index.php?pid=ManageOrders"><img src="images/clearpixel.gif" border="0"></a>
+  </div>
+
 <form name='pizza' class="cmxform" id="pizza" action='index.php?pid=order' method="post" >
 <div id="topBox">
 <div id="CustomerInfo">
@@ -166,7 +170,7 @@ if(isset($_POST['submit'])){
     <tr>
       <td><label>
         <input type="radio" name="pizzaSize" id="pizzaSize_3" 
-        title="Extra Large Pizza" value="Extra Large" <?php echo ($size="Extra Large"? "checked" : "" );?>/>
+        title="Extra Large Pizza" value="Extra Large" <?php echo ($size=="Extra Large"? "checked" : "" );?>/>
         XL</label></td>
       <td>$14.00</td>
     </tr>

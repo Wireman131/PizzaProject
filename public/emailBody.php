@@ -14,6 +14,13 @@
 */
 
 @session_start();
+$customerName = $_SESSION['customerName'];
+$customerEmail = $_SESSION['customerEmail'];
+$orderSummary = $_SESSION['orderSummary'];
+$timeOfOrder = $_SESSION['timeOfOrder'];
+$customerAddress = $_SESSION['customerAddress'];
+$customerBillingAddress = $_SESSION['customerBillingAddress'];
+$payMethod = $_SESSION['payMethod'];
 ?>
 
 <div id='confirmEmail'>
@@ -21,34 +28,23 @@
 <div id='header'><img src='images/header.png'/></div>
 <div id='hElement'></div>
 <div id='content'>
-<div id='orderSummary'>Order Summary for: <?php 
+<div id='orderSummary'>Order Summary for: 
+<?php 
 //print_r($_SESSION);
 try {
 $dbh = new PDO('sqlite:../database/pizzaOrders.db'); //SQLite by default is UTF-8
 //$dbh->exec('SET NAMES utf8');
 //
 //build a string with the statement and evaluated session v's
-$insertStatement = "INSERT INTO orders (name, email, orderSummary, timeOfOrder, address, billingAddress, payMethod)" .
-	"VALUES('" . $_SESSION['customerName'] ."','".	$_SESSION['customerEmail'] ."','". $_SESSION['orderSummary'] ."','".
-	$_SESSION['timeOfOrder'] ."','". $_SESSION['customerAddress'] ."','".	$_SESSION['customerBillingAddress'] ."','". $_SESSION['payMethod']."')";
 $dbh->exec('CREATE TABLE orders(id INTEGER PRIMARY KEY, name CHAR(20), email CHAR(30), 
 						orderSummary CHAR(255), timeOfOrder CHAR(40), address CHAR(30), 
-						billingAddress CHAR(30), payMethod CHAR(10) ) ');
+						billingAddress CHAR(30), payMethod CHAR(10), processed INTEGER(1) ) ');
+$insertStatement = "INSERT INTO orders (name, email, orderSummary, timeOfOrder,
+ address, billingAddress, payMethod, processed)" .
+	"VALUES('" . $customerName ."','".	$customerEmail ."','". $orderSummary ."','".
+	$timeOfOrder ."','". $customerAddress ."','".	$customerBillingAddress ."','". $payMethod."','0')";
+
 $dbh->exec($insertStatement);
-
-//foreach( $dbh->query('select * from orders WHERE name = '.$_SESSION['customerName']) as $row ){
-$stmt = $dbh->query("SELECT * FROM orders WHERE name = '" . $_SESSION['customerName'] . "'");
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-echo $row['name'] . chr(10);
-echo $row['email'] . chr(10);
-echo $row['orderSummary'] . chr(10);
-echo $row['timeOfOrder'] . chr(10);
-echo $row['address'] . chr(10);
-echo $row['billingAddress'] . chr(10);
-echo $row['payMethod'] . chr(10);
-
-
 
 $dbh = NULL;
 

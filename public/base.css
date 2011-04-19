@@ -281,4 +281,17 @@ font-size:1.4em;
   background-color:black;
   text-align:center;
 }
-
+#manage {
+  width:10px;
+  height:10px;
+	position:absolute;
+	top:80px;
+	left:940px;
+	z-index:100;
+}
+.black a {
+	font-size:1.4em;
+	color:black;
+	text-decoration:none;
+	text-align:center;
+}

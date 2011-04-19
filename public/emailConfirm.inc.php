@@ -99,7 +99,7 @@ $message->setReturnPath('tonyforschool@gmail.com');
  * Set the body of the message, followed by the format, in this case 'text/html'
  */
 
-$emailConfirm = "<img src='http://localhost:8080/PizzaProject/images/header.png' />";
+$emailConfirm = "<img src='http://localhost:8080/PizzaProject/public/images/header.png' />";
 $emailConfirm .= "<hr><h3>Order Confirmation: " . $_SESSION['orderSummary'] . " </h3>";
 $emailConfirm .= "<h4>Time of order:" . $_SESSION['timeOfOrder'] . "</h4>";
 $emailConfirm .= "<h4>" . $_SESSION['delivery'] . $_SESSION['deliveryTime'] . "</h4><br/>";
