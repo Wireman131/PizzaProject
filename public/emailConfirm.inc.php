@@ -40,9 +40,7 @@ include 'emailBody.php';
  * to send as a confirmation...
  */
 
-
-include '/library/SwiftMailer/V4.0.6/lib/swift_required.php';
-
+include 'swift_required.php';
 
 try {
   /*

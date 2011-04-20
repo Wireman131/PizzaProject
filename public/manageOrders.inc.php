@@ -1,5 +1,5 @@
 <?php
-session_start();
+@session_start();
 
 try {
 $dbh = new PDO('sqlite:../database/pizzaOrders.db'); //SQLite by default is UTF-8
