@@ -43,8 +43,8 @@ echo '<link rel="stylesheet" type="text/css" href="base.css"/>';
 //echo '<script src="library' . SLASH . 'jquery-validation' . SLASH . 'jquery.validate.js" type="text/javascript"></script>';
 //echo '<script src="library' . SLASH . 'jquery-validation' . SLASH . 'additional-methods.js" type="text/javascript"></script>';
 echo '<script src="library/jquery/1.5.1/jquery.js" type="text/javascript"></script>';
-echo '<script src="library/jquery-validation/jquery.validate.js" type="text/javascript"></script>';
-echo '<script src="library/jquery-validation/additional-methods.js" type="text/javascript"></script>';
+echo '<script src="library/jquery/jquery-validation/jquery.validate.js" type="text/javascript"></script>';
+echo '<script src="library/jquery/jquery-validation/additional-methods.js" type="text/javascript"></script>';
 echo '<script src="Project 2.js" type="text/javascript"></script>';
 echo '<script src="pizza_jQuery.js" type="text/javascript"></script>';
 
