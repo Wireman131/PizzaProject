@@ -56,7 +56,7 @@ define('APP_PATH', realpath(dirname(__FILE__)));
  * libraries
  */  
 set_include_path('.'.PATH_SEPARATOR.implode(PATH_SEPARATOR, array(
-    realpath(APP_PATH . SLASH . 'library' . SLASH . 'SwiftMailer' . SLASH . 'V4.0.6' . SLASH . 'lib' ),
+    realpath(APP_PATH . SLASH . 'library' . SLASH . 'Swift' . SLASH . 'V4.0.6' . SLASH . 'lib' ),
     realpath(APP_PATH)
   )));  
 
