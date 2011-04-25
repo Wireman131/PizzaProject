@@ -284,9 +284,9 @@ font-size:1.4em;
 #manage {
   width:10px;
   height:10px;
-	position:absolute;
-	top:80px;
-	left:940px;
+	position:relative;
+	top:15px;
+	left:15px;
 	z-index:100;
 }
 .black a {

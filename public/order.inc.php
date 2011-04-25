@@ -48,10 +48,11 @@ if(isset($_POST['submit'])){
 		}
 ?>
 <div id='container'>
-<div id='headerImage'><img src='images/header.png' /></div>
-  <div id="manage">
-  	<a href="index.php?pid=ManageOrders"><img src="images/clearpixel.gif" border="0"></a>
+<div id="manage">
+  	<a href="index.php?pid=ManageOrders"><img src="images/managerLink.jpg" border="0"></a>
   </div>
+<div id='headerImage'><img src='images/header.png' /></div>
+  
 
 <form name='pizza' class="cmxform" id="pizza" action='index.php?pid=order' method="post" >
 <div id="topBox">
